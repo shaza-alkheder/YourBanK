@@ -1,0 +1,12 @@
+.O-A-container{
+    padding-left: var(--yb-spacing-x-md);
+    padding-right: var(--yb-spacing-x-md);
+    margin-bottom: var(--yb-spacing-y-md);
+}
+@media screen and (maxwidth:992px) {
+    .O-A-container{
+        padding-left: var(--yb-spacing-x-sm);
+        padding-right: var(--yb-spacing-x-sm);
+        margin-bottom: var(--yb-spacing-y-sm);
+    }
+}
