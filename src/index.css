@@ -42,3 +42,8 @@
   --yb-font-size-title-sm: 18px;
   --yb-font-size-body-sm: 14px;
 }
+body {
+  background-color: var(--yb-color-dark-1);
+  color: var(--yb-color-white);
+  font-family: var(--yb-font-family-primary);
+}
