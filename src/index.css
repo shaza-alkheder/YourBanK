@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yb-color-primary: #caff33;
+  --yb-color-white: #ffffff;
+  --yb-color-text-secondary: #b3b3b3;
+  --yb-color-text-tertiary: #e4e4e7;
+  --yb-color-dark-1: #1a1a1a;
+  --yb-color-dark-2: #1c1c1c;
+  --yb-color-dark-3: #262626;
+  /* Vertical Spacing */
+  --yb-spacing-y-lg: 150px;
+  --yb-spacing-y-md: 120px;
+  --yb-spacing-y-sm: 80px;
+  /* Horizontal Spacing */
+  --yb-spacing-x-lg: 162px;
+  --yb-spacing-x-md: 80px;
+  --yb-spacing-x-sm: 16px;
+  /* Fonts */
+  --yb-font-family-primary: "Lexend", sans-serif;
+  /*  Font-Weight*/
+  --yb-font-weight-lt: 300;
+  --yb-font-weight-rg: 400;
+  --yb-font-weight-md: 500;
+
+  /* Font Size - Large */
+  --yb-font-size-heading-lg: 48px;
+  --yb-font-size-title-lg: 24px;
+  --yb-font-size-body-lg: 18px;
+
+  /* Font Size - Medium */
+  --yb-font-size-heading-md: 38px;
+  --yb-font-size-title-md: 20px;
+  --yb-font-size-body-md: 16px;
+
+  /* Font Size - Small */
+  --yb-font-size-heading-sm: 28px;
+  --yb-font-size-title-sm: 18px;
+  --yb-font-size-body-sm: 14px;
+}
