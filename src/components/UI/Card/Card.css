@@ -1,0 +1,19 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .iconCard {
+    width: 72px;
+    height: 72px;
+    gap: 10px;
+  
+    border-radius: 70px;
+    padding: 8px;
+    background: linear-gradient(
+      180deg,
+      rgba(202, 255, 51, 0.05) 0%,
+      rgba(202, 255, 51, 0) 100%
+    );
+  }
+}
