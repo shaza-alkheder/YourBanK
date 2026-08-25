@@ -1,15 +1,19 @@
 import "./Card.css";
-const Card = ({ image, title, desc, className = "" }) => {
+const Card = ({ image,icon, title, desc,classNames = {} }) => {
   return (
     <>
-      <div className={`card ${className}`}>
+      <div className={`skCard ${classNames.card || ""}`}>
         {image ? (
-          <div className="iconCard">
-            <img src={image} alt={title || ""} />
-          </div>
-        ) : null}
-        {title ? <h2>{title}</h2> : null}
-        {desc ? <p>{desc}</p> : null}
+        <div className={` ${classNames.imageDiv || ""}`}>
+          <img src={image} alt={title || ""}  className={` ${classNames.image || ""}`}/>
+        </div>
+      ) : icon ? (
+        <div className={`iconCard ${classNames.icon || ""}`}>
+          {icon}
+        </div>
+      ) : null}
+        {title ? <h2 className={classNames.title || ""}>{title}</h2> : null}
+        {desc ?   <p className={classNames.desc || ""}>{desc}</p> : null}
       </div>
     </>
   );
