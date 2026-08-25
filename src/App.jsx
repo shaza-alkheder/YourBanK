@@ -1,5 +1,6 @@
 
 import './App.css'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -7,7 +8,9 @@ function App() {
     <>
      
 
-     
+     <Footer
+     logo="/assets/img/Logo/logoNavBar.webp"
+     />
     </>
   )
 }
