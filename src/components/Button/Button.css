@@ -1,0 +1,33 @@
+        .DS_button{
+            font-weight: var(--yb-font-weight-rg);
+            font-size: clamp(var(--yb-font-size-body-sm), 0.95vw, var(--yb-font-size-title-sm));
+            border-radius: 82px;
+            line-height: 1.5;
+        }
+
+            /* عم يختلف البادينغ للزر بين الشاشة 1920 (14,30) 
+            وعالشاشة 1440 عم يكون (12,24) 
+            لهيك فصلت البادينغ العمودي عن البادينغ الافقي واستخدمت تابع clamp
+            التابع كلامب بساعد لحتى حدد اعلى قيمة ممكن يوصللها واي اقل قيمةوالنسبة اللي بالنص منقدر نحسبها 
+            والنسبة هيي قدي نسبة ال12 من قياس الشاشة 1440 
+            (12/1440)*100
+            */
+        /* هاد الكلاس مثال والتعديل عليه بالميديا كويري
+            .DS_styleTest{
+            padding-block: clamp(12px, 0.83vw, 14px); 
+            padding-inline: clamp(24px, 1.6vw, 30px);
+            background-color:var(--yb-color-primary); 
+            color:var(--yb-color-dark-2) ;
+            border: none;
+        } */
+
+
+        @media (max-width: 992px) {
+        /* .DS_button {
+            padding-block: 13px;
+            padding-inline: 17px;
+    } */
+}
+
+
+
