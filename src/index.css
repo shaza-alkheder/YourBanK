@@ -47,3 +47,14 @@ body {
   color: var(--yb-color-white);
   font-family: var(--yb-font-family-primary);
 }
+
+.O-A-container{
+  padding-left: var(--yb-spacing-x-md);
+  padding-right: var(--yb-spacing-x-md);
+}
+@media screen and (maxwidth:992px) {
+  .O-A-container{
+    padding-left: var(--yb-spacing-x-sm);
+    padding-right: var(--yb-spacing-x-sm);
+  }
+}
