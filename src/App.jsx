@@ -1,18 +1,18 @@
 
-
 import './App.css'
-import Footer from './components/Footer/Footer'
 import OurFeatures from './components/OurFeatures/OurFeatures';
 import Containeer from './components/Container/Container';
+import Footer from './components/Layout/Footer/Footer';
 
 function App() {
-
   return (
     <>
+
       <Containeer>
         <OurFeatures />
       </Containeer>
       
+
      <Footer
      logo="/assets/img/Logo/logoNavBar.webp"
      />
@@ -22,4 +22,4 @@ function App() {
 
 }
 
-export default App;
+export default App
