@@ -1,14 +1,13 @@
 
-
 import './App.css'
-import Footer from './components/Footer/Footer'
+import Footer from './components/Layout/Footer/Footer'
 
 
 function App() {
 
   return (
     <>
-    
+
 
      <Footer
      logo="/assets/img/Logo/logoNavBar.webp"
@@ -19,4 +18,4 @@ function App() {
 
 }
 
-export default App;
+export default App

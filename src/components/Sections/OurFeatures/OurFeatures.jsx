@@ -1,7 +1,7 @@
 // import { MdArrowOutward } from "react-icons/md"
-import Button from "../Button/Button"
-import TitleDescription from "../TitleDescription/TitleDescription"
-import Card from "../UI/Card/Card"
+import Button from "../../Button/Button"
+import TitleDescription from "../../TitleDescription/TitleDescription"
+import Card from "../../UI/Card/Card"
 import "./OurFeatures.css"
 
 const OurFeatures = () => {
