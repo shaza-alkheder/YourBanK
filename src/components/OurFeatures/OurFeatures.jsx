@@ -5,6 +5,7 @@ const OurFeatures = () => {
     return (
         <section>
             <TitleDescription 
+                className="OA_style"
                 titleParts={[    
                     {
                         text: "Our",
