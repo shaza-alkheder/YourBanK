@@ -1,9 +1,9 @@
 import "./Containeer.css"
 
-const Containeer = ({Children}) => {
+const Containeer = ({children}) => {
     return (
         <div className="O-A-container">
-            {Children}
+            {children}
         </div>
     )
 }
