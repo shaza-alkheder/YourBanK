@@ -17,6 +17,8 @@
         }
     }
 }
+
+
 .O-A-styleButton{
     width: 165px;
     height: 50px;
@@ -28,6 +30,7 @@
         color:var(--yb-color-primary);
     }
 } 
+
 
 .O-A-headerCardFeatures{
     display: flex;
