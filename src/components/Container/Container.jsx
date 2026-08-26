@@ -1,6 +1,6 @@
-import "./Containeer.css"
+import "./Container.css"
 
-const Containeer = ({children}) => {
+const Container = ({children}) => {
     return (
         <div className="O-A-container">
             {children}
@@ -8,4 +8,4 @@ const Containeer = ({children}) => {
     )
 }
 
-export default Containeer
+export default Container
