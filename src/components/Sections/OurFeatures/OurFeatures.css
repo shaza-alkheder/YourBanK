@@ -1,0 +1,65 @@
+.O-A-ourFeatures{
+    .O-A-groupFeatures{
+        display: flex;
+        gap: 20px;
+        .O-A-box{
+            padding: 40px;
+            background: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .O-A-containerCardFeatures{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+.O-A-styleButton{
+    /* padding-block: clamp(12px, 0.83vw, 14px); 
+    padding-inline: clamp(24px, 1.6vw, 30px); */
+    width: 165px;
+    height: 50px;
+    background-color:var(--yb-color-dark-1); 
+    color:var(--yb-color-white);
+    border: 1px solid var(--yb-color-dark-3);
+    cursor: pointer;
+    &:hover{
+        color:var(--yb-color-primary);
+    }
+} 
+
+.O-A-headerCardFeatures{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.O-A-cardFeaturesStyle{
+    max-width: 497px;
+    padding: 40px;
+    border: 1px solid var(--yb-color-dark-3);
+    border-radius: 10px;
+}
+
+.O-A-titleCardFeatures{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.O-A-descriptionCardFeatures{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.6%;
+    color: var(--yb-color-text-secondary);
+}
+
+
+
+@media screen and (max-width:992px) {
+
+}
