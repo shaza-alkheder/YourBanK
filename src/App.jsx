@@ -1,8 +1,8 @@
 
 import './App.css'
-import Footer from './components/Footer/Footer'
 import OurFeatures from './components/OurFeatures/OurFeatures';
 import Containeer from './components/Container/Container';
+import Footer from './components/Layout/Footer/Footer';
 
 function App() {
   return (
