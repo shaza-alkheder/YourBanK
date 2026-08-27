@@ -1,6 +1,6 @@
 
 
-function Home() {
+function Login() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Login
