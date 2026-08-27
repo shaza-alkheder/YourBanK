@@ -1,10 +1,17 @@
+import FAQ from "../../components/Sections/FAQ/FAQ"
+import Container from "../../components/UI/Container/Container"
 
 
 function Home() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <main>
+        <Container>
+       <FAQ/>
+
+      </Container>
+    </main>
+    </>
   )
 }
 

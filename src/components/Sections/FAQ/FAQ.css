@@ -1,6 +1,7 @@
 .S-K-FAQ {
   display: flex;
   flex-direction: column;
+  padding: 5px;
   .S-K-FaqCard {
     padding-top: 80px;
     display: grid;
@@ -11,8 +12,9 @@
       border-radius: 14px;
       gap: 30px;
       border: 1px solid #262626;
-      width: 782.5px;
-      /* width: 629.5px; */
+      max-width: 782.5px;
+      width: 100%;
+
       .S-K-headerCardFAQ {
         padding-bottom: 30px;
         border-bottom: 1px solid #262626;
@@ -37,13 +39,14 @@
     .S-K-FaqCard {
       padding-top: 80px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
+      justify-items: center;
       .S-K-cardFaqStyle {
-        padding: 40px;
+        padding: 30px;
         border-radius: 10px;
-        gap: 24px;
-        width: 629.5px;
+        gap: 20px;
+        /* width: 629.5px; */
         .S-K-headerCardFAQ {
           padding-bottom: 24px;
           .S-K-titleCardFAQ {
