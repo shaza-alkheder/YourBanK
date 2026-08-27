@@ -4,8 +4,10 @@
         display: flex;
         gap: 20px;
         .O-A-box{
+            height: 267px;
             padding: 40px;
-            background: none;
+            background-color: var(--yb-color-dark-2);
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -38,12 +40,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 24px;
 }
 
 .O-A-cardFeaturesStyle{
     max-width: 497px;
     padding: 40px;
     border: 1px solid var(--yb-color-dark-3);
+    background-color: var(--yb-color-dark-2);
     border-radius: 10px;
     svg{
         color: var(--yb-color-primary);
@@ -79,6 +83,7 @@
             align-items: center;
             .O-A-box{
                 width: 366px;
+                height: 95px;
                 padding: 20px;
                 flex-direction: row;
                 overflow-x: auto;
