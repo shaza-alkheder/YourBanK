@@ -3,6 +3,7 @@ import Container from "../../components/UI/Container/Container"
 
 import "./Home.css"
 import OurFeatures from "../../components/Sections/OurFeatures/OurFeatures"
+import FAQ from "../../components/Sections/FAQ/FAQ"
 
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
           <OurFeatures /> 
         </Container>
             <Container>
-          <OurFeatures /> 
+          <FAQ /> 
         </Container>
       </main>
     </div>
