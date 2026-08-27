@@ -1,4 +1,4 @@
-// import { MdArrowOutward } from "react-icons/md"
+import { MdArrowOutward } from "react-icons/md"
 import Button from "../../UI/Button/Button"
 import TitleDescription from "../../UI/TitleDescription/TitleDescription"
 import Card from "../../UI/Card/Card"
@@ -73,8 +73,8 @@ const OurFeatures = () => {
                                 return(
                                     <Card
                                         key={index}
-                                        // iconTitle= {<MdArrowOutward />}
-                                        imageTitle="/img/Icon.png"
+                                        titleIcon= {<MdArrowOutward />}
+                                        // imageTitle="/img/Icon.png"
                                         title= {online.title}
                                         desc={online.desc}
                                         classNames={{
@@ -96,8 +96,8 @@ const OurFeatures = () => {
                                     return(
                                         <Card
                                             key={index}
-                                            // iconTitle= {<MdArrowOutward />}
-                                            imageTitle="/img/Icon.png"
+                                            titleIcon= {<MdArrowOutward />}
+                                            // imageTitle="/img/Icon.png"
                                             title= {financial.title}
                                             desc={financial.desc}
                                             classNames={{
@@ -118,8 +118,8 @@ const OurFeatures = () => {
                                     return(
                                         <Card
                                             key={index}
-                                            // iconTitle= {<MdArrowOutward />}
-                                            imageTitle="/img/Icon.png"
+                                            titleIcon= {<MdArrowOutward />}
+                                            // imageTitle="/img/Icon.png"
                                             title= {customer.title}
                                             desc={customer.desc}
                                             classNames={{
