@@ -1,5 +1,6 @@
 .O-A-ourFeatures{
     .O-A-groupFeatures{
+        margin-top: 32px;
         display: flex;
         gap: 20px;
         .O-A-box{
@@ -8,6 +9,18 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            .O-A-styleButton{
+                width: 165px;
+                height: 50px;
+                background-color:var(--yb-color-dark-1); 
+                color:var(--yb-color-white);
+                border: 1px solid var(--yb-color-dark-3);
+                cursor: pointer;
+                &:hover{
+                    color:var(--yb-color-primary);
+                }
+            } 
+
         }
         .O-A-containerCardFeatures{
             display: flex;
@@ -17,19 +30,9 @@
         }
     }
 }
-.O-A-styleButton{
-    /* padding-block: clamp(12px, 0.83vw, 14px); 
-    padding-inline: clamp(24px, 1.6vw, 30px); */
-    width: 165px;
-    height: 50px;
-    background-color:var(--yb-color-dark-1); 
-    color:var(--yb-color-white);
-    border: 1px solid var(--yb-color-dark-3);
-    cursor: pointer;
-    &:hover{
-        color:var(--yb-color-primary);
-    }
-} 
+
+
+
 
 .O-A-headerCardFeatures{
     display: flex;
@@ -42,6 +45,15 @@
     padding: 40px;
     border: 1px solid var(--yb-color-dark-3);
     border-radius: 10px;
+    svg{
+        color: var(--yb-color-primary);
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.3s all;
+        &:hover{
+            font-size: 28px;
+        }
+    }
 }
 
 .O-A-titleCardFeatures{
@@ -61,5 +73,24 @@
 
 
 @media screen and (max-width:992px) {
+    .O-A-ourFeatures{
+        .O-A-groupFeatures{
+            flex-direction: column;
+            align-items: center;
+            .O-A-box{
+                width: 366px;
+                padding: 20px;
+                flex-direction: row;
+                overflow-x: auto;
+                .O-A-styleButton{
+                    flex-shrink: 0;
+                }
+            }
+        }
+    } 
+    
+    .O-A-cardFeaturesStyle{
+        padding: 30px;
+    } 
 
 }
