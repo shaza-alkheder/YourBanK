@@ -1,15 +1,20 @@
-import Hero from "../../components/Layout/Hero/Hero"
-import Container from "../../components/UI/Container/Container"
+
+import "./Home.css"
+import OurFeatures from "../../components/Sections/OurFeatures/OurFeatures"
+import Container from "../../components/UI/container/container"
+
 
 
 function Home() {
   return (
-    <div>
-      <Container>
-        <Hero/>
-      </Container>
-      
-    </div>
+ 
+      <main>
+        <Container>
+          <OurFeatures /> 
+        </Container>
+      </main>
+
+   
   )
 }
 
