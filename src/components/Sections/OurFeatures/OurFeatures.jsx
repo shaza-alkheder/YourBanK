@@ -1,10 +1,37 @@
 // import { MdArrowOutward } from "react-icons/md"
-import Button from "../../Button/Button"
-import TitleDescription from "../../TitleDescription/TitleDescription"
+import Button from "../../UI/Button/Button"
+import TitleDescription from "../../UI/TitleDescription/TitleDescription"
 import Card from "../../UI/Card/Card"
 import "./OurFeatures.css"
+import featuresCardData from "../../../data/FeaturesCardData.json"
+import { useEffect, useState } from "react"
 
 const OurFeatures = () => {
+    const [filter , setFilter] = useState("OnlineBanking")
+
+    localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
+    const featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    const featurescardDataOnline = featurescardData.OnlineBanking
+    const featurescardDataFinancialTools = featurescardData.FinancialTools
+    const featurescardDataCustomerSupport = featurescardData.CustomerSupport
+    
+    useEffect(()=> {
+        const buttons = document.querySelectorAll(".O-A-ourFeatures .O-A-groupFeatures .O-A-box .O-A-styleButton")
+        if (filter === "OnlineBanking") {
+            buttons[0].style.color= "var(--yb-color-primary)"
+            buttons[1].style.color= "var(--yb-color-white)"
+            buttons[2].style.color= "var(--yb-color-white)"
+        }else if(filter === "FinancialTools"){
+            buttons[1].style.color= "var(--yb-color-primary)"
+            buttons[2].style.color= "var(--yb-color-white)"
+            buttons[0].style.color= "var(--yb-color-white)"
+        }else{
+            buttons[2].style.color= "var(--yb-color-primary)"
+            buttons[0].style.color= "var(--yb-color-white)"
+            buttons[1].style.color= "var(--yb-color-white)"
+        }
+    } ,[filter])
+
     return (
         <section className="O-A-ourFeatures">
             <TitleDescription 
@@ -25,65 +52,90 @@ const OurFeatures = () => {
                     <Button 
                         className="O-A-styleButton"
                         content = "Online Banking"
+                        onClick={() => setFilter("OnlineBanking")}
                     />
                     <Button 
                         className="O-A-styleButton"
                         content = "Financial Tools"
+                        onClick={() => setFilter("FinancialTools")}
                     />
                     <Button 
                         className="O-A-styleButton"
                         content = "Customer Support"
+                        onClick={() => setFilter("CustomerSupport")}
                     />
                 </div>
                 <div className="O-A-containerCardFeatures">
-                    <Card
-                        // icon= {<MdArrowOutward />}
-                        imageTitle="/img/Icon.png"
-                        title="24/7 Account Access"
-                        desc="Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
-                        classNames={{
-                        imgTitleDiv : "O-A-headerCardFeatures",
-                        card: "O-A-cardFeaturesStyle",
-                        title: "O-A-titleCardFeatures",
-                        desc : "O-A-descriptionCardFeatures"
-                        }}
-                    /> 
-                    <Card
-                        // icon= {<MdArrowOutward />}
-                        imageTitle="/img/Icon.png"
-                        title="24/7 Account Access"
-                        desc="Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
-                        classNames={{
-                        imgTitleDiv : "O-A-headerCardFeatures",
-                        card: "O-A-cardFeaturesStyle",
-                        title: "O-A-titleCardFeatures",
-                        desc : "O-A-descriptionCardFeatures"
-                        }}
-                    /> 
-                    <Card
-                        // icon= {<MdArrowOutward />}
-                        imageTitle="/img/Icon.png"
-                        title="24/7 Account Access"
-                        desc="Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
-                        classNames={{
-                        imgTitleDiv : "O-A-headerCardFeatures",
-                        card: "O-A-cardFeaturesStyle",
-                        title: "O-A-titleCardFeatures",
-                        desc : "O-A-descriptionCardFeatures"
-                        }}
-                    /> 
-                    <Card
-                        // icon= {<MdArrowOutward />}
-                        imageTitle="/img/Icon.png"
-                        title="24/7 Account Access"
-                        desc="Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
-                        classNames={{
-                        imgTitleDiv : "O-A-headerCardFeatures",
-                        card: "O-A-cardFeaturesStyle",
-                        title: "O-A-titleCardFeatures",
-                        desc : "O-A-descriptionCardFeatures"
-                        }}
-                    /> 
+                    {filter==="OnlineBanking"? (
+                    <>
+                        {
+                            featurescardDataOnline?.map((online , index) => {
+                                return(
+                                    <Card
+                                        key={index}
+                                        // iconTitle= {<MdArrowOutward />}
+                                        imageTitle="/img/Icon.png"
+                                        title= {online.title}
+                                        desc={online.desc}
+                                        classNames={{
+                                        imgTitleDiv : "O-A-headerCardFeatures",
+                                        card: "O-A-cardFeaturesStyle",
+                                        title: "O-A-titleCardFeatures",
+                                        desc : "O-A-descriptionCardFeatures"
+                                        }}
+                                    /> 
+                                )
+                            })
+                        }
+                    </>
+                    )
+                    :filter==="FinancialTools"? (
+                        <>
+                            {
+                                featurescardDataFinancialTools?.map((financial , index) => {
+                                    return(
+                                        <Card
+                                            key={index}
+                                            // iconTitle= {<MdArrowOutward />}
+                                            imageTitle="/img/Icon.png"
+                                            title= {financial.title}
+                                            desc={financial.desc}
+                                            classNames={{
+                                            imgTitleDiv : "O-A-headerCardFeatures",
+                                            card: "O-A-cardFeaturesStyle",
+                                            title: "O-A-titleCardFeatures",
+                                            desc : "O-A-descriptionCardFeatures"
+                                            }}
+                                        /> 
+                                    )
+                                })
+                            }
+                        </>
+                    ):filter==="CustomerSupport"? (
+                        <>
+                            {
+                                featurescardDataCustomerSupport?.map((customer , index) => {
+                                    return(
+                                        <Card
+                                            key={index}
+                                            // iconTitle= {<MdArrowOutward />}
+                                            imageTitle="/img/Icon.png"
+                                            title= {customer.title}
+                                            desc={customer.desc}
+                                            classNames={{
+                                            imgTitleDiv : "O-A-headerCardFeatures",
+                                            card: "O-A-cardFeaturesStyle",
+                                            title: "O-A-titleCardFeatures",
+                                            desc : "O-A-descriptionCardFeatures"
+                                            }}
+                                        /> 
+                                    )
+                                })
+                            }
+                        </>
+                    ):""
+                }
+                
                 </div>
             </div>
         </section>
