@@ -1,17 +1,23 @@
-import FAQ from "../../components/Sections/FAQ/FAQ"
+
 import Container from "../../components/UI/Container/Container"
+
+import "./Home.css"
+import OurFeatures from "../../components/Sections/OurFeatures/OurFeatures"
 
 
 function Home() {
   return (
-    <>
-    <main>
-        <Container>
-       <FAQ/>
 
-      </Container>
-    </main>
-    </>
+    <div>
+      <main>
+        <Container>
+          <OurFeatures /> 
+        </Container>
+            <Container>
+          <OurFeatures /> 
+        </Container>
+      </main>
+    </div>
   )
 }
 
