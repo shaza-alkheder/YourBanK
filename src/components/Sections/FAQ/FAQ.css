@@ -1,0 +1,59 @@
+.S-K-FAQ {
+  display: flex;
+  flex-direction: column;
+  .S-K-FaqCard {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    .S-K-cardFaqStyle {
+      padding: 50px;
+      border-radius: 14px;
+      gap: 30px;
+      border: 1px solid #262626;
+      width: 782.5px;
+      /* width: 629.5px; */
+      .S-K-headerCardFAQ {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #262626;
+        .S-K-titleCardFAQ {
+          font-weight: 500;
+          font-size: 20px;
+          color: #ffffff;
+        }
+      }
+      .S-K-descriptionCardFaq {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        color: #b3b3b3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .S-K-FAQ {
+    .S-K-FaqCard {
+      padding-top: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      .S-K-cardFaqStyle {
+        padding: 40px;
+        border-radius: 10px;
+        gap: 24px;
+        width: 629.5px;
+        .S-K-headerCardFAQ {
+          padding-bottom: 24px;
+          .S-K-titleCardFAQ {
+            font-size: 18px;
+          }
+        }
+        .S-K-descriptionCardFaq {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
