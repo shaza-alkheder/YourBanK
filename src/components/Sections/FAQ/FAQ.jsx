@@ -1,8 +1,25 @@
+import { useState } from "react";
+import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 import TitleDescription from "../../UI/TitleDescription/TitleDescription";
 import "./FAQ.css";
+import FaqCardData from "../../../data/FaqCardData.json";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const FAQ = () => {
+  const [loadAll, setLoadAll] = useState(false);
+  const [faqs] = useState(() => {
+    const FaqStored = localStorage.getItem("faqs");
+
+    if (FaqStored) {
+      return JSON.parse(FaqStored);
+    }
+
+    localStorage.setItem("faqs", JSON.stringify(FaqCardData));
+    return FaqCardData;
+  });
+
+  const loadFaq = loadAll ? faqs : faqs.slice(0, 4);
   return (
     <>
       <section className="S-K-FAQ">
@@ -21,51 +38,43 @@ const FAQ = () => {
         />
 
         <div className="S-K-FaqCard">
-         <Card
-            title="How do I open an account with YourBank?"
-            desc="Opening an account with YourBank is easy. Simply visit our website and click on the 'Open an Account' button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help."
+        {
+            loadFaq.map((faq)  => (
+               <Card 
+                key={faq.id}
+            title={faq.question}
+            desc={faq.answer}
             classNames={{
               imgTitleDiv: "S-K-headerCardFAQ",
               card: "S-K-cardFaqStyle",
               title: "S-K-titleCardFAQ",
               desc: "S-K-descriptionCardFaq",
             }}
-            
           />
-            <Card
-            title="How do I open an account with YourBank?"
-            desc="Opening an account with YourBank is easy. Simply visit our website and click on the 'Open an Account' button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help."
-            classNames={{
-              imgTitleDiv: "S-K-headerCardFAQ",
-              card: "S-K-cardFaqStyle",
-              title: "S-K-titleCardFAQ",
-              desc: "S-K-descriptionCardFaq",
-            }}
-            
-          />
-             <Card
-            title="How do I open an account with YourBank?"
-            desc="Opening an account with YourBank is easy. Simply visit our website and click on the 'Open an Account' button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help."
-            classNames={{
-              imgTitleDiv: "S-K-headerCardFAQ",
-              card: "S-K-cardFaqStyle",
-              title: "S-K-titleCardFAQ",
-              desc: "S-K-descriptionCardFaq",
-            }}
-            
-          />
-           <Card
-            title="How do I open an account with YourBank?"
-            desc="Opening an account with YourBank is easy. Simply visit our website and click on the 'Open an Account' button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help."
-            classNames={{
-              imgTitleDiv: "S-K-headerCardFAQ",
-              card: "S-K-cardFaqStyle",
-              title: "S-K-titleCardFAQ",
-              desc: "S-K-descriptionCardFaq",
-            }}
-            
-          />
+          ))
+        }
+       
+      
         </div>
+
+        <Button
+          className="S-K-styleButton"
+          content={
+            loadAll ?
+            <>
+              <span>See Less  </span>
+              <MdKeyboardArrowUp />
+
+            </>
+            :
+                <>
+              <span>Load All FAQ’s </span>
+              <MdKeyboardArrowDown />
+
+            </>
+          }
+          onClick={() => setLoadAll(!loadAll)}
+        />
       </section>
     </>
   );
