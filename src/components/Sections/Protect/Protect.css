@@ -1,0 +1,156 @@
+.S-K-Protect {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  gap: 58px;
+  .S-K-ProdectCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 62px;
+    background:
+      linear-gradient(
+        267.5deg,
+        var(--yb-color-dark-2) 40.67%,
+        rgba(28, 28, 28, 0) 99.81%
+      ),
+      linear-gradient(
+        106.06deg,
+        rgba(202, 255, 51, 0.05) -29.45%,
+        rgba(202, 255, 51, 0) 27.86%
+      );
+    max-width: 1269px;
+    height: 549px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    gap: 20px;
+    opacity: 1;
+    padding-right: 80px;
+    padding-left: 80px;
+    .S-K-cardProtectStyle {
+      max-width: 550px;
+      height: 296px;
+      gap: 20px;
+      border-width: 1px;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--yb-color-dark-3);
+      background:
+        linear-gradient(
+          267.5deg,
+          var(--yb-color-dark-2) 40.67%,
+          rgba(28, 28, 28, 0) 99.81%
+        ),
+        linear-gradient(
+          106.06deg,
+          rgba(202, 255, 51, 0.05) -29.45%,
+          rgba(202, 255, 51, 0) 27.86%
+        );
+      .S-K-headerCardProtect {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+
+        .S-K-titleIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          order: 1;
+          width: 76px;
+          height: 76px;
+          gap: 10px;
+          padding: 8px;
+          border-radius: 70px;
+          background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.05) 0%,
+            rgba(202, 255, 51, 0) 100%
+          );
+
+          .borderImage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            gap: 10px;
+            border-width: 1px;
+            padding: 16px;
+            border-radius: 50px;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            border: 1px solid;
+
+            border-image-source: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.2) -173.65%,
+              rgba(202, 255, 51, 0) 87.22%
+            );
+          }
+        }
+        .S-K-titleCardProtect {
+          order: 2;
+          font-weight: var(--yb-font-weight-rg);
+          font-size: var(--yb-font-size-title-md);
+          line-height: 150%;
+          color: var(--yb-color-white);
+        }
+      }
+      .S-K-descriptionCardProtect {
+        font-weight: var(--yb-font-weight-lt);
+        font-size: var(--yb-font-size-body-md);
+        line-height: 150%;
+        color: var(--yb-color-text-secondary);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .S-K-Protect {
+    gap: 40px;
+    padding-bottom: 0;
+    .S-K-ProdectCard {
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 0;
+      height: auto;
+      justify-items: center;
+      .S-K-cardProtectStyle {
+        width: 100%;
+        gap: 18px;
+        padding: 24px;
+        max-width: fit-content;
+        .S-K-headerCardProtect {
+          gap: 14px;
+
+          .S-K-titleIcon {
+            width: 68px;
+            height: 68px;
+
+            .borderImage {
+              width: 52px;
+              height: 52px;
+              .iconImage {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          .S-K-titleCardProtect {
+            font-size: var(--yb-font-size-title-sm);
+          }
+        }
+        .S-K-descriptionCardProtect {
+          font-size: var(--yb-font-size-body-sm);
+        }
+      }
+    }
+  }
+}
