@@ -27,7 +27,7 @@
         .O-A-containerCardFeatures{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            /* justify-content: center; */
             gap: 20px;
         }
     }
@@ -44,11 +44,14 @@
 }
 
 .O-A-cardFeaturesStyle{
-    max-width: 497px;
+    width: 497px;
+    max-width: 800px;
     padding: 40px;
     border: 1px solid var(--yb-color-dark-3);
     background-color: var(--yb-color-dark-2);
     border-radius: 10px;
+    flex-grow: 1;
+    align-self: flex-start;
     svg{
         color: var(--yb-color-primary);
         font-size: 24px;
@@ -95,6 +98,7 @@
     } 
     
     .O-A-cardFeaturesStyle{
+        width: 100%;
         max-width: 100%;
         padding: 30px;
     } 
