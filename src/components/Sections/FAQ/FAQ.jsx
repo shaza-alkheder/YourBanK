@@ -37,7 +37,7 @@ const FAQ = () => {
           description="Still you have any questions? Contact our Team via support@yourbank.com"
         />
 
-        <div className="S-K-FaqCard">
+        <div className={`S-K-FaqCard ${!loadAll ? "S-K-FaqCard-collapsed" : ""}`}>
         {
             loadFaq.map((faq)  => (
                <Card 
