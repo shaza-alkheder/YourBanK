@@ -37,7 +37,7 @@ function Nav({logo}) {
       <HiMenuAlt3 
       onClick={()=>{setShow(!show)}}
       />
-       </div>
+      </div>
     
     </nav>
     <div className={`navMenu ${show ? "show" : ""}`}>
