@@ -1,57 +1,41 @@
-.S-K-Protect {
+.S-K-Benefits {
   display: flex;
   flex-direction: column;
-  padding-bottom: 80px;
-  gap: 58px;
-  .S-K-ProdectCard {
+  gap: 60px;
+  .S-K-BenefitsCard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 62px;
-    background:
-      linear-gradient(
-        267.5deg,
-        var(--yb-color-dark-2) 40.67%,
-        rgba(28, 28, 28, 0) 99.81%
-      ),
-      linear-gradient(
-        106.06deg,
-        rgba(202, 255, 51, 0.05) -29.45%,
-        rgba(202, 255, 51, 0) 27.86%
-      );
-    max-width: 1269px;
-    height: 549px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-
-    gap: 20px;
-    padding-right: 80px;
-    padding-left: 80px;
-    .S-K-cardProtectStyle {
-      max-width: 550px;
-      height: 296px;
-      gap: 20px;
+    gap: 30px;
+    .S-K-cardBenefitsStyle {
+      width: 610px;
+      height: 276px;
       border-width: 1px;
       padding: 40px;
-      border-radius: 20px;
-      border: 1px solid var(--yb-color-dark-3);
+      gap: 24px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 14px;
       background:
-        linear-gradient(
-          267.5deg,
-          var(--yb-color-dark-2) 40.67%,
-          rgba(28, 28, 28, 0) 99.81%
-        ),
+        linear-gradient(267.5deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
         linear-gradient(
           106.06deg,
           rgba(202, 255, 51, 0.05) -29.45%,
           rgba(202, 255, 51, 0) 27.86%
         );
-      .S-K-headerCardProtect {
+      border: 1px solid;
+
+      border-image-source: linear-gradient(
+        280.49deg,
+        rgba(202, 255, 51, 0.1) 0%,
+        rgba(38, 38, 38, 0) 17.02%,
+        rgba(38, 38, 38, 0) 68.88%,
+        rgba(38, 38, 38, 0.8) 100%
+      );
+
+      .S-K-headerCardBenefits {
         display: flex;
         align-items: center;
-        gap: 23px;
-
         .S-K-titleIcon {
           display: flex;
           justify-content: center;
@@ -92,7 +76,7 @@
             );
           }
         }
-        .S-K-titleCardProtect {
+        .S-K-titleCardBenefits {
           order: 2;
           font-weight: var(--yb-font-weight-rg);
           font-size: var(--yb-font-size-title-md);
@@ -100,7 +84,7 @@
           color: var(--yb-color-white);
         }
       }
-      .S-K-descriptionCardProtect {
+      .S-K-descriptionCardBenefits {
         font-weight: var(--yb-font-weight-lt);
         font-size: var(--yb-font-size-body-md);
         line-height: 150%;
@@ -111,43 +95,22 @@
 }
 
 @media screen and (max-width: 992px) {
-  .S-K-Protect {
-    gap: 40px;
-    padding-bottom: 0;
-    .S-K-ProdectCard {
+  .S-K-Benefits {
+    .S-K-BenefitsCard {
       grid-template-columns: repeat(1, 1fr);
-      padding-right: 0;
-      padding-left: 0;
-      padding-top: 0;
-      height: auto;
-      justify-items: center;
-      .S-K-cardProtectStyle {
+
+      .S-K-cardBenefitsStyle {
         width: 100%;
-        gap: 18px;
-        padding: 24px;
         max-width: fit-content;
-        .S-K-headerCardProtect {
-          gap: 14px;
-
+        .S-K-headerCardBenefits {
           .S-K-titleIcon {
-            width: 68px;
-            height: 68px;
-
             .borderImage {
-              width: 52px;
-              height: 52px;
-              .iconImage {
-                width: 24px;
-                height: 24px;
-              }
             }
           }
-          .S-K-titleCardProtect {
-            font-size: var(--yb-font-size-title-sm);
+          .S-K-titleCardBenefits {
           }
         }
-        .S-K-descriptionCardProtect {
-          font-size: var(--yb-font-size-body-sm);
+        .S-K-descriptionCardBenefits {
         }
       }
     }

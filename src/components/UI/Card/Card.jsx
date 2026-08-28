@@ -1,13 +1,13 @@
 import "./Card.css";
-const Card = ({ image, icon, titleIcon, title, desc, classNames = {} }) => {
+const Card = ({ image=null, icon, titleIcon, title, desc, classNames = {} }) => {
   return (
     <>
       <div className={`skCard ${classNames.card || ""}`}>
         {image ? (
           <div className={` ${classNames.imageDiv || ""}`}>
             <img
-              src={image}
-              alt={title || ""}
+              src={image.path}
+              alt={image.altImg || ""}
               className={` ${classNames.image || ""}`}
             />
           </div>
