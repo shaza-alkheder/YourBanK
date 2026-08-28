@@ -1,0 +1,94 @@
+.O-A-ourProduct{
+    .O-A-headerOurProduct{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        .O-A-titleOurProduct{
+            max-width: 831px;
+        }
+        .O-A-boxButtonsOurProduct{
+            max-width: 300px;
+            height: 65px;
+            padding: 12px;
+            background-color: var(--yb-color-dark-2);
+            border: 1px solid var(--yb-color-dark-3);
+            border-radius: 82px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+            .O-A-styleButtonOurProduct{
+                width: 136px;
+                height: 41px;
+                border: none;
+                background-color:var(--yb-color-dark-1); 
+                color:var(--yb-color-white);
+                cursor: pointer;
+                &:hover{
+                    width: 139px;
+                    color:var(--yb-color-dark-2);
+                    background-color: var(--yb-color-primary);
+                }
+            }
+        }
+    }
+    .O-A-boxCardsOurProduct{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .O-A-cardStyleOueProduct{
+            max-width: 373px;
+            height: 262px;
+            background-color: var(--yb-color-dark-2);
+            border: 1px solid var(--yb-color-dark-3);
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            .O-A-titleCardOurProduct{
+                margin-top: 24px;
+                margin-bottom: 16px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: var(--yb-color-white);
+            }
+            .O-A-descCardOurProduct{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--yb-color-text-secondary);
+            }
+        }
+    }
+}
+
+.O-A-active{
+    color:var(--yb-color-dark-2) !important;
+    background-color: var(--yb-color-primary) !important;
+}
+
+@media screen and (max-width:992px) {
+    .O-A-ourProduct{
+        .O-A-headerOurProduct{
+            flex-direction: column;
+            gap: 20px;
+            .O-A-titleOurProduct{
+                max-width: 100%;
+            }
+            .O-A-boxButtonsOurProduct{
+                align-self: center;
+            }
+        }
+        .O-A-boxCardsOurProduct{
+            flex-wrap: nowrap;
+            flex-direction: column;
+            .O-A-cardStyleOueProduct{
+                max-width: 100%;
+                height: max-content;
+            }
+        }
+    }
+}
