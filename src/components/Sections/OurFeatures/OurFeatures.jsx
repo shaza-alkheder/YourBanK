@@ -18,6 +18,7 @@ const OurFeatures = () => {
     const featurescardDataOnline = featurescardData.OnlineBanking
     const featurescardDataFinancialTools = featurescardData.FinancialTools
     const featurescardDataCustomerSupport = featurescardData.CustomerSupport
+    console.log(featurescardData)
     
     useEffect(()=> {
         const buttons = document.querySelectorAll(".O-A-ourFeatures .O-A-groupFeatures .O-A-box .O-A-styleButton")
