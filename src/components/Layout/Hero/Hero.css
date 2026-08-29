@@ -1,7 +1,6 @@
 
 .MGhome-hero{
     margin-top: 50px;
-    padding-top: 100px;
     margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +69,7 @@
     
     .MGhome-hero{
     margin-top: 30px;
-    padding-top : 60px ;
+    /*padding-top : 60px ;*/
 
     }
 

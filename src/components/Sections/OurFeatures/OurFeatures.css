@@ -1,51 +1,51 @@
 .O-A-ourFeatures{
+    .O-A-titleOurFeatures{
+        max-width: 1296px;
+    }
     .O-A-groupFeatures{
         margin-top: 32px;
         display: flex;
-        gap: 20px;
+        gap: 30px;
         .O-A-box{
-            height: 267px;
-            padding: 40px;
+            height: 373px;
+            padding: 50px;
             background-color: var(--yb-color-dark-2);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             gap: 20px;
             .O-A-styleButton{
-                width: 165px;
-                height: 50px;
+                width: 208px;
+                height: 63px;
                 background-color:var(--yb-color-dark-1); 
                 color:var(--yb-color-white);
                 border: 1px solid var(--yb-color-dark-3);
                 cursor: pointer;
                 &:hover{
-                    color:var(--yb-color-primary);
+                    color:var(--yb-color-primary) !important;
                 }
             } 
 
         }
         .O-A-containerCardFeatures{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
     }
 }
 
 
-
-
 .O-A-headerCardFeatures{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 31px;
 }
 
 .O-A-cardFeaturesStyle{
-    max-width: 497px;
-    padding: 40px;
+    max-width: 614px;
+    padding: 50px;
     border: 1px solid var(--yb-color-dark-3);
     background-color: var(--yb-color-dark-2);
     border-radius: 10px;
@@ -62,19 +62,48 @@
 
 .O-A-titleCardFeatures{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 150%;
 }
 
 .O-A-descriptionCardFeatures{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     letter-spacing: -0.6%;
     color: var(--yb-color-text-secondary);
 }
 
-
+@media screen and (max-width:1440px) {
+    .O-A-ourFeatures{
+        .O-A-titleOurFeatures{
+            max-width: 1030px;
+        }
+        .O-A-groupFeatures{
+            gap: 20px;
+            .O-A-box{
+                height: 267px;
+                padding: 40px;
+                .O-A-styleButton{
+                    width: 165px;
+                    height: 50px;
+                }    
+            }
+        }  
+    } 
+    .O-A-headerCardFeatures{
+        margin-bottom: 24px;
+    }
+    .O-A-cardFeaturesStyle{
+        padding: 40px;
+    }  
+    .O-A-titleCardFeatures{
+        font-size: 18px;
+    } 
+    .O-A-descriptionCardFeatures{
+        font-size: 16px;
+    }  
+}
 
 @media screen and (max-width:992px) {
     .O-A-ourFeatures{
@@ -82,7 +111,7 @@
             flex-direction: column;
             align-items: center;
             .O-A-box{
-                width: 366px;
+                width: 100%;
                 height: 95px;
                 padding: 20px;
                 flex-direction: row;
@@ -91,11 +120,24 @@
                     flex-shrink: 0;
                 }
             }
+            .O-A-containerCardFeatures{
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     } 
-    
+    .O-A-headerCardFeatures{
+        margin-bottom: 20px;
+    }
     .O-A-cardFeaturesStyle{
+        width: 100%;
+        max-width: 100%;
         padding: 30px;
     } 
+    .O-A-titleCardFeatures{
+        font-size: 18px;
+    } 
+    .O-A-descriptionCardFeatures{
+        font-size: 14px;
+    }  
 
 }

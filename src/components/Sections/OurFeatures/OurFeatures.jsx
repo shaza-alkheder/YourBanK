@@ -9,11 +9,16 @@ import { useEffect, useState } from "react"
 const OurFeatures = () => {
     const [filter , setFilter] = useState("OnlineBanking")
 
-    localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
-    const featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    let featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    if (featurescardData === null) {
+        localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
+        featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    }
+    
     const featurescardDataOnline = featurescardData.OnlineBanking
     const featurescardDataFinancialTools = featurescardData.FinancialTools
     const featurescardDataCustomerSupport = featurescardData.CustomerSupport
+    console.log(featurescardData)
     
     useEffect(()=> {
         const buttons = document.querySelectorAll(".O-A-ourFeatures .O-A-groupFeatures .O-A-box .O-A-styleButton")
@@ -35,6 +40,7 @@ const OurFeatures = () => {
     return (
         <section className="O-A-ourFeatures">
             <TitleDescription 
+                className ="O-A-titleOurFeatures" 
                 titleParts={[    
                     {
                         text: "Our",

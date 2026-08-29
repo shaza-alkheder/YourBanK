@@ -1,8 +1,17 @@
+import Benefits from "../../components/Sections/Benefits/Benefits"
+import Container from "../../components/UI/Container/Container"
 
 
 function Careers() {
   return (
-   <div></div>
+   <>
+   <main>
+     <Container>
+          <Benefits /> 
+        </Container>
+   </main>
+   
+   </>
   )
 }
 
