@@ -34,6 +34,7 @@
         line-height: 150%;
         color: var(--yb-color-text-secondary);
         height: 100%;
+        opacity: 0.6;
       }
     }
     &.S-K-FaqCard-collapsed {
@@ -86,7 +87,7 @@
           filter: none;
         }
         .S-K-descriptionCardFaq {
-          opacity: 0.4;
+          opacity: 0.3;
           filter: blur(0.5px);
 
           -webkit-mask-image: linear-gradient(
@@ -168,7 +169,7 @@
   }
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1440px) {
   .S-K-FAQ {
     .S-K-FaqCard {
       padding-top: 80px;
