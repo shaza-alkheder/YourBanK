@@ -1,25 +1,28 @@
 .O-A-ourFeatures{
+    .O-A-titleOurFeatures{
+        max-width: 1200px;
+    }
     .O-A-groupFeatures{
         margin-top: 32px;
         display: flex;
-        gap: 20px;
+        gap: 30px;
         .O-A-box{
-            height: 267px;
-            padding: 40px;
+            height: 373px;
+            padding: 50px;
             background-color: var(--yb-color-dark-2);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             gap: 20px;
             .O-A-styleButton{
-                width: 165px;
-                height: 50px;
+                width: 208px;
+                height: 63px;
                 background-color:var(--yb-color-dark-1); 
                 color:var(--yb-color-white);
                 border: 1px solid var(--yb-color-dark-3);
                 cursor: pointer;
                 &:hover{
-                    color:var(--yb-color-primary);
+                    color:var(--yb-color-primary) !important;
                 }
             } 
 
@@ -32,16 +35,17 @@
     }
 }
 
+
 .O-A-headerCardFeatures{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 31px;
 }
 
 .O-A-cardFeaturesStyle{
     max-width: 614px;
-    padding: 40px;
+    padding: 50px;
     border: 1px solid var(--yb-color-dark-3);
     background-color: var(--yb-color-dark-2);
     border-radius: 10px;
@@ -58,40 +62,43 @@
 
 .O-A-titleCardFeatures{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 150%;
 }
 
 .O-A-descriptionCardFeatures{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     letter-spacing: -0.6%;
     color: var(--yb-color-text-secondary);
 }
 
-@media screen and (min-width:1441px) {
+@media screen and (max-width:1440px) {
     .O-A-ourFeatures{
         .O-A-groupFeatures{
-            gap: 30px;
+            gap: 20px;
             .O-A-box{
-                height: 373px;
-                padding: 50px;
+                height: 267px;
+                padding: 40px;
                 .O-A-styleButton{
-                    width: 208px;
-                    height: 63px;
+                    width: 165px;
+                    height: 50px;
                 }    
             }
         }  
     } 
+    .O-A-headerCardFeatures{
+        margin-bottom: 24px;
+    }
     .O-A-cardFeaturesStyle{
-        padding: 50px;
+        padding: 40px;
     }  
     .O-A-titleCardFeatures{
-        font-size: 22px;
+        font-size: 18px;
     } 
     .O-A-descriptionCardFeatures{
-        font-size: 18px;
+        font-size: 16px;
     }  
 }
 
@@ -115,10 +122,19 @@
             }
         }
     } 
+    .O-A-headerCardFeatures{
+        margin-bottom: 20px;
+    }
     .O-A-cardFeaturesStyle{
         width: 100%;
         max-width: 100%;
         padding: 30px;
     } 
+    .O-A-titleCardFeatures{
+        font-size: 18px;
+    } 
+    .O-A-descriptionCardFeatures{
+        font-size: 14px;
+    }  
 
 }

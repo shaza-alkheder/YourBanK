@@ -1,13 +1,13 @@
 .O-A-container{
-    padding-left: var(--yb-spacing-x-md);
-    padding-right: var(--yb-spacing-x-md);
-    margin-bottom: var(--yb-spacing-y-md);
+    padding-left: var(--yb-spacing-x-lg);
+    padding-right: var(--yb-spacing-x-lg);
+    margin-bottom: var(--yb-spacing-y-lg);
 }
-@media screen and (min-width:1441px) {
+@media screen and (max-width:1440px) {
     .O-A-container{
-        padding-left: var(--yb-spacing-x-lg);
-        padding-right: var(--yb-spacing-x-lg);
-        margin-bottom: var(--yb-spacing-y-lg);
+        padding-left: var(--yb-spacing-x-md);
+        padding-right: var(--yb-spacing-x-md);
+        margin-bottom: var(--yb-spacing-y-md);
     }
 }
 @media screen and (max-width:992px) {

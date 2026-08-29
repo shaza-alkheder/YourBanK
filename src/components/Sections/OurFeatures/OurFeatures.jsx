@@ -40,6 +40,7 @@ const OurFeatures = () => {
     return (
         <section className="O-A-ourFeatures">
             <TitleDescription 
+                className ="O-A-titleOurFeatures" 
                 titleParts={[    
                     {
                         text: "Our",
