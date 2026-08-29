@@ -12,7 +12,7 @@
 
     .DS_title {
         font-size: clamp(var(--yb-font-size-heading-md), 2.5vw, var(--yb-font-size-heading-lg));
-        line-height: 1.5;
+        line-height: 1.5; 
         word-break: break-word;
         font-weight:var(--yb-font-weight-md); 
     }
