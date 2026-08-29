@@ -22,8 +22,7 @@ function Home() {
         <Container>
           <Testimonials/>
         </Container>
-        
-           <Container>
+          <Container>
           <CTA /> 
         </Container>
       </main>

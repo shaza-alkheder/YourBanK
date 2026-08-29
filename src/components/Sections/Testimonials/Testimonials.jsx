@@ -121,8 +121,8 @@ const Testimonials = () => {
                 </div>
 
                 <div className="DS_arrows"> 
-                    <button className="DS_Arrow" onClick={handlePrev}><FaArrowLeft /></button>
-                    <button className="DS_Arrow" onClick={handleNext}><FaArrowRight /></button>              
+                    <button className="DS_Arrow" onClick={handlePrev}><FaArrowLeft className="DS_FaArrow"/></button>
+                    <button className="DS_Arrow" onClick={handleNext}><FaArrowRight  className="DS_FaArrow"/></button>              
                 </div>
             </div>
         </div>
