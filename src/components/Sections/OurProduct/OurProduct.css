@@ -2,14 +2,14 @@
     .O-A-headerOurProduct{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 80px;
+        margin-bottom: 100px;
         .O-A-titleOurProduct{
             max-width: 831px;
         }
         .O-A-boxButtonsOurProduct{
-            max-width: 300px;
-            height: 65px;
-            padding: 12px;
+            max-width: 386px;
+            height:83px;
+            padding: 14px;
             background-color: var(--yb-color-dark-2);
             border: 1px solid var(--yb-color-dark-3);
             border-radius: 82px;
@@ -18,14 +18,14 @@
             align-items: center;
             align-self: flex-end;
             .O-A-styleButtonOurProduct{
-                width: 136px;
-                height: 41px;
+                width: 177px;
+                height: 55px;
                 border: none;
                 background-color:var(--yb-color-dark-1); 
                 color:var(--yb-color-white);
                 cursor: pointer;
                 &:hover{
-                    width: 139px;
+                    width: 181px;
                     color:var(--yb-color-dark-2);
                     background-color: var(--yb-color-primary);
                 }
@@ -38,26 +38,75 @@
         align-items: center;
         flex-wrap: wrap;
         .O-A-cardStyleOueProduct{
-            max-width: 373px;
-            height: 262px;
-            background-color: var(--yb-color-dark-2);
-            border: 1px solid var(--yb-color-dark-3);
-            border-radius: 10px;
+            max-width: 465px;
+            height: 319px;
+            /* background-color: var(--yb-color-dark-2);
+            border: 1px solid var(--yb-color-dark-3); */
+            /* border-radius: 10px; */
             text-align: center;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: start;
+            .O-A-borderIconCardOurProduct {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* width: 76px;
+                height: 76px; */
+                width: 98px;
+                height: 98px;
+                /* gap: 10px;
+                padding: 8px; */
+                /* gap: 20px; */
+                padding: 12px;
+                /* border-radius: 70px; */
+                border-radius: 50%;
+                background: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.05) 0%,
+                    rgba(202, 255, 51, 0) 100%
+                );
+
+                .O-A-borderImage {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    /* width: 60px;
+                    height: 60px; */
+                    width: 74px;
+                    height: 74px;
+                    /* gap: 10px; */
+                    border-width: 1px;
+                    /* padding: 16px; */
+                    padding: 20px;
+                    /* border-radius: 50px; */
+                    border-radius: 50%;
+                    background: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.1) -66.22%,
+                    rgba(202, 255, 51, 0) 85.46%
+                    );
+                    border: 1px solid;
+
+                    border-image-source: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.2) -173.65%,
+                    rgba(202, 255, 51, 0) 87.22%
+                    );
+                }
+            }
             .O-A-titleCardOurProduct{
-                margin-top: 24px;
-                margin-bottom: 16px;
+                margin-top: 30px;
+                margin-bottom: 20px;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 24px;
                 line-height: 150%;
                 color: var(--yb-color-white);
             }
             .O-A-descCardOurProduct{
                 font-weight: 300;
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 150%;
                 color: var(--yb-color-text-secondary);
             }
@@ -68,6 +117,44 @@
 .O-A-active{
     color:var(--yb-color-dark-2) !important;
     background-color: var(--yb-color-primary) !important;
+}
+
+@media screen and (max-width:1440px) {
+    .O-A-ourProduct{
+        .O-A-headerOurProduct{
+            margin-bottom: 80px;
+            .O-A-titleOurProduct{
+                max-width: 910px;
+            }
+            .O-A-boxButtonsOurProduct{
+                max-width: 300px;
+                height: 65px;
+                padding: 12px;
+                .O-A-styleButtonOurProduct{
+                    width: 136px;
+                    height: 41px;
+                    &:hover{
+                        width: 139px;
+                    }
+                }
+            }
+        }
+        .O-A-boxCardsOurProduct{
+            .O-A-cardStyleOueProduct{
+                max-width: 373px;
+                height: 262px;
+                .O-A-titleCardOurProduct{
+                    margin-top: 24px;
+                    margin-bottom: 16px;
+                    font-size: 20px;
+                }
+                .O-A-descCardOurProduct{
+                    font-size: 16px;
+                }
+            }
+            
+        }
+    }        
 }
 
 @media screen and (max-width:992px) {
@@ -85,9 +172,19 @@
         .O-A-boxCardsOurProduct{
             flex-wrap: nowrap;
             flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
             .O-A-cardStyleOueProduct{
                 max-width: 100%;
                 height: max-content;
+                .O-A-titleCardOurProduct{
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                }
+                .O-A-descCardOurProduct{
+                    font-size: 14px;
+                }
             }
         }
     }

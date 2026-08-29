@@ -55,31 +55,34 @@ const OurProduct = () => {
                         <Card
                             title= "Checking Accounts"
                             desc="Enjoy easy and convenient access to your funds with our range of checking account options. Benefit from features such as online and mobile banking, debit cards, and free ATM access."
-                            image = "/assets/img/HomePage/IconCardProduct1.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct1.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
                         <Card
                             title= "Savings Accounts"
                             desc="Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you."
-                            image = "/assets/img/HomePage/IconCardProduct2.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct2.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
                         <Card
                             title= "Loans and Mortgages"
                             desc="Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need."
-                            image = "/assets/img/HomePage/IconCardProduct3.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct3.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         />
                     </>
@@ -89,31 +92,34 @@ const OurProduct = () => {
                         <Card
                             title= "Lorem ipsum dolor sit."
                             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, illo ipsa voluptatibus cumque quia maiores perferendis deserunt delectus. Saepe, impedit."
-                            image = "/assets/img/HomePage/IconCardProduct1.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct2.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
                         <Card
                             title= "Lorem ipsum dolor sit."
                             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, illo ipsa voluptatibus cumque quia maiores perferendis deserunt delectus. Saepe, impedit."
-                            image = "/assets/img/HomePage/IconCardProduct2.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct3.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
                         <Card
                             title= "Lorem ipsum dolor sit."
                             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, illo ipsa voluptatibus cumque quia maiores perferendis deserunt delectus. Saepe, impedit."
-                            image = "/assets/img/HomePage/IconCardProduct3.webp"
+                            icon = {<div className="O-A-borderImage"><img src="/assets/img/HomePage/IconCardProduct1.webp"  className="O-A-imageOurProduct"/></div>}
                             classNames={{
                             card: "O-A-cardStyleOueProduct",
                             title: "O-A-titleCardOurProduct",
-                            desc : "O-A-descCardOurProduct"
+                            desc : "O-A-descCardOurProduct",
+                            icon : "O-A-borderIconCardOurProduct"
                             }}
                         />
                     </>
