@@ -17,10 +17,10 @@
         106.06deg,
         rgba(202, 255, 51, 0.05) -29.45%,
         rgba(202, 255, 51, 0) 27.86%
-      );
+      ),
+      url("/assets/img/SecurityPage/lg-bg.webp");
     max-width: 1593px;
     height: 631px;
-
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 20px;
@@ -28,6 +28,8 @@
     gap: 30px;
     padding-right: 93px;
     padding-left: 93px;
+    position: relative;
+    z-index: 1;
     .S-K-cardProtectStyle {
       max-width: 688px;
       width: 100%;
@@ -42,8 +44,12 @@
           106.06deg,
           rgba(202, 255, 51, 0.05) -29.45%,
           rgba(202, 255, 51, 0) 27.86%
-        );
+        ),
+        url("/assets/img/SecurityPage/bg.webp");
       border: 1px solid #262626;
+      position: relative;
+      z-index: 2;
+      /* opacity: 50%; */
       .S-K-headerCardProtect {
         display: flex;
         align-items: center;
