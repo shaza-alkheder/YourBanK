@@ -5,6 +5,7 @@ import "./Home.css"
 import OurFeatures from "../../components/Sections/OurFeatures/OurFeatures"
 import FAQ from "../../components/Sections/FAQ/FAQ"
 import CTA from "../../components/Sections/CTA/CTA"
+import Testimonials from "../../components/Sections/Testimonials/Testimonials"
 
 
 function Home() {
@@ -18,7 +19,10 @@ function Home() {
             <Container>
           <FAQ /> 
         </Container>
-           <Container>
+        <Container>
+          <Testimonials/>
+        </Container>
+          <Container>
           <CTA /> 
         </Container>
       </main>
