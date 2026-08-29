@@ -47,7 +47,19 @@ function Nav({logo}) {
           <li><NavLink to = "/careers" className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
           <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
         </ul>
-      
+        
+      <div className = "MGmobile-buttons">
+        <Button
+        className = "MGsignup-mobile"
+        content = "Sign Up "
+        onClick = {()=>navigate("/signup")}
+        />
+
+        <Button
+        className="MGlogin-mobile"
+        content = "Login" 
+        onClick={()=>navigate("/login")}/>
+      </div>
     </div>
 
 
