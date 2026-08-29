@@ -39,14 +39,18 @@
       border-width: 1px;
       padding: 46px;
       background:
-        linear-gradient(267.5deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
+        linear-gradient(
+          267.5deg,
+          var(--yb-color-dark-2) 40.67%,
+          rgba(28, 28, 28, 0) 99.81%
+        ),
         linear-gradient(
           106.06deg,
           rgba(202, 255, 51, 0.05) -29.45%,
           rgba(202, 255, 51, 0) 27.86%
         ),
         url("/assets/img/SecurityPage/bg.webp");
-      border: 1px solid #262626;
+      border: 1px solid var(--yb-color-dark-3);
       position: relative;
       z-index: 2;
       /* opacity: 50%; */
@@ -95,17 +99,17 @@
         }
         .S-K-titleCardProtect {
           order: 2;
-          font-weight: 400;
-          font-size: 24px;
+          font-weight: var(--yb-font-weight-rg);
+          font-size: var(--yb-font-size-title-lg);
           line-height: 150%;
-          color: #ffffff;
+          color: var(--yb-color-white);
         }
       }
       .S-K-descriptionCardProtect {
-        font-weight: 300;
-        font-size: 18px;
+        font-weight: var(--yb-font-weight-lt);
+        font-size: var(--yb-font-size-body-lg);
         line-height: 150%;
-        color: #b3b3b3;
+        color: var(--yb-color-text-secondary);
       }
     }
   }
@@ -145,11 +149,11 @@
             }
           }
           .S-K-titleCardProtect {
-            font-size: 20px;
+            font-size: var(--yb-font-size-title-md);
           }
         }
         .S-K-descriptionCardProtect {
-          font-size: 16px;
+          font-size: var(--yb-font-size-body-md);
         }
       }
     }
