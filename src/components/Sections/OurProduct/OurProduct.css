@@ -4,7 +4,7 @@
         justify-content: space-between;
         margin-bottom: 100px;
         .O-A-titleOurProduct{
-            max-width: 831px;
+            max-width: 910px;
         }
         .O-A-boxButtonsOurProduct{
             max-width: 386px;
@@ -36,13 +36,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        gap: 2px;
         .O-A-cardStyleOueProduct{
             max-width: 465px;
             height: 319px;
-            /* background-color: var(--yb-color-dark-2);
-            border: 1px solid var(--yb-color-dark-3); */
-            /* border-radius: 10px; */
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -111,6 +108,11 @@
                 color: var(--yb-color-text-secondary);
             }
         }
+        .O-A-line{
+            height: 319px;
+            width: 1px;
+            background-color: var(--yb-color-dark-3);
+        }
     }
 }
 
@@ -124,7 +126,7 @@
         .O-A-headerOurProduct{
             margin-bottom: 80px;
             .O-A-titleOurProduct{
-                max-width: 910px;
+                max-width: 831px;
             }
             .O-A-boxButtonsOurProduct{
                 max-width: 300px;
@@ -151,8 +153,23 @@
                 .O-A-descCardOurProduct{
                     font-size: 16px;
                 }
+                .O-A-borderIconCardOurProduct {
+                    width: 72px;
+                    height: 72px;
+                    padding: 8px;
+                    .O-A-borderImage {
+                        width: 56px;
+                        height: 56px;
+                        padding: 17px;
+                        .O-A-imageOurProduct{
+                            width: 26px;
+                        }
+                    }
+                }
             }
-            
+            .O-A-line{
+                height: 262px;
+            }
         }
     }        
 }
@@ -172,6 +189,7 @@
         .O-A-boxCardsOurProduct{
             flex-wrap: nowrap;
             flex-direction: column;
+            gap: 30px;
             padding-left: 10px;
             padding-right: 10px;
             .O-A-cardStyleOueProduct{
@@ -185,6 +203,10 @@
                 .O-A-descCardOurProduct{
                     font-size: 14px;
                 }
+            }
+            .O-A-line{
+                height: 1px;
+                width: 100%;
             }
         }
     }

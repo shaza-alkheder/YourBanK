@@ -1,6 +1,6 @@
 .O-A-ourFeatures{
     .O-A-titleOurFeatures{
-        max-width: 1200px;
+        max-width: 1296px;
     }
     .O-A-groupFeatures{
         margin-top: 32px;
@@ -76,6 +76,9 @@
 
 @media screen and (max-width:1440px) {
     .O-A-ourFeatures{
+        .O-A-titleOurFeatures{
+            max-width: 1030px;
+        }
         .O-A-groupFeatures{
             gap: 20px;
             .O-A-box{

@@ -63,6 +63,7 @@ const OurProduct = () => {
                             icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
+                        <div className="O-A-line"></div>
                         <Card
                             title= "Savings Accounts"
                             desc="Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you."
@@ -74,6 +75,7 @@ const OurProduct = () => {
                             icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
+                        <div className="O-A-line"></div>
                         <Card
                             title= "Loans and Mortgages"
                             desc="Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need."
@@ -100,6 +102,7 @@ const OurProduct = () => {
                             icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
+                        <div className="O-A-line"></div>
                         <Card
                             title= "Lorem ipsum dolor sit."
                             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, illo ipsa voluptatibus cumque quia maiores perferendis deserunt delectus. Saepe, impedit."
@@ -111,6 +114,7 @@ const OurProduct = () => {
                             icon : "O-A-borderIconCardOurProduct"
                             }}
                         /> 
+                        <div className="O-A-line"></div>
                         <Card
                             title= "Lorem ipsum dolor sit."
                             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, illo ipsa voluptatibus cumque quia maiores perferendis deserunt delectus. Saepe, impedit."
