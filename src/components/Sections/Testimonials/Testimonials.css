@@ -2,7 +2,7 @@
     width: 100%;
 
     .DS_btnFilter {
-        width: clamp(299px, 20.7vw, 388px); 
+        width: clamp(311px, 20.7vw, 388px); 
         padding: clamp(12px, 0.83vw, 14px);  
         background-color: var(--yb-color-dark-2);
         border: 1px solid var(--yb-color-dark-3);
@@ -11,17 +11,15 @@
         justify-content: space-between;
 
         .DS_styleTest {
-            padding-block: clamp(12px, 0.83vw, 14px); 
-            padding-inline: clamp(24px, 1.6vw, 30px);
+            padding-block: clamp(10px, 0.69vw, 14px); 
+            padding-inline: clamp(18px, 0.24vw, 24px);
             background-color: var(--yb-color-dark-2); 
             color: var(--yb-color-white);
             border: none;
             font-family: Lexend;
             font-weight: var(--yb-font-weight-rg);
-            font-size:var(--yb-font-size-body-lg);
+            font-size:clamp(var(--yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg)); 
             line-height: 1.5;
-
-
         }
 
         .DS_styleTest.active {
@@ -46,54 +44,65 @@
 
 
     .DS_testimonialsSlider {
-        padding: clamp(92px, 6.38vw, 112px);
+        width:clamp(937px, 76.1vw, 1372px);
         display: flex;
-        gap: 40px;
+        gap: clamp(60px, 4.16vw, 80px);
         flex-shrink: 0;
         transition: transform 0.4s ease-in-out;
-        width: 100%;
+        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.2) 100%);
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.2) 100%);
         overflow: hidden;
 
         .DS_testimonialCard {
-            width: clamp(325px, 22.5vw, 404px);
+            width: clamp(230px, 22.5vw, 404px);
             flex: 0 0 auto;
             box-sizing: border-box;
+            overflow: hidden;
+            gap: clamp(40px, 2.77vw, 50px);
 
             .DS_titleWrapper {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
+                order: 2;
             }
 
             .DS_opinionText {
+                font-size:clamp(var(--yb-font-size-body-md), 1.1vw, var(--yb-font-size-body-lg)); 
                 order: 1;
+                text-align: center;
+                line-height: 1.5;
             }
 
             .DS_clientName {
-                order: 2;
                 text-align: center;
                 margin-top: 15px;
+                font-family: Lexend;
+                font-weight: var(--yb-font-weight-md);
+                font-size:clamp(var(--yb-font-size-body-md), 1.1vw, var(--yb-font-size-body-lg)); 
+                line-height: 1.5;
+                color: var(--yb-color-primary);
             }
 
             .DS_quoteImageDiv {
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 20px;
-                width: 100%;
-                margin-bottom: 25px;
+
 
                 &::before,
                 &::after {
                     content: "";
                     flex: 1;
                     height: 1px;
-                    background-color: #caff33;
+                    background-color:var(--yb-color-dark-3);
                 }
             }
 
             .DS_quoteIcon {
-                width: 32px;
+                width: clamp(44px, 3.05vw, 60px);
                 height: auto;
                 object-fit: contain;
             }
@@ -108,7 +117,7 @@
         display: flex;
         justify-content: space-between;
 
-        button {
+        .DS_Arrow{
             width: clamp(52px, 3.6vw, 62px); 
             height: clamp(52px, 3.6vw, 62px);
             color: var(--yb-color-primary);
@@ -117,11 +126,6 @@
             border: 1px solid var(--yb-color-dark-3);
             background-color: var(--yb-color-dark-2);
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50px;
-            }
         }
     }
 
@@ -131,7 +135,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: clamp(100px, 10.4vw, 300px); 
+        gap: clamp(100px, 6vw, 300px); 
     }
 
     .DS_SizeTitleDescription {
@@ -148,6 +152,45 @@
             margin-bottom: 40px;
             flex-direction: column;
             gap: 20px;
+        }
+        .DS_testimonialsSlider{
+            max-width: 400px;
+            width: 91vw;
+            scroll-behavior: smooth;
+
+        
+
+        .DS_testimonialCard {
+            width: 100%;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--yb-color-dark-3);
+            gap: 30px;
+            background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
+
+
+        }
+    }
+        
+            .DS_opinionText {
+                font-size: var(--yb-font-size-body-sm); 
+                order: 1;
+            }
+
+        .DS_slider {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .DS_arrows {
+            width:124px;
+            position: static;     
+            transform: none;       
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
         }
     }
 }
