@@ -26,9 +26,9 @@ function Home() {
 
         <Container><OurProduct />
         </Container>
-        <container>
+        <Container>
           <OurFeatures /> 
-        </container>
+        </Container>
         <Container>
           <FAQ /> 
         </Container>
