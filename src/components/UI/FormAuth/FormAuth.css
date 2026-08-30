@@ -4,24 +4,26 @@
         flex-direction: column;
         align-items: center;
         .O-A-boxFormInputs{
+            width: 100%;
             margin-bottom: 40px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            /* .O-A-inputStyle{
+            .O-A-boxPassInput{
                 max-width: 498px;
-                height: 75px;
-                padding: 24px;
-                background-color: var(--yb-color-dark-1);
-                border: 1px solid var(--yb-color-dark-3);
-                border-radius: 88px;
-                &::placeholder{
-                    font-weight: 300;
-                    font-size: 18px;
-                    color: #59595A;
-                    line-height: 150%;
+                position: relative;
+                .O-A-inputPassword{
+                    width: 100% !important;
                 }
-            } */
+                svg{
+                    font-size: 24px;
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #59595A;
+                }
+            }
         }
         .O-A-forgetPassword{
             margin-bottom: 40px;
@@ -53,33 +55,79 @@
                     border: none;
                 }
             }
-        }
-        .O-A-orContinueWith{
-            width: 518px;
-            margin-top: 24px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            &::before{
-                content: "";
+            .O-A-orContinueWith{
                 width: 100%;
-                height: 1px;
-                display: block;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: var(--yb-color-text-secondary);
-                z-index: -1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: var(--yb-color-text-secondary);
+                    z-index: -1;
+                }
+                .O-A-textContinue{
+                    width: 187px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    background-color: var(--yb-color-dark-2);
+                }
             }
-            .O-A-textContinue{
-                width: 187px;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 150%;
-                background-color: var(--yb-color-dark-2);
+            .O-A-boxIconForm{
+                width: 100%;
+                padding-left: 94px;
+                padding-right: 94px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .O-A-borderIconForm{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 94px;
+                    height: 94px;
+                    padding: 12px;
+                    border-radius: 50%;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.05) 0%,
+                        rgba(202, 255, 51, 0) 100%
+                    );
+                    .O-A-circleIconForm{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70px;
+                        height: 70px;
+                        border-width: 1px;
+                        padding: 20px;
+                        border-radius: 50%;
+                        background: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.1) -66.22%,
+                        rgba(202, 255, 51, 0) 85.46%
+                        );
+                        border: 1px solid;
+
+                        border-image-source: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.2) -173.65%,
+                        rgba(202, 255, 51, 0) 87.22%
+                        );
+                        svg{
+                            font-size: 30px;
+                            color: var(--yb-color-primary);
+                        }
+                    }
+                }
             }
         }
     }
@@ -96,6 +144,16 @@
             .O-A-boxFormInputs{
                 margin-bottom: 30px;
                 gap: 24px;
+                .O-A-boxPassInput{
+                    max-width: 320px;
+                    .O-A-inputPassword{
+                        width: 100% !important;
+                    }
+                    svg{
+                        font-size: 20px;
+                        right: 20px;
+                    }
+                }
             }
             .O-A-forgetPassword{
                 margin-bottom: 30px;
@@ -106,14 +164,28 @@
                     width: 404px;
                     height: 49px;
                 }
-            }
-            .O-A-orContinueWith{
-                width: 404px;
-                margin-top: 24px;
-                margin-bottom:24px;
-                .O-A-textContinue{
-                    width: 136px;
-                    font-size: 14px;
+                .O-A-orContinueWith{
+                    .O-A-textContinue{
+                        width: 136px;
+                        font-size: 14px;
+                    }
+                }
+                .O-A-boxIconForm{
+                    padding-left: 80px;
+                    padding-right: 80px;
+                    .O-A-borderIconForm{
+                        width: 68px;
+                        height: 68px;
+                        padding: 8px;
+                        .O-A-circleIconForm{
+                            width: 52px;
+                            height: 52px;
+                            padding: 14px;
+                            svg{
+                                font-size: 24px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -124,13 +196,22 @@
     .O-A-containerForm{
         form{
             .O-A-boxFormInputs{
-                /* grid-template-columns: repeat(1, 1fr); */
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: 24px;
                 gap: 20px;
+                .O-A-boxPassInput{
+                    max-width: 100%;
+                    width: 100%;
+                    .O-A-inputPassword{
+                        width: 100% !important;
+                    }
+                    svg{
+                        right: 16px;
+                    }
+                }
             }
             .O-A-forgetPassword{
                 margin-bottom: 24px;
@@ -140,14 +221,15 @@
                 .O-A-styleButtonForm{
                     max-width: 298px;
                 }
-            }
-            .O-A-orContinueWith{
-                max-width: 298px;
-                margin-top: 24px;
-                margin-bottom:24px;
-                .O-A-textContinue{
-                    width: 136px;
-                    font-size: 14px;
+                .O-A-orContinueWith{
+                    .O-A-textContinue{
+                        width: 136px;
+                        font-size: 14px;
+                    }
+                }
+                .O-A-boxIconForm{
+                    padding-left: 27px;
+                    padding-right: 27px;
                 }
             }
         }

@@ -1,5 +1,5 @@
 input{
-    width: 498px;
+    /* width: 498px; */
     max-width: 498px;
     height: 75px;
     padding: 24px;
@@ -17,7 +17,7 @@ input{
 
 @media screen and (max-width:1440px) {
     input{
-        width: 320px;
+        /* width: 320px; */
         max-width: 320px;
         height: 64px;
         padding: 20px;

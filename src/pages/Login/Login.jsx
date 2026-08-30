@@ -1,10 +1,10 @@
-import LoginSection from "../../components/Sections/LoginSection/LoginSection"
-import Container from "../../components/UI/Container/Container"
-
+import LoginSignUpSection from "../../components/Sections/LoginSignUpSection/LoginSignUpSection"
+import ContainerLoginAndSignUp from "../../components/UI/ContainerLoginAndSignUp/ContainerLoginAndSignUp"
+import "./Login.css"
 function Login() {
   return (
     <div>
-      <Container><LoginSection /></Container>
+      <ContainerLoginAndSignUp><LoginSignUpSection  login = "true"/></ContainerLoginAndSignUp>
     </div>
   )
 }

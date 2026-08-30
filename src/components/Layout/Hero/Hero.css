@@ -1,0 +1,156 @@
+
+.MGhome-hero{
+    margin-top: 50px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MGhero-left{
+    width: 50%;
+
+
+    .MG-button{
+            padding-block: clamp(12px, 0.83vw, 14px); 
+            padding-inline: clamp(24px, 1.6vw, 30px);
+            background-color:var(--yb-color-primary); 
+            color:var(--yb-color-dark-2) ;
+            border: none; }
+
+}
+.MGtitle1{
+    max-width: max-content;
+    display: flex;
+    gap: 6px;
+    background-color:var(--yb-color-dark-3);
+    padding: 10px 20px 10px 12px;
+    border-radius: 61px;
+    p{
+        color: var( --yb-color-white);
+        font-family:var(--yb-font-family-primary) ;
+        font-weight:var(--yb-font-weight-lt) ;
+        font-size: var( --yb-font-size-body-lg);
+        line-height: 24px;
+    }
+
+    
+}
+
+.DS_style{
+    max-width: 825.98px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+.MGhero-right{
+    position: relative;
+    width: 50%;
+    min-height: 450px;
+
+    .MGarrow-hero{
+    position: absolute;
+    width: 417.94px;
+    right: 0;
+    top: 20px;
+    z-index: 1;
+    }
+    .MGhero-dashboard{
+    position: absolute;
+    width: 515.019px;
+    right: 88px;
+    top: 0;
+    z-index: 2;
+    }
+
+}
+
+
+@media screen and (max-width : 1440px) {
+    
+    .MGhome-hero{
+    margin-top: 30px;
+    /*padding-top : 60px ;*/
+
+    }
+
+    .MGtitle1{
+        gap: 6px;
+        padding: 8px 16px 8px 8px ;
+
+        p{
+            font-size : var(--yb-font-size-body-sm);
+        }
+    }
+
+    
+    .DS_style{
+        max-width: 649.80px;
+        margin-top: 16px;
+        margin-bottom: 40px;
+
+    }
+    .MGhero-right{
+        .MGarrow-hero{
+            width: 300px;
+        }
+
+        .MGhero-dashboard{
+            width: 410px;
+
+        }
+    }
+    
+}
+@media screen and (max-width : 992px){
+    .MGhome-hero{
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .MGhero-left{
+        width: 100%;
+        
+    .MG-button{
+        margin-bottom: 54.43;
+    }
+    }
+
+    
+.MGhero-right{
+    width: 305px;
+    min-height: 350px;
+
+    .MGarrow-hero{
+        width: 220px;
+        right: -20px;
+    }
+
+    .MGhero-dashboard{
+        width: 305px;
+        right: 1px;
+        top: 18px;
+
+
+    }
+
+}
+
+.MGtitle1{
+    margin: auto;
+}
+.DS_style {
+        max-width: 100%;
+        margin-top: 12px;
+        margin-bottom: 30px;
+
+    }
+
+
+}
+
+
+
+
