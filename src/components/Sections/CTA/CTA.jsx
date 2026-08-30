@@ -7,7 +7,7 @@ const CTA = () => {
       <section className='S-K-CTA'>
   <div className='S-K-contentCTA'>
     <h2>Start your financial journey with <span>YourBank today!</span></h2>
-    <p>Lorem ipsum dolor sit amet consectetur. Blandit odio semper risus pellentesque elit. Pellentesque eget ut imperdiet nulla penatibus. Nascetur viverra arcu sed amet cursus purus.</p>
+    <p>Ready to take control of your finances? Join YourBank now, and let us help you achieve your financial goals with our tailored solutions and exceptional customer service</p>
   </div>
       <Button 
                         className="S-K-styleButton"
