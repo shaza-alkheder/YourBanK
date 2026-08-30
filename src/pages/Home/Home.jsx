@@ -15,14 +15,16 @@ function Home() {
       <img src="/assets/img/HomePage/Objects.webp" 
       alt="" 
       className="MGobjects"/>
-    
-      <main>
+    <header>
         <Container> 
           <Hero iconHero="/assets/img/HomePage/iconHero.png"
                 arrowsHero="/assets/img/HomePage/arrowsHero.webp"
                 imageHero="/assets/img/HomePage/imageHero.webp"
           />
         </Container>
+    </header>
+      <main>
+      
 
         <Container><OurProduct />
         </Container>

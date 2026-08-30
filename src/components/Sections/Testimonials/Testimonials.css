@@ -132,6 +132,9 @@
             border-radius: 100px;
             border: 1px solid var(--yb-color-dark-3);
             background-color: var(--yb-color-dark-2);
+            display: flex;
+            justify-content:center;
+            align-items: center;
 
             .DS_FaArrow{
                 font-size: clamp(24px, 1.9vw, 30px); 
@@ -162,6 +165,7 @@
         .DS_Container {
             margin-bottom: 40px;
             flex-direction: column;
+            align-items: center;
             gap: 20px;
         }
         .DS_testimonialsSlider{
@@ -169,7 +173,6 @@
             width: 91vw;
             scroll-behavior: smooth;
 
-        
 
         .DS_testimonialCard {
             width: 100%;
