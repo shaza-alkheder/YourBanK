@@ -4,6 +4,7 @@
   align-items: center;
   padding: 80px;
   gap: 150px;
+  position: relative;
   background:
     /* linear-gradient(0deg, #1c1c1c, #1c1c1c), */
     linear-gradient(267.5deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
@@ -19,7 +20,14 @@
     );
 
   border-radius: 20px;
-
+  .imgdesign {
+    width: 298px;
+    height: 283px;
+    /* angle: 90 deg; */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .S-K-contentCTA {
     display: flex;
     flex-direction: column;
@@ -67,7 +75,10 @@
 @media screen and (max-width: 1440px) {
   .S-K-CTA {
     padding: 60px;
-
+    .imgdesign {
+      width: 202px;
+      height: 192px;
+    }
     .S-K-contentCTA {
       gap: 10px;
       h2 {
@@ -103,7 +114,10 @@
     gap: 24px;
     align-items: center;
     text-align: center;
-
+    .imgdesign {
+      width: 151px;
+      height: 143px;
+    }
     .S-K-contentCTA {
       gap: 14px;
       h2 {
