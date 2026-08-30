@@ -148,13 +148,45 @@
       &.S-K-FaqCard-collapsed {
         .S-K-cardFaqStyle:nth-child(3) {
           opacity: 1;
-          filter: blur(0);
+          filter: none;
+          .S-K-descriptionCardFaq {
+            opacity: 0.6;
+            filter: none;
+            mask-image: none;
+          }
+          .S-K-headerCardFAQ {
+            border-bottom-color: var(--yb-color-dark-3);
+          }
         }
         .S-K-cardFaqStyle:nth-child(4) {
           display: block;
-          opacity: 0.5;
+          /* opacity: 0.5; */
           /* opacity: 0.5;
           filter: blur(0.9px); */
+          .S-K-descriptionCardFaq {
+            opacity: 0.5;
+            filter: blur(0.9px);
+            mask-image: linear-gradient(
+              to bottom,
+              #000 0%,
+              #000 30%,
+              rgba(0, 0, 0, 0.9) 45%,
+              rgba(0, 0, 0, 0.65) 60%,
+              rgba(0, 0, 0, 0.35) 75%,
+              rgba(0, 0, 0, 0.12) 88%,
+              rgba(0, 0, 0, 0) 100%
+            );
+            -webkit-mask-image: linear-gradient(
+              to bottom,
+              #000 0%,
+              #000 30%,
+              rgba(0, 0, 0, 0.9) 45%,
+              rgba(0, 0, 0, 0.65) 60%,
+              rgba(0, 0, 0, 0.35) 75%,
+              rgba(0, 0, 0, 0.12) 88%,
+              rgba(0, 0, 0, 0) 100%
+            );
+          }
         }
       }
     }
