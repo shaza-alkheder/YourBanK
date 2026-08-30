@@ -10,6 +10,7 @@ import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
 
 function App() {
+
   return (
     <>
       <Nav logo="/assets/img/Logo/logoNavBar.webp" />
