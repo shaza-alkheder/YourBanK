@@ -13,6 +13,7 @@
   /* width: min(759px, 52vw); */
   width: 759px;
   height: auto;
+  position: fixed;
 }
 
 header {
@@ -32,8 +33,7 @@ header {
     padding-top: 158px;
   }
   .MGobjects {
-    width: 381.997px;
-    height: 307.417px;
+    width: 382px;
+    height: 307.42px;
   }
 }
-
