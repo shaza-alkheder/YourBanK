@@ -1,0 +1,155 @@
+.O-A-containerForm{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .O-A-boxFormInputs{
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            /* .O-A-inputStyle{
+                max-width: 498px;
+                height: 75px;
+                padding: 24px;
+                background-color: var(--yb-color-dark-1);
+                border: 1px solid var(--yb-color-dark-3);
+                border-radius: 88px;
+                &::placeholder{
+                    font-weight: 300;
+                    font-size: 18px;
+                    color: #59595A;
+                    line-height: 150%;
+                }
+            } */
+        }
+        .O-A-forgetPassword{
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            color: var(--yb-color-white);
+            cursor: pointer;
+        }
+        .O-A-boxBtnForm{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            .O-A-styleButtonForm{
+                width: 518px;
+                height: 63px;
+                background-color: var(--yb-color-dark-3);
+                color: var(--yb-color-white);
+                border: 1px solid #333333;
+                cursor: pointer;
+                font-family: var(--yb-font-family-primary);
+                &:hover{
+                    background-color: var(--yb-color-primary);
+                    color: var(--yb-color-dark-3);
+                    border: none;
+                }
+            }
+        }
+        .O-A-orContinueWith{
+            width: 518px;
+            margin-top: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            &::before{
+                content: "";
+                width: 100%;
+                height: 1px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: var(--yb-color-text-secondary);
+                z-index: -1;
+            }
+            .O-A-textContinue{
+                width: 187px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                background-color: var(--yb-color-dark-2);
+            }
+        }
+    }
+}
+
+.O-A-activeBtnForm{
+    background-color: var(--yb-color-primary) !important;
+    color: var(--yb-color-dark-3) !important;
+}
+
+@media screen and (max-width:1440px) {
+    .O-A-containerForm{
+        form{
+            .O-A-boxFormInputs{
+                margin-bottom: 30px;
+                gap: 24px;
+            }
+            .O-A-forgetPassword{
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+            .O-A-boxBtnForm{
+                .O-A-styleButtonForm{
+                    width: 404px;
+                    height: 49px;
+                }
+            }
+            .O-A-orContinueWith{
+                width: 404px;
+                margin-top: 24px;
+                margin-bottom:24px;
+                .O-A-textContinue{
+                    width: 136px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }            
+}
+
+@media screen and (max-width:992px) {
+    .O-A-containerForm{
+        form{
+            .O-A-boxFormInputs{
+                /* grid-template-columns: repeat(1, 1fr); */
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 24px;
+                gap: 20px;
+            }
+            .O-A-forgetPassword{
+                margin-bottom: 24px;
+                font-size: 14px;
+            }
+            .O-A-boxBtnForm{
+                .O-A-styleButtonForm{
+                    max-width: 298px;
+                }
+            }
+            .O-A-orContinueWith{
+                max-width: 298px;
+                margin-top: 24px;
+                margin-bottom:24px;
+                .O-A-textContinue{
+                    width: 136px;
+                    font-size: 14px;
+                }
+            }
+        }
+    } 
+}
