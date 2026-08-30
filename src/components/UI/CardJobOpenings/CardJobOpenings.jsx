@@ -18,14 +18,14 @@ const CardJobOpenings = ({job}) => {
         <ul className="DS_jobRequirementsList">
             {job.requirements.map((req, index) => (
                 <li key={index} className="DS_jobReqItem">
-                    <FaBriefcase />
+                    <img className='DS_WorkBag' src="/assets/img/CareersPage/WorkBag.webp" alt="WorkBag icon" />
                     <span className='DS_ReqText'>{req}</span>
                 </li>
             ))}
         </ul>
 
         <Button 
-        className="DS_styleTest"
+        className="DS_BtnApply"
         content ="Apply Now"
         /> 
         </div>

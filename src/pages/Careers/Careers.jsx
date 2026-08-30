@@ -6,17 +6,20 @@ import Container from "../../components/UI/Container/Container"
 
 function Careers() {
   return (
-   <>
-   <main>
-     <Container>
-          <Benefits /> 
-        </Container>
+    <>
+    <main>
+      <Container>
+            <Benefits /> 
+          </Container>
           <Container>
-          <FAQ /> 
-        </Container>
-   </main>
-   
-   </>
+            <JobOpenings />
+          </Container>
+            <Container>
+            <FAQ /> 
+          </Container>
+    </main>
+    
+    </>
   )
 }
 
