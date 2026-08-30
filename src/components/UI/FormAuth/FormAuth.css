@@ -1,0 +1,238 @@
+.O-A-containerForm{
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .O-A-boxFormInputs{
+            width: 100%;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            .O-A-boxPassInput{
+                max-width: 498px;
+                position: relative;
+                .O-A-inputPassword{
+                    width: 100% !important;
+                }
+                svg{
+                    font-size: 24px;
+                    position: absolute;
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #59595A;
+                }
+            }
+        }
+        .O-A-forgetPassword{
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            color: var(--yb-color-white);
+            cursor: pointer;
+        }
+        .O-A-boxBtnForm{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            .O-A-styleButtonForm{
+                width: 518px;
+                height: 63px;
+                background-color: var(--yb-color-dark-3);
+                color: var(--yb-color-white);
+                border: 1px solid #333333;
+                cursor: pointer;
+                font-family: var(--yb-font-family-primary);
+                &:hover{
+                    background-color: var(--yb-color-primary);
+                    color: var(--yb-color-dark-3);
+                    border: none;
+                }
+            }
+            .O-A-orContinueWith{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: var(--yb-color-text-secondary);
+                    z-index: -1;
+                }
+                .O-A-textContinue{
+                    width: 187px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    background-color: var(--yb-color-dark-2);
+                }
+            }
+            .O-A-boxIconForm{
+                width: 100%;
+                padding-left: 94px;
+                padding-right: 94px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                .O-A-borderIconForm{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 94px;
+                    height: 94px;
+                    padding: 12px;
+                    border-radius: 50%;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.05) 0%,
+                        rgba(202, 255, 51, 0) 100%
+                    );
+                    .O-A-circleIconForm{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70px;
+                        height: 70px;
+                        border-width: 1px;
+                        padding: 20px;
+                        border-radius: 50%;
+                        background: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.1) -66.22%,
+                        rgba(202, 255, 51, 0) 85.46%
+                        );
+                        border: 1px solid;
+
+                        border-image-source: linear-gradient(
+                        180deg,
+                        rgba(202, 255, 51, 0.2) -173.65%,
+                        rgba(202, 255, 51, 0) 87.22%
+                        );
+                        svg{
+                            font-size: 30px;
+                            color: var(--yb-color-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.O-A-activeBtnForm{
+    background-color: var(--yb-color-primary) !important;
+    color: var(--yb-color-dark-3) !important;
+}
+
+@media screen and (max-width:1440px) {
+    .O-A-containerForm{
+        form{
+            .O-A-boxFormInputs{
+                margin-bottom: 30px;
+                gap: 24px;
+                .O-A-boxPassInput{
+                    max-width: 320px;
+                    .O-A-inputPassword{
+                        width: 100% !important;
+                    }
+                    svg{
+                        font-size: 20px;
+                        right: 20px;
+                    }
+                }
+            }
+            .O-A-forgetPassword{
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+            .O-A-boxBtnForm{
+                .O-A-styleButtonForm{
+                    width: 404px;
+                    height: 49px;
+                }
+                .O-A-orContinueWith{
+                    .O-A-textContinue{
+                        width: 136px;
+                        font-size: 14px;
+                    }
+                }
+                .O-A-boxIconForm{
+                    padding-left: 80px;
+                    padding-right: 80px;
+                    .O-A-borderIconForm{
+                        width: 68px;
+                        height: 68px;
+                        padding: 8px;
+                        .O-A-circleIconForm{
+                            width: 52px;
+                            height: 52px;
+                            padding: 14px;
+                            svg{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }            
+}
+
+@media screen and (max-width:992px) {
+    .O-A-containerForm{
+        form{
+            .O-A-boxFormInputs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 24px;
+                gap: 20px;
+                .O-A-boxPassInput{
+                    max-width: 100%;
+                    width: 100%;
+                    .O-A-inputPassword{
+                        width: 100% !important;
+                    }
+                    svg{
+                        right: 16px;
+                    }
+                }
+            }
+            .O-A-forgetPassword{
+                margin-bottom: 24px;
+                font-size: 14px;
+            }
+            .O-A-boxBtnForm{
+                .O-A-styleButtonForm{
+                    max-width: 298px;
+                }
+                .O-A-orContinueWith{
+                    .O-A-textContinue{
+                        width: 136px;
+                        font-size: 14px;
+                    }
+                }
+                .O-A-boxIconForm{
+                    padding-left: 27px;
+                    padding-right: 27px;
+                }
+            }
+        }
+    } 
+}
