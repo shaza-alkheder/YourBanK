@@ -1,0 +1,61 @@
+.O-A-continerLogInAndSignUp{
+    margin: 200px 297px var(--yb-spacing-y-lg);
+    padding: 100px 150px;
+    border: 1px solid var(--yb-color-dark-3);
+    border-radius: 20px;
+    position: relative;
+    .O-A-bgImageLoginSignUp{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: -3;
+        opacity: 0.1;
+        border-radius: 20px;
+    }
+    .O-A-bgCornerImageLoginSignUp{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+    }
+    .O-A-titleLoginSignUp{
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1440px) {
+    .O-A-continerLogInAndSignUp{
+        margin-top: 153px;
+        margin-left: 9vw;
+        margin-right: 9vw;
+        margin: 153px 9vw var(--yb-spacing-y-md);
+        padding: 80px 200px;
+        .O-A-bgCornerImageLoginSignUp{
+            width: 256px;
+        }
+        .O-A-titleLoginSignUp{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .O-A-continerLogInAndSignUp{
+        margin-top: 138px;
+        margin-left: var(--yb-spacing-x-sm);
+        margin-right: var(--yb-spacing-x-sm);
+        margin: 138px var(--yb-spacing-x-sm) var(--yb-spacing-y-sm);
+        padding: 30px;
+        .O-A-bgCornerImageLoginSignUp{
+            width: 167px;
+        }
+        .O-A-titleLoginSignUp{
+            margin-bottom: 40px;
+        }
+    }
+}
