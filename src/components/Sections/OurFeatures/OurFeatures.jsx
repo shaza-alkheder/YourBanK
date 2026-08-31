@@ -8,17 +8,29 @@ import { useEffect, useState } from "react"
 
 const OurFeatures = () => {
     const [filter , setFilter] = useState("OnlineBanking")
-
+    // const [featureData , setFeatureData] = useState({})
     let featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
     if (featurescardData === null) {
         localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
         featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
     }
-    
     const featurescardDataOnline = featurescardData.OnlineBanking
     const featurescardDataFinancialTools = featurescardData.FinancialTools
     const featurescardDataCustomerSupport = featurescardData.CustomerSupport
-    console.log(featurescardData)
+    // useEffect(() => {
+    //     let featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    //     if (featurescardData) {
+    //         setFeatureData(featurescardData)
+    //     }else{  
+    //         localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
+    //         featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+    //         setFeatureData(featurescardData)
+    //     }
+    // } , [])
+    // const featurescardDataOnline = featureData.OnlineBanking
+    // const featurescardDataFinancialTools = featureData.FinancialTools
+    // const featurescardDataCustomerSupport = featureData.CustomerSupport
+    // console.log(featurescardData)
     
     useEffect(()=> {
         const buttons = document.querySelectorAll(".O-A-ourFeatures .O-A-groupFeatures .O-A-box .O-A-styleButton")
