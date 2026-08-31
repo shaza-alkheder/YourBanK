@@ -3,6 +3,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
+        gap: 8px;
         .O-A-titleOurProduct{
             max-width: 910px;
         }
