@@ -1,6 +1,6 @@
 import Button from '../Button/Button'
 import './CardJobOpenings.css'
-import { FaBriefcase } from "react-icons/fa6";
+
 
 const CardJobOpenings = ({job}) => {
     return (
