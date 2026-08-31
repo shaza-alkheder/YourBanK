@@ -1,0 +1,20 @@
+
+.DS_TitleDescriptionJob{
+    width: clamp(900px, 71.5vw, 1296px);
+}
+.DS_jobsContainer{
+    margin-top: clamp(60px, 4.16vw, 80px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:clamp(17px, 1.38vw,30px);
+}
+
+
+@media (max-width: 992px) {
+    .DS_TitleDescriptionJob{
+    width: 100%;
+    text-align: center;
+}
+}
