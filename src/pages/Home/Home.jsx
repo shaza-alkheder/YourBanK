@@ -7,6 +7,7 @@ import FAQ from "../../components/Sections/FAQ/FAQ"
 import CTA from "../../components/Sections/CTA/CTA"
 import Testimonials from "../../components/Sections/Testimonials/Testimonials"
 import OurProduct from "../../components/Sections/OurProduct/OurProduct"
+import UseCases from "../../components/Sections/UseCases/UseCases"
 
 
 function Home() {
@@ -26,20 +27,30 @@ function Home() {
       <main>
       
 
-        <Container><OurProduct />
+        <Container>
+          <OurProduct />
         </Container>
+
+        <Container>
+          <UseCases/>
+        </Container>
+
         <Container>
           <OurFeatures /> 
         </Container>
+
         <Container>
           <FAQ /> 
         </Container>
+
         <Container>
           <Testimonials/>
         </Container>
-          <Container>
+
+        <Container>
           <CTA /> 
         </Container>
+
       </main>
     </div>
   )
