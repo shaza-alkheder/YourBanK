@@ -30,12 +30,15 @@
     justify-content: space-between;
     gap:clamp(10px, 0.7vw, 20px); 
     position: relative; 
-    background-image: url('assets/img/HomePage/backgroundDots.webp'); 
+    background-image: url('assets/img/HomePage/AbstractDesign.webp'); 
     background-repeat: no-repeat;
     background-position: top left;
 }
 .DS_Container2Card{
-    transform: scaleX(-1);
+    background-image: url('assets/img/HomePage/backgroundDotsRight.webp'); 
+    background-repeat: no-repeat;
+    background-position: top right;
+
 }
 
 .DS_CardStyleUseCase{
