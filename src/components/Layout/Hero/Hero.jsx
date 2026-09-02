@@ -124,7 +124,7 @@ function Hero({ iconHero }) {
           </div>
         </div>
         <div className="S-K-Arrows">
-                  <img src="/assets/img/HomePage/Abstract-Design.webp" alt="" />
+                  <img src="/assets/img/HomePage/AbstractDesign2.webp" alt="" />
 
         </div>
 
@@ -132,16 +132,16 @@ function Hero({ iconHero }) {
           <p>Supported Currency</p>
           <div className="S-K-CurrencyIcons">
             <div className="S-K-CurrIcon">
-              <img src="/public/assets/img/HomePage/Shape.webp" alt="" />
+              <img src="/assets/img/HomePage/Shape.webp" alt="" />
             </div>
                <div className="S-K-CurrIcon">
-              <img src="/public/assets/img/HomePage/euro-currency-symbol.webp" alt="" />
+              <img src="/assets/img/HomePage/euro-currency-symbol.webp" alt="" />
             </div>
                <div className="S-K-CurrIcon">
-              <img src="/public/assets/img/HomePage/Shape2.webp" alt="" />
+              <img src="/assets/img/HomePage/Shape2.webp" alt="" />
             </div>
                <div className="S-K-CurrIcon">
-              <img src="/public/assets/img/HomePage/Group.webp" alt="" />
+              <img src="/assets/img/HomePage/Group.webp" alt="" />
             </div>
           </div>
         </div>
