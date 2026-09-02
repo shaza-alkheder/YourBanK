@@ -2,7 +2,7 @@ import FormAuth from "../../UI/FormAuth/FormAuth"
 import TitleDescription from "../../UI/TitleDescription/TitleDescription"
 import "./LoginSignUpSection.css"
 
-const LoginSignUpSection = ({login , signup}) => {
+const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
     return (
         <>
             {login? 
@@ -44,16 +44,21 @@ const LoginSignUpSection = ({login , signup}) => {
                     email = "Enter your Email"
                     inputInfoEm = {{
                         typeInput : "email",
-                        placeholderInput : "Enter your Email"
+                        placeholderInput : "Enter your Email",
+                        name : "email",
+                        id : "emailInput"
                     }}
                     password = "Enter your Password"
                     inputInfoPass ={{
                         classNameInput : "O-A-inputPassword",
                         typeInput : "password",
-                        placeholderInput : "Enter your Password"
+                        placeholderInput : "Enter your Password",
+                        name : "password",
+                        id : "passwordInput"
                     }}
                     forgetPassword = "Forgot Password?"
                     btn1 = "Login"
+                    click1={onclick1}
                     btn2 = "Sign Up"
                 />
             :""
@@ -63,27 +68,37 @@ const LoginSignUpSection = ({login , signup}) => {
                     firstName = "Enter firstName"
                     inputInfoFN = {{
                         typeInput : "text",
-                        placeholderInput : "Enter First Name"
+                        placeholderInput : "Enter First Name",
+                        name : "firstName",
+                        id : "firstNameInput"
                     }}
                     lastName = "Enter lastName"
                     inputInfoLN = {{
                         typeInput : "text",
-                        placeholderInput : "Enter Last Name"
+                        placeholderInput : "Enter Last Name",
+                        name : "lastName",
+                        id : "lastNameInput"
                     }}
                     email = "Enter your Email"
                     inputInfoEm = {{
                         typeInput : "email",
-                        placeholderInput : "Enter your Email"
+                        placeholderInput : "Enter your Email",
+                        name : "email",
+                        id : "emailInput"
                     }}
                     password = "Enter your Password"
                     inputInfoPass ={{
                         classNameInput : "O-A-inputPassword",
                         typeInput : "password",
-                        placeholderInput : "Enter your Password"
+                        placeholderInput : "Enter your Password",
+                        name : "password",
+                        id : "passwordInput"
                     }}
                     forgetPassword = "Forgot Password?"
                     btn1 = "Sign Up"
+                    click1={onclick1}
                     btn2 = "Login"
+                    click2={onclick2}
                 />
             :""
             }

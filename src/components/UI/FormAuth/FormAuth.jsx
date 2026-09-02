@@ -4,7 +4,7 @@ import Input from "../Input/Input"
 import "./FormAuth.css"
 import { IoEye } from "react-icons/io5"
 
-const FormAuth = ({firstName , inputInfoFN , lastName , inputInfoLN, email , inputInfoEm , password, inputInfoPass , forgetPassword , btn1 , btn2}) => {
+const FormAuth = ({firstName , inputInfoFN , lastName , inputInfoLN, email , inputInfoEm , password, inputInfoPass , forgetPassword , btn1 , click1, btn2 , click2}) => {
     return (
         <div className="O-A-containerForm">
             <form>
@@ -23,10 +23,12 @@ const FormAuth = ({firstName , inputInfoFN , lastName , inputInfoLN, email , inp
                     <Button 
                         className="O-A-styleButtonForm"
                         content = {btn1}
+                        onClick={click1}
                     />
                     <Button 
                         className="O-A-styleButtonForm"
                         content = {btn2}
+                        onClick={click2}
                     />
                     <div className="O-A-orContinueWith">
                         <p className="O-A-textContinue">Or Continue with</p>

@@ -131,7 +131,17 @@
 .MGmobile-buttons {
   display: none;
 }
-
+.MGnav .O-A-alignCenter{
+  align-items: center;
+  .O-A-logout{
+    background-color: red !important;
+    color: var(--yb-color-white) !important;
+    transition: 0.3s all;
+    &:hover{
+      background-color: rgb(225, 23, 23) !important;
+    }
+  }
+}
 @media screen and (max-width: 1440px) {
   .MGnav {
     top: 30px;
@@ -213,5 +223,13 @@
     background-color: var(--yb-color-primary);
     color: var(--yb-color-dark-2);
     transition: 1s all;
+  }
+  .O-A-boxLogOut{
+    padding-top: 8px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .O-A-menuLogOut{
+    color: red;
   }
 }

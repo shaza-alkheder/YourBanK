@@ -8,6 +8,7 @@ import { useState } from "react"
 function Nav({logo}) {
   const [show , setShow] = useState(false)
   const navigate = useNavigate()
+  const [userFound , SetuserFound] = useState(localStorage.getItem("userFound") || "false")
   return (
     <>
     <nav className="MGnav">
@@ -20,7 +21,34 @@ function Nav({logo}) {
           <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
         </ul>
       </div>
+      {userFound==="true"? (
+        <>
+          <div style={{display : "none"}} className = "MGnavbar-buttons">
+            <Button
+            className = "MGsignup-btn"
+            content = "Sign Up "
+            onClick = {()=>navigate("/signup")}
+            />
 
+            <Button
+            className="MGlogin-btn"
+            content = "Login" 
+            onClick={()=>navigate("/login")}/>
+          </div>
+      
+          <div  className = "MGnavbar-buttons O-A-alignCenter">
+            <p>{localStorage.getItem("userLoginNow")}</p>
+            <Button
+              className="MGlogin-btn O-A-logout"
+              content = "LogOut" 
+              onClick={()=>{SetuserFound("false")
+                localStorage.setItem("userFound" , "false")
+                localStorage.setItem("userLoginNow" , "")
+              }}
+            />
+        </div>
+      </>
+      ):
       <div className = "MGnavbar-buttons">
         <Button
         className = "MGsignup-btn"
@@ -33,6 +61,8 @@ function Nav({logo}) {
         content = "Login" 
         onClick={()=>navigate("/login")}/>
       </div>
+      }
+      
       <div className="menu-icon">
       <HiMenuAlt3 
       onClick={()=>{setShow(!show)}}
@@ -48,6 +78,34 @@ function Nav({logo}) {
           <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
         </ul>
         
+      {userFound==="true"? (
+        <>
+          <div style={{display : "none"}} className = "MGmobile-buttons">
+            <Button
+            className = "MGsignup-mobile"
+            content = "Sign Up "
+            onClick = {()=>navigate("/signup")}
+            />
+
+            <Button
+            className="MGlogin-mobile"
+            content = "Login" 
+            onClick={()=>navigate("/login")}/>
+          </div>
+          <div className = "MGmobile-buttons O-A-boxLogOut">
+          <p>{localStorage.getItem("userLoginNow")}</p>
+
+          <Button
+            className="MGlogin-mobile O-A-menuLogOut"
+            content = "LogOut" 
+            onClick={()=>{SetuserFound("false")
+              localStorage.setItem("userFound" , "false")
+              localStorage.setItem("userLoginNow" , "")
+            }}
+          />
+        </div>
+        </>
+      ):
       <div className = "MGmobile-buttons">
         <Button
         className = "MGsignup-mobile"
@@ -60,6 +118,8 @@ function Nav({logo}) {
         content = "Login" 
         onClick={()=>navigate("/login")}/>
       </div>
+      }  
+      
     </div>
 
 
