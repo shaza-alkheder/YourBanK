@@ -38,7 +38,8 @@ function Hero({ iconHero }) {
       </div>
 
       <div className="MGhero-right">
-        <div className="S-K-Transactions">
+       <div className="S-K-RightSection">
+         <div className="S-K-Transactions">
           <div className="S-K-TransactionsCards">
             <h2>Your Transactions</h2>
             <div className="S-K-TransCard">
@@ -144,6 +145,7 @@ function Hero({ iconHero }) {
             </div>
           </div>
         </div>
+       </div>
       </div>
     </div>
   );
