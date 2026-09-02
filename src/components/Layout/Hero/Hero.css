@@ -2,7 +2,7 @@
   margin-top: 50px;
   margin-bottom: 120px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
 }
 
 .MGhero-left {
@@ -39,6 +39,7 @@
 }
 .MGhero-right {
   position: relative;
+
   display: flex;
   flex-direction: column;
   .S-K-RightSection {
@@ -313,6 +314,7 @@
       left: 350px;
       top: 24px;
       z-index: 2;
+
       img {
         z-index: 0;
         /* display: block;
