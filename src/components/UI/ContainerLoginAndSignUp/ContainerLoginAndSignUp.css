@@ -1,6 +1,8 @@
 .O-A-continerLogInAndSignUp{
     margin: 200px 297px var(--yb-spacing-y-lg);
-    padding: 100px 150px;
+    /* margin: 200px 9vw var(--yb-spacing-y-lg); */
+    padding: 100px 7.8vw;
+    /* padding: 100px 150px; */
     border: 1px solid var(--yb-color-dark-3);
     border-radius: 20px;
     position: relative;
@@ -30,11 +32,9 @@
 }
 @media screen and (max-width:1440px) {
     .O-A-continerLogInAndSignUp{
-        margin-top: 153px;
-        margin-left: 9vw;
-        margin-right: 9vw;
         margin: 153px 9vw var(--yb-spacing-y-md);
-        padding: 80px 200px;
+        padding: 80px 13vw;
+        /* padding: 80px 200px; */
         .O-A-bgCornerImageLoginSignUp{
             width: 256px;
         }
@@ -46,9 +46,6 @@
 
 @media screen and (max-width:992px) {
     .O-A-continerLogInAndSignUp{
-        margin-top: 138px;
-        margin-left: var(--yb-spacing-x-sm);
-        margin-right: var(--yb-spacing-x-sm);
         margin: 138px var(--yb-spacing-x-sm) var(--yb-spacing-y-sm);
         padding: 30px;
         .O-A-bgCornerImageLoginSignUp{
