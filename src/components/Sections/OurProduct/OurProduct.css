@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
-        gap: 8px;
+        gap: 10px;
         .O-A-titleOurProduct{
             max-width: 910px;
         }
@@ -25,6 +25,7 @@
                 background-color:var(--yb-color-dark-1); 
                 color:var(--yb-color-white);
                 cursor: pointer;
+                transition: 0.3s all;
                 &:hover{
                     width: 181px;
                     color:var(--yb-color-dark-2);
@@ -81,6 +82,10 @@
                     rgba(202, 255, 51, 0.2) -173.65%,
                     rgba(202, 255, 51, 0) 87.22%
                     );
+                    svg{
+                        font-size: 34px;
+                        color: var(--yb-color-primary);
+                    }
                 }
             }
             .O-A-titleCardOurProduct{
@@ -153,6 +158,9 @@
                         padding: 17px;
                         .O-A-imageOurProduct{
                             width: 26px;
+                        }
+                        svg{
+                            font-size: 26px;
                         }
                     }
                 }
