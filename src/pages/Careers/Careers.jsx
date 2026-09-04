@@ -1,11 +1,14 @@
 import InnerHero from "../../components/Layout/InnerHero/InnerHero"
 import Benefits from "../../components/Sections/Benefits/Benefits"
 import OurValues from "../../components/Sections/OurValues/OurValues"
+import FAQ from "../../components/Sections/FAQ/FAQ"
+import JobOpenings from "../../components/Sections/JobOpenings/JobOpenings"
 import Container from "../../components/UI/Container/Container"
 
 
 function Careers() {
   return (
+
   <>
     <main>
     <Container>
@@ -25,6 +28,16 @@ function Careers() {
       <Container>
           <Benefits /> 
         </Container>
+
+          <Container>
+            <JobOpenings />
+          </Container>
+
+            <Container>
+            <FAQ /> 
+          </Container>
+
+
     </main>
   
     </>

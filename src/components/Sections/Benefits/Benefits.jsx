@@ -20,7 +20,8 @@ const Benefits = () => {
     <>
       
       <section className="S-K-Benefits">
-         <TitleDescription
+    <div className='TitleHeader'>
+           <TitleDescription
           titleParts={[
             {
               text: "Our",
@@ -33,6 +34,7 @@ const Benefits = () => {
           ]}
           description="At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth."
         />
+    </div>
         <div className='S-K-BenefitsCard'>
    {benefitsContent.map((data) => (
             <Card

@@ -16,6 +16,7 @@
   --yb-spacing-y-lg: 150px;
   --yb-spacing-y-md: 120px;
   --yb-spacing-y-sm: 80px;
+  --yb-spacing-y-sm-2: 70px;
   /* Horizontal Spacing */
   --yb-spacing-x-lg: 162px;
   --yb-spacing-x-md: 80px;
@@ -47,6 +48,17 @@ body {
   color: var(--yb-color-white);
   font-family: var(--yb-font-family-primary);
 }
-main{
-      padding-top: 250px;
+
+main {
+  padding-top: var(--yb-spacing-y-lg);
+}
+@media screen and (max-width: 1440px) {
+  main {
+    padding-top: var(--yb-spacing-y-md);
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    padding-top: var(--yb-spacing-y-sm-2);
+  }
 }

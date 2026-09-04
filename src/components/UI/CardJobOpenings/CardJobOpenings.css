@@ -1,0 +1,110 @@
+.DS_CardJobOpenings{
+    width: clamp(630px, 40.8vw, 900px);
+    padding: 50px;
+    border-radius: 16px;
+    background-color: var(--yb-color-dark-2);
+    border: 1px solid var(--yb-color-dark-3);
+}
+
+.DS_jobTitle{
+    font-size:clamp(var(--yb-font-size-title-lg), 1.6vw, 30px);
+    font-family: var(--yb-font-family-primary);
+    font-weight: 600 ;
+    line-height: 1.5;
+    color: var(--yb-color-white);
+}
+
+.DS_jobTags{
+    margin-top:clamp(10px, 0.7vw, 14px);
+    margin-bottom: clamp(30px, 2.72vw, 50px);
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+
+    .DS_jobTag{
+        width: fit-content;
+        padding: clamp(6px, 0.41vw, 8px) clamp(10px, 0.97vw, 16px) ;
+        background-color: var(--yb-color-dark-1);
+        border: 1px solid var(--yb-color-dark-3);
+        border-radius: 68px;
+        font-family: var(--yb-font-family-primary);
+        font-weight: var(--yb-font-weight-lt);
+        font-size: clamp(var(--yb-font-size-body-sm), 1.11vw, var(--yb-font-size-body-lg));
+        line-height:1.5;
+    }
+}
+
+.DS_TitleAbout , .DS_TitleRequire{
+    font-family: var(--yb-font-family-primary);
+    font-weight: 600;
+    font-size:clamp(var(--yb-font-size-title-sm), 1.40vw, var(--yb-font-size-title-lg));
+    line-height: 1.5;
+    color: var(--yb-color-white);
+}
+
+.DS_DescAbout{
+    margin-top:clamp(8px, 1.12vw, 20px);
+    margin-bottom: clamp(30px, 2.9vw, 40px);
+    font-family: var(--yb-font-family-primary);
+    font-weight: var(--yb-font-weight-lt);
+    font-size: clamp(var(--yb-font-size-body-sm), 1.11vw, var(--yb-font-size-body-lg));
+    line-height: 1.5;
+    color: var(--yb-color-text-secondary);
+}
+
+.DS_jobRequirementsList{
+    margin-top:clamp(10px, 1.12vw, 20px);
+    margin-bottom: clamp(30px, 2.9vw, 50px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px, 0.99vw, 20px);
+    list-style: none;
+
+    .DS_jobReqItem{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+.DS_WorkBag{
+    width:clamp(20px, 1.38vw, 24px);
+}
+
+        .DS_ReqText{
+            font-family: var(--yb-font-family-primary);
+            font-weight: var(--yb-font-weight-lt);
+            font-size: clamp(var(--yb-font-size-body-sm), 1.11vw, var(--yb-font-size-body-lg));
+            line-height: 1.5;
+            color: var(--yb-color-text-secondary);
+        }
+    }
+}
+.DS_BtnApply{
+    padding: clamp(12px, 0.84vw, 16px) clamp(20px, 1.39vw, 30px);
+    border-radius: 82px;
+    background-color: var(--yb-color-primary);
+    font-size: clamp(var(--yb-font-size-body-sm), 0.98vw, var(--yb-font-size-body-lg)); 
+    font-family: Lexend;
+    font-weight: var(--yb-font-weight-md);
+    line-height: 1.5;
+    color:var(--yb-color-dark-2) ;
+    border: none;
+}
+
+
+@media (max-width: 992px) {
+    .DS_CardJobOpenings{
+        width: 100%;
+        padding: 24px;
+    }
+
+    .DS_jobTitle{
+    font-size:var(--yb-font-size-title-md);
+    
+}
+
+.DS_jobTags{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+}

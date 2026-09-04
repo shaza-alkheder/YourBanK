@@ -1,156 +1,835 @@
-
-.MGhome-hero{
-    margin-top: 50px;
-    margin-bottom: 120px;
-    display: flex;
-    justify-content: space-between;
+.MGhome-hero {
+  margin-top: 50px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.MGhero-left{
-    width: 50%;
+.MGhero-left {
+  width: 50%;
 
-
-    .MG-button{
-            padding-block: clamp(12px, 0.83vw, 14px); 
-            padding-inline: clamp(24px, 1.6vw, 30px);
-            background-color:var(--yb-color-primary); 
-            color:var(--yb-color-dark-2) ;
-            border: none; }
-
+  .MG-button {
+    padding-block: clamp(12px, 0.83vw, 14px);
+    padding-inline: clamp(24px, 1.6vw, 30px);
+    background-color: var(--yb-color-primary);
+    color: var(--yb-color-dark-2);
+    border: none;
+  }
 }
-.MGtitle1{
-    max-width: max-content;
-    display: flex;
-    gap: 6px;
-    background-color:var(--yb-color-dark-3);
-    padding: 10px 20px 10px 12px;
-    border-radius: 61px;
-    p{
-        color: var( --yb-color-white);
-        font-family:var(--yb-font-family-primary) ;
-        font-weight:var(--yb-font-weight-lt) ;
-        font-size: var( --yb-font-size-body-lg);
-        line-height: 24px;
-    }
-
-    
+.MGtitle1 {
+  max-width: max-content;
+  display: flex;
+  gap: 6px;
+  background-color: var(--yb-color-dark-3);
+  padding: 10px 20px 10px 12px;
+  border-radius: 61px;
+  p {
+    color: var(--yb-color-white);
+    font-family: var(--yb-font-family-primary);
+    font-weight: var(--yb-font-weight-lt);
+    font-size: var(--yb-font-size-body-lg);
+    line-height: 24px;
+  }
 }
 
-.DS_style{
-    max-width: 825.98px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-
+.DS_style {
+  max-width: 825.98px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
-.MGhero-right{
+.MGhero-right {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  .S-K-RightSection {
     position: relative;
-    width: 50%;
-    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    .S-K-Transactions {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 515.01px;
+      /* height: 624.48px; */
+      height: auto;
+      width: 100%;
+      border-radius: 10.4px;
+      padding: 34.68px;
+      gap: 26.01px;
+      border-width: 0.87px;
+      z-index: 7;
+      background:
+        linear-gradient(0deg, var(--yb-color-dark-1), var(--yb-color-dark-1)),
+        linear-gradient(
+          214.85deg,
+          rgba(26, 26, 26, 0) 0%,
+          var(--yb-color-dark-1) 39.72%
+        ),
+        url("/assets/img/HomePage/bg-righthero.webp");
+      border:
+        0.87px solid,
+        var(--yb-color-dark-3);
+      background-size: cover;
+      background-repeat: no-repeat;
 
-    .MGarrow-hero{
-    position: absolute;
-    width: 417.94px;
-    right: 0;
-    top: 20px;
-    z-index: 1;
-    }
-    .MGhero-dashboard{
-    position: absolute;
-    width: 515.019px;
-    right: 88px;
-    top: 0;
-    z-index: 2;
-    }
+      border-image-source:
+        linear-gradient(0deg, var(--yb-color-dark-3), var(--yb-color-dark-3)),
+        linear-gradient(
+          214.24deg,
+          rgba(202, 255, 51, 0.2) 0%,
+          rgba(202, 255, 51, 0) 11.24%
+        ),
+        linear-gradient(
+          214.24deg,
+          rgba(202, 255, 51, 0) 91.73%,
+          rgba(202, 255, 51, 0.2) 99.95%
+        );
 
+      h2 {
+        font-weight: 500;
+        font-size: 17.34px;
+        line-height: 150%;
+      }
+      .S-K-TransactionsCards {
+        display: flex;
+        flex-direction: column;
+        max-width: 445.66px;
+        width: 100%;
+        /* height: auto; */
+        height: 225.02px;
+        position: relative;
+        gap: 17.34px;
+
+        .S-K-TransCard {
+          display: flex;
+          max-width: 445.66px;
+          width: 100%;
+          /* height: 181.68px; */
+          height: auto;
+          z-index: 5;
+          .S-K-TransCardSec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 445.66px;
+            height: 76.75px;
+            justify-content: space-between;
+            border-radius: 10.4px;
+            border-width: 0.87px;
+            padding-top: 13.87px;
+            padding-right: 20.81px;
+            padding-bottom: 13.87px;
+            padding-left: 20.81px;
+            background: var(--yb-color-dark-2);
+            border: 0.87px solid var(--yb-color-dark-3);
+            .S-K-TransCardLeft {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 8.67px;
+              .S-K-TransCardLeftIcon {
+                width: 38.15px;
+                height: 38.15px;
+                border-radius: 45.95px;
+                padding: 8.67px;
+                gap: 8.67px;
+                background: #caff33;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .S-K-ContentLeft {
+                display: flex;
+                flex-direction: column;
+                p {
+                  font-weight: 300;
+                  font-size: 15.61px;
+                  line-height: 150%;
+                  color: var(--yb-color-white);
+                }
+                h2 {
+                  font-weight: 400;
+                  font-size: 17.34px;
+                  line-height: 150%;
+                  color: var(--yb-color-white);
+                }
+              }
+            }
+          }
+          &:nth-child(3) {
+            opacity: 0.5;
+            padding-right: 17.34px;
+            padding-left: 17.34px;
+            gap: 8.67px;
+            position: absolute;
+            top: 95px;
+            z-index: 4;
+          }
+          &:nth-child(4) {
+            opacity: 0.2;
+            padding-right: 34.68px;
+            padding-left: 34.68px;
+            gap: 8.67px;
+            z-index: 3;
+            position: absolute;
+            top: 148px;
+          }
+        }
+      }
+      .S-K-Exchange {
+        /* */
+        display: flex;
+        flex-direction: column;
+        gap: 25.14px;
+
+        .S-K-ExchangeContainer {
+          gap: 25.14px;
+          display: flex;
+          flex-direction: column;
+          h1 {
+            font-weight: 500;
+            font-size: 17.34px;
+            line-height: 150%;
+            color: var(--yb-color-white);
+          }
+          .S-K-ExchangeCurrency {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-radius: 10.4px;
+            border-width: 0.87px;
+            border: 0.87px solid var(--yb-color-dark-3);
+            background: #1c1c1c;
+            .S-K-ExchangeCurrencyCard {
+              display: flex;
+              flex-direction: column;
+              border: 0.87px solid var(--yb-color-dark-3);
+
+              padding: 17.34px;
+              gap: 8.67px;
+
+              .S-K-CurrencyDivImg {
+                display: flex;
+                gap: 8.67px;
+                justify-content: flex-start;
+                align-items: center;
+                h2 {
+                  font-weight: 400;
+                  font-size: 15.61px;
+                  line-height: 150%;
+                  color: var(--yb-color-white);
+                }
+              }
+              p {
+                font-weight: 300;
+                font-size: 13.87px;
+                line-height: 150%;
+                color: var(--yb-color-text-tertiary);
+              }
+            }
+            .S-K-Price {
+              padding-top: 26.01px;
+              padding-right: 17.34px;
+              padding-bottom: 26.01px;
+              padding-left: 17.34px;
+              border: 0.87px solid var(--yb-color-dark-3);
+              h2 {
+                font-weight: 500;
+                font-size: 17.34px;
+                line-height: 150%;
+                color: var(--yb-color-white);
+              }
+            }
+          }
+        }
+        .S-K-btn-change {
+          /* width: 445.6565246582031;
+        height: 50.74515151977539; */
+          border-radius: 71.1px;
+          gap: 8.67px;
+          padding-top: 13.87px;
+          padding-right: 26.01px;
+          padding-bottom: 13.87px;
+          padding-left: 26.01px;
+          background: #22251b;
+          border: none;
+          font-family: Lexend;
+          font-weight: 400;
+          font-size: 15.61px;
+          line-height: 150%;
+          color: #d1ff4d;
+        }
+      }
+    }
+    .S-K-Income {
+      z-index: 8;
+      width: 188.5px;
+      height: 75.61px;
+      background: #22251b;
+      padding-top: 13.87px;
+      padding-right: 17.34px;
+      padding-bottom: 13.87px;
+      padding-left: 17.34px;
+      gap: 8.67px;
+      border-radius: 10.4px;
+      display: flex;
+      top: -45px;
+      left: -60px;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      .S-K-IncomeDivImg {
+        width: 38.15px;
+        height: 38.15px;
+        gap: 8.67px;
+        border-radius: 45.95px;
+        padding: 8.67px;
+        background: var(--yb-color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .S-K-IncomeContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          font-weight: 400;
+          font-size: 17.34px;
+          line-height: 150%;
+          color: var(--yb-color-white);
+        }
+        p {
+          font-family: Lexend;
+          font-weight: 300;
+          font-size: 13.87px;
+          line-height: 150%;
+          color: var(--yb-color-text-tertiary);
+        }
+      }
+    }
+    .S-K-Arrows {
+      position: absolute;
+      left: 350px;
+      top: 24px;
+      z-index: 2;
+
+      img {
+        z-index: 0;
+        /* display: block;
+      max-width: 100%;
+      height: auto; */
+        width: auto;
+      }
+    }
+    .S-K-Currency {
+      margin-top: 13.95px;
+      display: flex;
+      width: 370.22px;
+      height: 69.36px;
+      justify-content: space-between;
+      /* justify-content: center; */
+      align-items: center;
+      padding-top: 8.67px;
+      padding-right: 8.67px;
+      padding-bottom: 8.67px;
+      padding-left: 20.81px;
+      border-radius: 69.36px;
+      position: absolute;
+      bottom: -85px;
+      left: 200px;
+      background: #22251b;
+      p {
+        font-weight: 400;
+        font-size: 15.61px;
+        line-height: 150%;
+        color: var(--yb-color-white);
+      }
+
+      .S-K-CurrencyIcons {
+        width: 176.88px;
+        height: 52.02px;
+        gap: 6.94px;
+        border-radius: 47.69px;
+        border-width: 0.87px;
+        padding: 8.67px;
+        display: flex;
+        background: var(--yb-color-dark-1);
+        border: 0.87px solid var(--yb-color-dark-3);
+        justify-content: center;
+        align-items: center;
+        .S-K-CurrIcon {
+          width: 34.68px;
+          height: 34.68px;
+          border-radius: 50%;
+          background: var(--yb-color-dark-3);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
 }
 
-
-@media screen and (max-width : 1440px) {
-    
-    .MGhome-hero{
+@media screen and (max-width: 1440px) {
+  .MGhome-hero {
     margin-top: 30px;
     /*padding-top : 60px ;*/
+  }
 
+  .MGtitle1 {
+    gap: 6px;
+    padding: 8px 16px 8px 8px;
+
+    p {
+      font-size: var(--yb-font-size-body-sm);
     }
-
-    .MGtitle1{
-        gap: 6px;
-        padding: 8px 16px 8px 8px ;
-
-        p{
-            font-size : var(--yb-font-size-body-sm);
-        }
-    }
-
-    
-    .DS_style{
-        max-width: 649.80px;
-        margin-top: 16px;
-        margin-bottom: 40px;
-
-    }
-    .MGhero-right{
-        .MGarrow-hero{
-            width: 300px;
-        }
-
-        .MGhero-dashboard{
-            width: 410px;
-
-        }
-    }
-    
-}
-@media screen and (max-width : 992px){
-    .MGhome-hero{
-        flex-direction: column;
-        margin-top: 50px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .MGhero-left{
+  }
+  .MGhero-right {
+    .S-K-RightSection {
+      .S-K-Transactions {
+        max-width: 410.192px;
         width: 100%;
-        
-    .MG-button{
-        margin-bottom: 54.43;
+        border-radius: 8.26px;
+        padding: 27.55px;
+        gap: 20.66px;
+        border-width: 0.69px;
+        h2 {
+          font-size: 13.77px;
+        }
+        .S-K-TransactionsCards {
+          max-width: 355.099px;
+          height: 182.32px;
+          gap: 13.77px;
+
+          .S-K-TransCard {
+            max-width: 355.099px;
+            .S-K-TransCardSec {
+              width: 355.099px;
+              height: 62.037px;
+
+              padding-top: 11.02px;
+              padding-right: 16.53px;
+              padding-bottom: 11.02px;
+              padding-left: 16.53px;
+              border-radius: 8.26px;
+              border-width: 0.69px;
+
+              .S-K-TransCardLeft {
+                gap: 6.89px;
+
+                .S-K-TransCardLeftIcon {
+                  width: 30.35px;
+                  height: 30.33px;
+                  gap: 6.89px;
+                  border-radius: 36.5px;
+                  padding: 6.89px;
+                }
+                .S-K-ContentLeft {
+                  p {
+                    font-size: 12.4px;
+                  }
+                  h2 {
+                    font-size: 13.77px;
+                  }
+                }
+              }
+            }
+            &:nth-child(3) {
+              padding-right: 13.77px;
+              padding-left: 13.77px;
+              gap: 6.89px;
+
+              top: 78px;
+            }
+            &:nth-child(4) {
+              padding-right: 27.55px;
+              padding-left: 27.55px;
+              gap: 6.89px;
+
+              top: 120px;
+            }
+          }
+        }
+        .S-K-Exchange {
+          /* */
+
+          gap: 19.97px;
+
+          .S-K-ExchangeContainer {
+            gap: 19.97px;
+
+            h1 {
+              font-size: 13.77px;
+            }
+            .S-K-ExchangeCurrency {
+              border-radius: 8.26px;
+              border: 0.69px solid var(--yb-color-dark-3);
+
+              .S-K-ExchangeCurrencyCard {
+                border: 0.87px solid var(--yb-color-dark-3);
+
+                padding: 13.77px;
+                gap: 6.89px;
+
+                .S-K-CurrencyDivImg {
+                  gap: 6.89px;
+
+                  h2 {
+                    font-size: 12.4px;
+                  }
+                }
+                p {
+                  font-size: 11.02px;
+                }
+              }
+              .S-K-Price {
+                padding-top: 20.66px;
+                padding-right: 13.77px;
+                padding-bottom: 20.66px;
+                padding-left: 13.77px;
+                gap: 6.89px;
+
+                h2 {
+                  font-size: 13.77px;
+                }
+              }
+            }
+          }
+          .S-K-btn-change {
+            border-radius: 56.47px;
+            gap: 6.89px;
+            font-size: 12.4px;
+            padding-top: 11.02px;
+            padding-right: 20.66px;
+            padding-bottom: 11.02px;
+            padding-left: 20.66px;
+          }
+        }
+      }
+
+      .S-K-Income {
+        width: 154px;
+        height: 60.73px;
+        padding-top: 11.02px;
+        padding-right: 13.77px;
+        padding-bottom: 11.02px;
+        padding-left: 13.77px;
+        gap: 6.89px;
+        border-radius: 8.26px;
+        top: -35px;
+        left: -52px;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        .S-K-IncomeDivImg {
+          width: 30.35px;
+          height: 30.26px;
+
+          gap: 6.89px;
+          border-radius: 36.5px;
+          padding: 6.89px;
+        }
+        .S-K-IncomeContent {
+          display: flex;
+          gap: 0.69px;
+
+          h2 {
+            font-size: 13.77px;
+          }
+          p {
+            font-size: 11.02px;
+          }
+        }
+      }
+      .S-K-Arrows {
+        left: 240px;
+        top: 24px;
+        img {
+          z-index: 0;
+          /* width: 300px;
+        height: 275px; */
+        }
+      }
+      .S-K-Currency {
+        width: 294.87px;
+        height: 55.02px;
+
+        padding-top: 6.89px;
+        padding-right: 6.89px;
+        padding-bottom: 6.89px;
+        padding-left: 16.53px;
+        border-radius: 55.09px;
+
+        left: 160px;
+        background: #22251b;
+        p {
+          font-size: 12.4px;
+          line-height: 150%;
+        }
+
+        .S-K-CurrencyIcons {
+          width: 140.79px;
+          height: 41.24px;
+
+          gap: 5.51px;
+          border-radius: 37.88px;
+          border-width: 0.69px;
+          padding: 6.89px;
+
+          .S-K-CurrIcon {
+            width: 27.62px;
+            height: 27.47px;
+
+            border-radius: 50%;
+            background: var(--yb-color-dark-3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
     }
-    }
+  }
 
-    
-.MGhero-right{
-    width: 305px;
-    min-height: 350px;
-
-    .MGarrow-hero{
-        width: 220px;
-        right: -20px;
-    }
-
-    .MGhero-dashboard{
-        width: 305px;
-        right: 1px;
-        top: 18px;
-
-
-    }
-
+  .DS_style {
+    max-width: 649.8px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
 }
+@media screen and (max-width: 992px) {
+  .MGhome-hero {
+    flex-direction: column;
+    /* margin-top: 50px; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;
+  }
 
-.MGtitle1{
+  .MGhero-left {
+    width: 100%;
+
+    .MG-button {
+      margin-bottom: 54.43;
+    }
+  }
+
+  .MGtitle1 {
     margin: auto;
-}
-.DS_style {
-        max-width: 100%;
-        margin-top: 12px;
-        margin-bottom: 30px;
+  }
+  .DS_style {
+    max-width: 100%;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+  .MGhero-right {
+    .S-K-RightSection {
+      .S-K-Transactions {
+        max-width: 305.45px;
+        width: 100%;
+        border-radius: 6.15px;
+        padding: 20.51px;
+        gap: 15.38px;
+        border-width: 0.51px;
+        h2 {
+          font-size: 10.26px;
+          text-align: start;
+        }
+        .S-K-TransactionsCards {
+          max-width: 264.433px;
+          height: 132.77px;
+          gap: 10.26px;
 
+          .S-K-TransCard {
+            max-width: 264.43px;
+            .S-K-TransCardSec {
+              width: 264.43px;
+              height: 45.41px;
+
+              padding-top: 8.2px;
+              padding-right: 12.31px;
+              padding-bottom: 8.2px;
+              padding-left: 12.31px;
+              border-radius: 6.15px;
+              border-width: 0.51px;
+
+              .S-K-TransCardLeft {
+                gap: 5.13px;
+
+                .S-K-TransCardLeftIcon {
+                  width: 22.598px;
+                  height: 22.53px;
+                  gap: 5.13px;
+                  border-radius: 27.18px;
+                  padding: 5.13px;
+                }
+                .S-K-ContentLeft {
+                  p {
+                    font-size: 9.23px;
+                  }
+                  h2 {
+                    font-size: 10.26px;
+                  }
+                }
+              }
+            }
+            &:nth-child(3) {
+              padding-right: 10.26px;
+              padding-left: 10.26px;
+              gap: 5.13px;
+
+              top: 58px;
+            }
+            &:nth-child(4) {
+              padding-right: 20.51px;
+              padding-left: 20.51px;
+              gap: 5.13px;
+
+              top: 90px;
+            }
+          }
+        }
+        .S-K-Exchange {
+          /* */
+
+          gap: 14.87px;
+
+          .S-K-ExchangeContainer {
+            gap: 14.87px;
+
+            h1 {
+              font-size: 10.26px;
+            }
+            .S-K-ExchangeCurrency {
+              border-radius: 6.15px;
+              border: 0.51px solid var(--yb-color-dark-3);
+
+              .S-K-ExchangeCurrencyCard {
+                border: 0.87px solid var(--yb-color-dark-3);
+
+                padding: 10.26px;
+                gap: 5.13px;
+
+                .S-K-CurrencyDivImg {
+                  gap: 6.89px;
+                  img {
+                    width: 20.57px;
+                    height: 20.46px;
+                  }
+                  h2 {
+                    font-size: 9.23px;
+                  }
+                }
+                p {
+                  font-size: 8.2px;
+                }
+              }
+              .S-K-Price {
+                padding-top: 15.38px;
+                padding-right: 10.26px;
+                padding-bottom: 15.38px;
+                padding-left: 10.26px;
+                gap: 5.13px;
+
+                h2 {
+                  font-size: 10.26px;
+                }
+              }
+            }
+          }
+          .S-K-btn-change {
+            border-radius: 42.05px;
+            gap: 5.13px;
+            font-size: 9.23px;
+            padding-top: 8.2px;
+            padding-right: 15.38px;
+            padding-bottom: 8.2px;
+            padding-left: 15.38px;
+          }
+        }
+      }
+      .S-K-Income {
+        width: 111.24px;
+        height: 43.93px;
+        padding-top: 8.2px;
+        padding-right: 10.26px;
+        padding-bottom: 8.2px;
+        padding-left: 10.26px;
+        gap: 5.13px;
+        border-radius: 6.15px;
+        top: -24px;
+        left: -35px;
+
+        .S-K-IncomeDivImg {
+          width: 22.59px;
+          height: 22.53px;
+
+          gap: 5.13px;
+          border-radius: 27.18px;
+          padding: 5.13px;
+          img {
+            width: 12.34px;
+            height: 12.27px;
+          }
+        }
+        .S-K-IncomeContent {
+          display: flex;
+          gap: 0.51px;
+
+          h2 {
+            font-size: 10.26px;
+          }
+          p {
+            font-size: 8.2px;
+          }
+        }
+      }
+      .S-K-Arrows {
+        left: 60px;
+        top: -24px;
+        max-width: 220px;
+        width: 100%;
+        height: 201px;
+        img {
+          z-index: 0;
+          /* width: 300px;
+        height: 275px; */
+        }
+      }
+      .S-K-Currency {
+        width: 219.57px;
+        height: 40.97px;
+
+        padding-top: 5.13px;
+        padding-right: 5.13px;
+        padding-bottom: 5.13px;
+        padding-left: 12.31px;
+        border-radius: 41.02px;
+        bottom: -65px;
+        left: 120px;
+        p {
+          font-size: 9.23px;
+        }
+
+        .S-K-CurrencyIcons {
+          width: 104.84px;
+          height: 30.71px;
+
+          gap: 4.1px;
+          border-radius: 28.2px;
+          border-width: 0.51px;
+          padding: 5.13px;
+
+          .S-K-CurrIcon {
+            width: 20.57px;
+            height: 20.46px;
+          }
+        }
+      }
     }
-
-
+  }
 }
-
-
-
-

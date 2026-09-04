@@ -1,0 +1,40 @@
+input{
+    min-width: 320px;
+    max-width: 498px;
+    height: 75px;
+    padding: 24px;
+    background-color: var(--yb-color-dark-1);
+    border: 1px solid var(--yb-color-dark-3);
+    color: var(--yb-color-white);
+    border-radius: 88px;
+    &::placeholder{
+        font-weight: 300;
+        font-size: 18px;
+        color: #59595A;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    input{
+        min-width: 250px;
+        max-width: 320px;
+        height: 64px;
+        padding: 20px;
+        &::placeholder{
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    input{
+        max-width: 100%;
+        width: 100%;
+        height: 56px;
+        padding: 16px;
+        &::placeholder{
+            font-size: 16px;
+        }
+    }
+}
