@@ -2,7 +2,7 @@
 /*import TitleDescription from '../../UI/TitleDescription/TitleDescription'
 import './InnerHero.css'
 function InnerHero({paragraph , img}) {
-  return (
+return (
     <div className="inner-hero">
     <div className="MGinner-title">
         <p>{paragraph}</p>

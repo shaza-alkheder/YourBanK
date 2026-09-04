@@ -10,11 +10,7 @@ import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
 
 function App() {
-<<<<<<< HEAD
-  localStorage.clear();
-=======
 
->>>>>>> f8930d81d208e1220fbaa29c4a5bea5df3b38b9d
   return (
     <>
       <Nav logo="/assets/img/Logo/logoNavBar.webp" />
@@ -33,3 +29,4 @@ function App() {
 }
 
 export default App;
+
