@@ -30,11 +30,11 @@ function Home() {
         <Container>
           <OurProduct />
         </Container>
-<<<<<<< HEAD
+
         <Container>
           <OurFeatures /> 
         </Container>
-=======
+
 
         <Container>
           <UseCases/>
@@ -44,7 +44,7 @@ function Home() {
           <OurFeatures /> 
         </Container>
 
->>>>>>> f8930d81d208e1220fbaa29c4a5bea5df3b38b9d
+
         <Container>
           <FAQ /> 
         </Container>
