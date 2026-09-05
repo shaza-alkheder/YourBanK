@@ -39,11 +39,10 @@ export default InnerHero*/
 import TitleDescription from '../../UI/TitleDescription/TitleDescription'
 import './InnerHero.css'
 
-function InnerHero({ paragraph, img }) {
+function InnerHero({ img , titlePart1, titlePart2, titlePart3, description }) {
   return (
     <div className="inner-hero">
 
-      {paragraph}
 
       <div className="MGinner-img">
 
@@ -59,24 +58,27 @@ function InnerHero({ paragraph, img }) {
           className="MGbg-image"
         />
 
+
         <TitleDescription
           className="MGts-style"
           titleParts={[
             {
-              text: "Welcome to ",
+              text: titlePart1 ,
               className: ""
             },
             {
-              text: "YourBank",
+              text: titlePart2,
               className: "DS_ColorLimeGreen"
             },
             {
-              text: " Careers!",
+              text: titlePart3,
               className: ""
             }
           ]}
-          description="Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."
+          description={description}
         />
+
+  
 
       </div>
 
