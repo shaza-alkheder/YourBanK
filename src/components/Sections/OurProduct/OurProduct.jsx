@@ -5,9 +5,9 @@ import Card from "../../UI/Card/Card"
 import TitleDescription from "../../UI/TitleDescription/TitleDescription"
 import "./OurProduct.css"
 import OurProductData from "../../../data/OurProductData.json"
-import { HiBanknotes } from "react-icons/hi2";
-import { FaBriefcase } from "react-icons/fa";
-import { IoArchive } from "react-icons/io5";
+// import { HiBanknotes } from "react-icons/hi2";
+// import { FaBriefcase } from "react-icons/fa";
+// import { IoArchive } from "react-icons/io5";
 
 const OurProduct = () => {
     const [filterOurProduct , setFilterOurProduct] = useState("forIndividuals")
@@ -30,11 +30,11 @@ const OurProduct = () => {
             buttonsProduct[1].classList.add("O-A-active")
         }
     } ,[filterOurProduct])
-    const icons = {
-        "FaBriefcase" : FaBriefcase,
-        "IoArchive" : IoArchive,
-        "HiBanknotes" : HiBanknotes
-    } 
+    // const icons = {
+    //     "FaBriefcase" : FaBriefcase,
+    //     "IoArchive" : IoArchive,
+    //     "HiBanknotes" : HiBanknotes
+    // } 
     // const iconss = [FaBriefcase , IoArchive , HiBanknotes]
     return (
         <section className="O-A-ourProduct">
@@ -75,12 +75,15 @@ const OurProduct = () => {
                                     <Card
                                         // key={index}
                                         title= {inviduals.title}
+                                        // titleIcon = {<div className="O-A-borderImage">{index===0? <icons.FaBriefcase /> : index===1? <icons.IoArchive /> : <icons.HiBanknotes />}</div>}
                                         desc= {inviduals.desc}
-                                        // icon = {<div className="O-A-borderImage"><img src={inviduals.imgSrc} className="O-A-imageOurProduct"/></div>}
-                                        icon = {<div className="O-A-borderImage">{index===0? <icons.FaBriefcase /> : index===1? <icons.IoArchive /> : <icons.HiBanknotes />}</div>}
+                                        icon = {<div className="O-A-borderImage"><img src={inviduals.imgSrc} className="O-A-imageOurProduct"/></div>}
+                                        // icon = {<div className="O-A-borderImage">{index===0? <icons.FaBriefcase /> : index===1? <icons.IoArchive /> : <icons.HiBanknotes />}</div>}
                                         classNames={{
                                         card: "O-A-cardStyleOueProduct",
                                         title: "O-A-titleCardOurProduct",
+                                        // titleIcon : "O-A-borderIconCardOurProduct O-A-display",
+                                        // imgTitleDiv : "O-A-smallScreenStyle",
                                         desc : "O-A-descCardOurProduct",
                                         icon : "O-A-borderIconCardOurProduct"
                                         }}
@@ -137,8 +140,8 @@ const OurProduct = () => {
                                         key={index}
                                         title= {inviduals.title}
                                         desc= {inviduals.desc}
-                                        // icon = {<div className="O-A-borderImage"><img src={inviduals.imgSrc} className="O-A-imageOurProduct"/></div>}
-                                        icon = {<div className="O-A-borderImage">{index===0? <icons.IoArchive /> : index===1? <icons.HiBanknotes /> : <icons.FaBriefcase />}</div>}
+                                        icon = {<div className="O-A-borderImage"><img src={inviduals.imgSrc} className="O-A-imageOurProduct"/></div>}
+                                        // icon = {<div className="O-A-borderImage">{index===0? <icons.IoArchive /> : index===1? <icons.HiBanknotes /> : <icons.FaBriefcase />}</div>}
                                         classNames={{
                                         card: "O-A-cardStyleOueProduct",
                                         title: "O-A-titleCardOurProduct",

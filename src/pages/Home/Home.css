@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -10;
   /* width: min(759px, 52vw); */
   width: 759px;
   height: auto;

@@ -88,6 +88,15 @@
                     }
                 }
             }
+            /* .O-A-smallScreenStyle{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 24px;
+                .O-A-display{
+                    display: none;
+                }
+            } */
             .O-A-titleCardOurProduct{
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -193,6 +202,14 @@
             .O-A-cardStyleOueProduct{
                 max-width: 100%;
                 height: max-content;
+                /* .O-A-smallScreenStyle{
+                    .O-A-display{
+                        display: block;
+                    }
+                }
+                .O-A-borderIconCardOurProduct {
+                    display: none;
+                } */
                 .O-A-titleCardOurProduct{
                     margin-top: 20px;
                     margin-bottom: 12px;
