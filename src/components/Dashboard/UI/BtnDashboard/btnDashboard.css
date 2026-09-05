@@ -1,0 +1,35 @@
+.DS_BtnDash {
+    width: clamp(50px, 3.47vw, 90px);
+    padding-block: clamp(10px, 0.69vw, 14px);
+    padding-inline: clamp(18px, 0.24vw, 24px);
+    background-color: var(--yb-color-primary);
+    border-radius: 16px;
+    color: var(--yb-color-white);
+    border: none;
+    font-weight: var(--yb-font-weight-rg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease; 
+}
+.DS_DivBtnDash{
+    width: clamp(50px, 3.47vw, 103px);
+    display: inline-flex;
+    flex-direction: column;
+}
+.DS_IconBtnDash {
+    color: #000000;
+    font-size: clamp(var(--yb-font-size-heading-sm), 3.33vw, var(--yb-font-size-heading-lg));
+    pointer-events: none
+}
+
+
+.DS_BtnDash:hover {
+    background-color: #b3e62e; 
+    color: var(--yb-color-dark-2);
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 16px rgba(202, 255, 51, 0.25); 
+}
+
