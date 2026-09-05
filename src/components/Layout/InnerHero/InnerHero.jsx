@@ -39,7 +39,7 @@ export default InnerHero*/
 import TitleDescription from '../../UI/TitleDescription/TitleDescription'
 import './InnerHero.css'
 
-function InnerHero({ img , titlePart1, titlePart2, titlePart3, description }) {
+function InnerHero({ Welcome ,img , titlePart1, titlePart2, titlePart3, description }) {
   return (
     <div className="inner-hero">
 
@@ -60,6 +60,7 @@ function InnerHero({ img , titlePart1, titlePart2, titlePart3, description }) {
 
 
         <TitleDescription
+          Welcome={Welcome}
           className="MGts-style"
           titleParts={[
             {
