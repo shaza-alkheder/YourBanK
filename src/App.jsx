@@ -8,12 +8,13 @@ import Security from "./pages/Security/Security";
 import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
+import Dashboard from "./pages/DashBoard/DashBoard";
 
 function App() {
 
   return (
     <>
-      <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+      {/*<Nav logo="/assets/img/Logo/logoNavBar.webp" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -21,9 +22,80 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
 
-      <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+      <Footer logo="/assets/img/Logo/logoNavBar.webp" /> */}
+
+      <Routes>
+           <Route
+        path="/"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <Home />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+        <Route
+        path="/about"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <About />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+
+      <Route
+        path="/careers"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <Careers />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+
+      <Route
+        path="/security"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <Security />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+
+      <Route
+        path="/signup"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <SignUp />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+
+      <Route
+        path="/login"
+        element={
+          <>
+           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+            <Login />
+            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+          </>
+        }
+      />
+
+       <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+
     </>
   );
 }

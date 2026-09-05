@@ -3,7 +3,7 @@
   top: 50px;
   left: 162px;
   right: 162px;
-  z-index: 3;
+  z-index: 20;
   padding: 20px 34px;
   display: flex;
   justify-content: space-between;
@@ -99,7 +99,7 @@
   border-radius: 10px;
   transform: translateX(200%);
   transition: 1s all;
-  z-index: 3;
+  z-index: 20;
   display: none;
 }
 .navMenu ul {
