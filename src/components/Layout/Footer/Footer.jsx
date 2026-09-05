@@ -1,6 +1,7 @@
 import './Footer.css'
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { NavLink } from 'react-router-dom';
 
 function Footer({ logo}) {
 
@@ -13,10 +14,10 @@ function Footer({ logo}) {
         <div className="mmTitle">
            <img src={logo} alt="" className='mmLogo'/>
             <ul>
-                <li>Home</li>
-                <li>Careers</li>
-                <li>About</li>
-                <li>Security</li>
+                <li><NavLink to = "/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink></li>
+                <li><NavLink to = "/about" className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
+                <li><NavLink to = "/careers" className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
+                <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
             </ul>
         </div>
 
