@@ -197,7 +197,6 @@
 
     .DS_CardStyleUseCase{
         width:  clamp(154px, 39.7vw, 314px);
-        flex: 1 1 154px;
         padding: 20px 14px;
 }
 .DS_TitleTextContent{
@@ -241,7 +240,5 @@
             width:100%;
             text-align: center;
         }
-
-
 }
 }

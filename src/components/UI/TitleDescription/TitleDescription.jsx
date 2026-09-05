@@ -1,8 +1,9 @@
 import './TitleDescription.css'
 
-function TitleDescription({ className = "", titleParts = [], description }) {
+function TitleDescription({ Welcome,className = "", titleParts = [], description }) {
     return (
         <div className={`DS_TitleDescription ${className}`}>
+            {Welcome ?<p className="DS_Welcome" > {Welcome} </p>  : "" }
             <h2 className="DS_title">
                 {titleParts.map((part, index) => (
                     <span key={index} className={part.className || ""}>
