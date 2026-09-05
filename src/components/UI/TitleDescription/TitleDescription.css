@@ -6,10 +6,20 @@
   display: flex;
   flex-direction: column;
   color: var(--yb-color-white);
-  gap: clamp(10px, 0.79vw, 14px);
 }
-
+.DS_Welcome{
+  font-family: var(--yb-font-family-primary);
+font-weight: var(--yb-font-weight-rg);
+  font-size: clamp(
+    var(--yb-font-size-body-sm),
+    1.25vw,
+    var(--yb-font-size-title-md)
+  );
+line-height: 1.5;
+color: var(--yb-color-white);
+}
 .DS_title {
+  margin-bottom: clamp(10px, 0.79vw, 14px);
   font-size: clamp(
     var(--yb-font-size-heading-md),
     2.5vw,

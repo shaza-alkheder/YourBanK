@@ -16,7 +16,7 @@ function Careers() {
       img = "/assets/img/CareersPage/careersHeroImage.webp"
       titlePart1 = "Welcome to"
       titlePart2 = "YourBank"
-      titlePart3 = "Careers"
+      titlePart3 = "Careers!"
       description = "Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."
       />
     </Container>
