@@ -36,7 +36,7 @@
       height: 330px;
       gap: 24px;
       border-radius: 20px;
-      border-width: 1px;
+      /* border-width: 1px; */
       padding: 46px;
       background:
         linear-gradient(
@@ -81,7 +81,7 @@
             height: 74px;
             gap: 10px;
             border-radius: 50px;
-            border-width: 1px;
+            /* border-width: 1px; */
             padding: 20px;
             background: linear-gradient(
               180deg,

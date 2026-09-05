@@ -63,7 +63,7 @@
         url("/assets/img/CareersPage/bg.webp");
       border: 1px solid;
 
-      border-image-source: linear-gradient(
+      border-image: linear-gradient(
         280.49deg,
         rgba(202, 255, 51, 0.1) 0%,
         rgba(38, 38, 38, 0) 17.02%,
