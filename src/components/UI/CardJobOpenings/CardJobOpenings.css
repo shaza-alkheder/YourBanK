@@ -1,6 +1,6 @@
 .DS_CardJobOpenings{
-    width: clamp(630px, 40.8vw, 900px);
-    padding: 50px;
+    /* width: clamp(630px, 40.8vw, 800px); */
+    padding: clamp(24px, 2.77vw, 50px);
     border-radius: 16px;
     background-color: var(--yb-color-dark-2);
     border: 1px solid var(--yb-color-dark-3);
@@ -19,11 +19,12 @@
     margin-bottom: clamp(30px, 2.72vw, 50px);
     display: flex;
     flex-direction: row;
-    gap: 9px;
+    gap: 10px;
 
     .DS_jobTag{
         width: fit-content;
-        padding: clamp(6px, 0.41vw, 8px) clamp(10px, 0.97vw, 16px) ;
+        padding: clamp(6px, 0.41vw, 8px) clamp(8px, 0.95vw, 16px) ;
+        color: var(--yb-color-text-secondary);
         background-color: var(--yb-color-dark-1);
         border: 1px solid var(--yb-color-dark-3);
         border-radius: 68px;
@@ -94,7 +95,6 @@
 @media (max-width: 992px) {
     .DS_CardJobOpenings{
         width: 100%;
-        padding: 24px;
     }
 
     .DS_jobTitle{

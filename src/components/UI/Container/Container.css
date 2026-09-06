@@ -1,6 +1,7 @@
 .O-A-container{
-    padding-left: var(--yb-spacing-x-lg);
-    padding-right: var(--yb-spacing-x-lg);
+    /* padding-left: var(--yb-spacing-x-lg);
+    padding-right: var(--yb-spacing-x-lg); */
+    padding-inline: clamp(80px, 9vw, 162px);
     margin-bottom: var(--yb-spacing-y-lg);
 }
 @media screen and (max-width:1440px) {

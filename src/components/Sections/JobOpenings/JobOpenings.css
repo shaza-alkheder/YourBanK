@@ -4,11 +4,9 @@
 }
 .DS_jobsContainer{
     margin-top: clamp(60px, 4.16vw, 80px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     gap:clamp(17px, 1.38vw,30px);
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
@@ -16,5 +14,8 @@
     .DS_TitleDescriptionJob{
     width: 100%;
     text-align: center;
+}
+.DS_jobsContainer{
+    grid-template-columns: repeat(1, 1fr);
 }
 }
