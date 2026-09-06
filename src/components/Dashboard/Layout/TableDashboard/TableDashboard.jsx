@@ -4,7 +4,7 @@ import BtnAdd from "../../UI/BtnDashboard/BtnAdd/BtnAdd"
 // import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 // import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
 
-const TableDashboard = ({title1 , title2 }) => {
+const TableDashboard = ({title1 , title2 , children}) => {
     return (
         <>
             <TitleDescription 
@@ -23,6 +23,7 @@ const TableDashboard = ({title1 , title2 }) => {
             />
             <BtnAdd />
             <div className="O-A-boxTable">
+                {children}
             {/* <table>
                 <thead>
                     <tr>
