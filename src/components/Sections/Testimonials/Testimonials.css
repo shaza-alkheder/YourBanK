@@ -2,17 +2,17 @@
     width: 100%;
 
     .DS_btnFilter {
-        width: clamp(311px, 20.7vw, 388px); 
+        width: clamp(310px, 20.8vw, 386px); 
         padding: clamp(12px, 0.83vw, 14px);  
         background-color: var(--yb-color-dark-2);
         border: 1px solid var(--yb-color-dark-3);
         border-radius: 82px;
         display: flex;
-        justify-content: space-between;
+
 
         .DS_styleTest {
             padding-block: clamp(10px, 0.69vw, 14px); 
-            padding-inline: clamp(18px, 0.24vw, 24px);
+            padding-inline: clamp(18px, 1.25vw, 24px);
             background-color: var(--yb-color-dark-2); 
             color: var(--yb-color-white);
             border: none;
@@ -32,10 +32,12 @@
     }
 
     .DS_slider {
+        max-width: 1980px;
         width: 100%;
+        margin: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         gap: 40px;
         position: relative;
@@ -44,26 +46,27 @@
 
 
     .DS_testimonialsSlider {
-        width:clamp(937px, 76.1vw, 1372px);
+        width:clamp(700px, 88vw, 1594px);
+        padding-inline:clamp(63px, 6.40vw, 113px); 
         display: flex;
+        justify-content: space-between;
         align-items: stretch;
-        gap: clamp(60px, 4.16vw, 80px);
+        gap: clamp(60px, 4.17vw, 80px);
         flex-shrink: 0;
         transition: transform 0.4s ease-in-out;
-        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.2) 100%);
-        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.2) 100%);
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 92%);
         overflow-x: auto;
         overflow-y: hidden;
         scroll-behavior: smooth;
         overflow: hidden;
 
         .DS_testimonialCard {
-            width: clamp(230px, 22.5vw, 404px);
+            width: clamp(193px, 22.5vw, 325px);
             height: auto;
             flex: 0 0 auto;
             box-sizing: border-box;
             display: flex;
-            justify-content: space-between;
+            justify-content: start;
             overflow: hidden;
             gap: clamp(40px, 2.77vw, 50px);
 
@@ -104,7 +107,7 @@
                     content: "";
                     flex: 1;
                     height: 1px;
-                    background-color:var(--yb-color-dark-3);
+                    background-color:#414141;
                 }
             }
 
@@ -125,8 +128,8 @@
         justify-content: space-between;
 
         .DS_Arrow{
-            width: clamp(52px, 3.6vw, 62px); 
-            height: clamp(52px, 3.6vw, 62px);
+            width: clamp(52px, 3.3vw, 62px); 
+            height: clamp(52px, 3.3vw, 62px);
             color: var(--yb-color-primary);
             font-size: var(--yb-font-size-body-lg);
             border-radius: 100px;
@@ -149,12 +152,15 @@
         flex-direction: row;
         justify-content: space-between;
         align-items:end;
-        gap: clamp(100px, 6vw, 300px); 
+        gap: 10px; 
     }
 
     .DS_SizeTitleDescription {
-        width: clamp(831px, 57.7vw, 910px);
+        width: clamp(350px, 56.1vw, 910px);
     }
+}
+.DS_SizeTitleDescription p{
+    font-size: clamp(var( --yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg));
 }
 
 @media (max-width: 992px) {
@@ -166,24 +172,30 @@
             margin-bottom: 40px;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
         }
         .DS_testimonialsSlider{
-            max-width: 400px;
-            width: 91vw;
+            max-width: 600px;
+            width: 100%;
+            padding: 0px;
             scroll-behavior: smooth;
+            mask-image: none;
+            border: 1px solid #414141;
+            border-radius: 12px;
+
 
 
         .DS_testimonialCard {
             width: 100%;
             padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--yb-color-dark-3);
+            /* border-radius: 12px; */
+            /* border: 2px solid var(--yb-color-dark-3); */
             gap: 30px;
-
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 92%);
 
         }
     }
+        .DS_btnFilter {
+        width: clamp(250px, 78vw, 310px); }
         
             .DS_opinionText {
                 font-size: var(--yb-font-size-body-sm); 
@@ -205,4 +217,14 @@
             gap: 20px;
         }
     }
+}
+
+@media (min-width: 1441px) {
+        .DS_Testimonials {
+            .DS_testimonialsSlider{
+        .DS_testimonialCard {
+                width: clamp(300px, 22vw, 404px);}
+            }
+        }
+
 }
