@@ -32,11 +32,6 @@ function Home() {
         </Container>
 
         <Container>
-          <OurFeatures /> 
-        </Container>
-
-
-        <Container>
           <UseCases/>
         </Container>
 

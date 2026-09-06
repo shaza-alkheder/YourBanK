@@ -1,158 +1,11 @@
-/*.inner-hero{
-    margin-top: 53px;
-    background-color: var(--yb-color-dark-2);
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-}
-
-.MGinner-title{
-    padding-top: 50px;
-    padding-left: 50px;
-}
-.MGts-style{
-    padding: 80px 80px;
-    background-color: var(--yb-color-dark-1);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius:20px ;
-    border-bottom-right-radius:80px ;
-    width: 100%;
-    max-width: 631px;
-    position: absolute;
-    z-index: 2;
-
-}
-
-.MGinner-img{
-    padding: 50px 50px 50px 0;
-    position: relative;
-    display: flex;
-}
-.MGbg-image{
-    width: 505px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-}
-.MGimginner-hero{
-    width: 961px;
-    border-radius: 16px;
-    z-index: 1;
-}
-
-@media screen and (max-width : 1440px){
-    .inner-hero{
-    margin-top: 50px;}
-
-    
-.MGinner-title{
-    padding-top: 40px;
-    padding-left: 40px;
-    
-}
-
-.MGts-style{
-    padding: 60px 60px;
-    border-bottom-right-radius:60px ;
-    max-width: 538px;
-
-}
-
-.MGinner-img{
-    padding: 40px 40px 40px 0;
-}
-
-.MGbg-image{
-    width: 334px;
-}
-
-.MGimginner-hero{
-    width: 715px;
-}
-
-}
-
-@media screen and (max-width : 992px) {
-    .inner-hero{
-        margin-top: 53px;
-        display: flex;
-        flex-direction: column-reverse;
-    
-    }
-    
-.MGinner-title{
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-bottom: 14px;
-}
-
-.MGts-style{
-    padding: 24px 24px;
-    border-radius: 20px;
-    max-width: 281px;
-}
-
-.MGinner-img{
-    padding: 14px 14px 0 14px;}
-    
-.MGbg-image{
-    width: 199px;}
-
-
-.MGimginner-hero{
-    width: 329px;}
-}*/
-    
-/*
-
-import TitleDescription from '../../UI/TitleDescription/TitleDescription'
-import './InnerHero.css'
-function InnerHero({paragraph , img}) {
-    return (
-    <div className="inner-hero">
-    <div className="MGinner-title">
-        <p>{paragraph}</p>
-        <TitleDescription
-            className="MGts-style"
-            titleParts={[    
-        {
-            text: "Welcome to  Careers!",
-            className: ""
-        },
-        {
-            text: "YourBank",
-            className: "DS_ColorLimeGreen"
-        }
-    ]}
-        description="Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."
-    /> 
-    </div>
-
-    <div className="MGinner-img">
-        <img src="/assets/img/bgImage/bgImage.webp" alt="bgImage"  className="MGbg-image"/>
-        <img src={img} alt="" className="MGimginner-hero"/>
-
-    </div>
-
-
-    </div>
-)
-}
-
-export default InnerHero*/
-
-
 .inner-hero {
-    margin-top: 53px;
-    background-color: var(--yb-color-dark-2);
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    position: relative;
-
+  margin-top: 53px;
+  background-color: var(--yb-color-dark-2);
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  position: relative;
 }
-
 
 /* الصورة والمنطقة اليمينية */
 .MGinner-img {
@@ -164,7 +17,6 @@ export default InnerHero*/
   padding: 50px 50px 50px 0;
 }
 
-
 /* الصورة الأساسية */
 .MGimginner-hero {
   width: 961px;
@@ -175,7 +27,6 @@ export default InnerHero*/
   display: block;
 }
 
-
 /* الخلفية الزخرفية */
 .MGbg-image {
   width: 505px;
@@ -185,11 +36,10 @@ export default InnerHero*/
   z-index: 0;
 }
 
-
 /* مربع النص */
 .MGts-style {
   position: absolute;
-  left: 50px ;
+  left: 50px;
   top: 50px;
   z-index: 2;
   width: 791px;
@@ -199,75 +49,66 @@ export default InnerHero*/
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 80px;
 }
-.MGts-style h2{
-        font-size: clamp(var(--yb-font-size-heading-lg) ,3.33vw ,58px);
-        line-height: 1.3;
+.MGts-style h2 {
+  font-size: clamp(var(--yb-font-size-heading-lg), 3.33vw, 58px);
+  line-height: 1.3;
 }
 
+@media screen and (max-width: 1449px) {
+  .inner-hero {
+    margin-top: 50px;
+  }
 
-@media screen and (max-width : 1449px) {
+  .MGinner-img {
+    padding: 40px 40px 40px 0;
+  }
 
-    .inner-hero{
-        margin-top: 50px;
-    }
+  .MGimginner-hero {
+    width: 715px;
+  }
 
-    .MGinner-img {
-        padding: 40px 40px 40px 0;
-    }
+  .MGbg-image {
+    width: 334px;
+  }
 
-    .MGimginner-hero {
-        width: 715px;
-    }
-
-    .MGbg-image {
-        width: 334px;
-    }
-
-    .MGts-style {
-        width: 658px;
-        left: 40px;
-        top: 40px;
-        padding: 60px 60PX;
-        border-bottom-right-radius: 60px;
-    }
+  .MGts-style {
+    width: 658px;
+    left: 40px;
+    top: 40px;
+    padding: 60px 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
-@media screen and (max-width : 992px) {
-    .inner-hero{
-        margin-top: 53px;
-        height: 605px;
-    
-    }
-    
-    .MGinner-img{
-        padding: 14px 14px 0 14px;
-        width: 100%;
-        height: 100%;
-        align-items :flex-start ;
-        
-    }
+@media screen and (max-width: 992px) {
+  .inner-hero {
+    margin-top: 53px;
+    height: 605px;
+  }
 
-    .MGimginner-hero{
-        width: 100%;
+  .MGinner-img {
+    padding: 14px 14px 0 14px;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
 
-    }
+  .MGimginner-hero {
+    width: 100%;
+  }
 
-    .MGbg-image{
-        width: 199px;
-    }
+  .MGbg-image {
+    width: 199px;
+  }
 
-    .MGts-style{
-        width: calc(100% - 28px);
-        left: auto;
-        top: auto;
-        bottom: 14px;
-        padding: 24px 24px;
-        border-radius: 20px;
-    }
-    .MGts-style h2{
-        font-size: var(--yb-font-size-heading-sm);
+  .MGts-style {
+    width: calc(100% - 28px);
+    left: auto;
+    top: auto;
+    bottom: 14px;
+    padding: 24px 24px;
+    border-radius: 20px;
+  }
+  .MGts-style h2 {
+    font-size: var(--yb-font-size-heading-sm);
+  }
 }
-    
-}
-
-
-
