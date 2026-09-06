@@ -8,7 +8,9 @@ import Security from "./pages/Security/Security";
 import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
-import Dashboard from "./pages/DashBoard/DashBoard";
+import Dashboard from "./pages/Dashboard/Dashboard";
+// import Dashboard from "./pages/DashBoard/DashBoard";
+
 
 function App() {
 
