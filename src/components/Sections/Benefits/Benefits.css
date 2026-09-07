@@ -135,7 +135,7 @@
 
 @media screen and (max-width: 1440px) {
   .S-K-Benefits {
-    padding-top: 200px;
+    /* padding-top: 200px; */
     gap: 60px;
     .TitleHeader {
       width: 79%;
