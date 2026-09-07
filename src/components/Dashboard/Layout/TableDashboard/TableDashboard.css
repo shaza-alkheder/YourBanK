@@ -9,11 +9,15 @@
         max-width: 100%;
         width: 100%;
         margin-bottom: 40px;
+        border-collapse: collapse;
+        tr{
+            min-height: max-content;
+
+        }
         th , td {
-            max-width: 120px;
+            max-width: 180px;
             padding: 4px 10px;
             border: 1px solid white;
-            /* word-break: break-all; */
         }
         th{
             color: var(--yb-color-primary);
@@ -25,18 +29,19 @@
             width: 100px;
         }
         td{
-            /* font-size: 16px; */
             font-weight: 300;
             word-break: break-all;
             text-align: center;
+            height: auto;
         }
         .O-A-tdBtn{
             max-width: 177px;
             min-width: fit-content;
-            padding: 16px 10px;
-            display: flex;
-            gap: 6px;
-            align-items: center;
+            .O-A-flex{
+                display: flex;
+                align-items: center;
+            }
+            
         }
     }
 }
@@ -69,5 +74,8 @@
     }
     .O-A-boxTable{
         overflow-x: auto;
+        table{
+            min-width: 700px;
+        }
     }
 }
