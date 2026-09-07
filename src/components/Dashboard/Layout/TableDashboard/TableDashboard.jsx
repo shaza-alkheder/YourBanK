@@ -24,70 +24,67 @@ const TableDashboard = ({title1 , title2 , children}) => {
             <BtnAdd />
             <div className="O-A-boxTable">
                 {children}
-            {/* <table>
-                <thead>
-                    <tr>
-                        {column1? <th>{column1}</th> :""}
-                        {column2? <th>{column2}</th> :""}
-                        {column3? <th>{column3}</th> :""}
-                        {column4? <th>{column4}</th> :""}
-                        {column5? <th>{column5}</th> :""}
-                        {column6? <th>{column6}</th> :""}
-                        {column7? <th>{column7}</th> :""}
-                        {column8? <th>{column8}</th> :""}
-                        {column9? <th>{column9}</th> :""}
-                        {column10? <th>{column10}</th> :""}
-                        {column11? <th>{column11}</th> :""}
-                        <th className="O-A-action">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>/assets/img/CareersPage/WorkBag.webp</td>
-                        <td className="O-A-tdBtn"><BtnUpdate /> <BtnDelete /></td>
-                    </tr>
-                    <tr>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>/assets/img/CareersPage/WorkBag.webp</td>
-                        <td className="O-A-tdBtn"><BtnUpdate /> <BtnDelete /></td>
-                    </tr>
-                    <tr>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>/assets/img/CareersPage/WorkBag.webp</td>
-                        <td className="O-A-tdBtn"><BtnUpdate /> <BtnDelete /></td>
-                    </tr>
-                    <tr>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>world</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>Lorem ipsum dolor sit amet consectetur.</td>
-                        <td>/assets/img/CareersPage/WorkBag.webp</td>
-                        <td className="O-A-tdBtn"><BtnUpdate /> <BtnDelete /></td>
-                    </tr>
-                </tbody>
-            </table> */}
+                {/* <table>
+                    <thead>
+                        <tr>
+                            <th>title</th>
+                            <th>description</th>
+                            <th>imgurl</th>
+                            <th>imgurl</th>
+                            <th>imgurl</th>
+                            <th>imgurl</th>
+                            <th>imgurl</th>
+                            <th>imgurl</th>
+                            <th className="O-A-action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure voluptatum quia tempora?</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>/assets/img/CareersPage/WorkBag.webp</td>
+                            <td className="O-A-tdBtn"><div className="O-A-flex"><BtnUpdate /> <BtnDelete /></div></td>
+                        </tr>
+                        <tr>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea qui odio a repellat dicta earum quos iste. Doloribus, accusamus perferendis.</td>
+                            <td>/assets/img/CareersPage/WorkBag.webp</td>
+                            <td className="O-A-tdBtn"><div className="O-A-flex"><BtnUpdate /> <BtnDelete /></div></td>
+                        </tr>
+                        <tr>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>/assets/img/CareersPage/WorkBag.webp</td>
+                            <td className="O-A-tdBtn"><div className="O-A-flex"><BtnUpdate /> <BtnDelete /></div></td>
+                        </tr>
+                        <tr>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>world</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>Lorem ipsum dolor sit amet consectetur.</td>
+                            <td>/assets/img/CareersPage/WorkBag.webp</td>
+                            <td className="O-A-tdBtn"><div className="O-A-flex"><BtnUpdate /> <BtnDelete /></div></td>
+                        </tr>
+                    </tbody>
+                </table> */}
             </div>
         </>
     )
