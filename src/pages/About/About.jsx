@@ -1,4 +1,5 @@
 import InnerHero from "../../components/Layout/InnerHero/InnerHero"
+import MissionVision from "../../components/Sections/MissionVision/MissionVision"
 import PressReleases from "../../components/Sections/PressReleases/PressReleases"
 import Container from "../../components/UI/Container/Container"
 
@@ -20,6 +21,7 @@ function About() {
     
       <main>
       <Container>
+        <MissionVision/>
         <PressReleases />
       </Container>
       </main>
