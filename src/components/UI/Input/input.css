@@ -1,4 +1,4 @@
-input{
+.O-A-inputRegister{
     min-width: 320px;
     max-width: 498px;
     height: 75px;
@@ -16,7 +16,7 @@ input{
 }
 
 @media screen and (max-width:1440px) {
-    input{
+    .O-A-inputRegister{
         min-width: 250px;
         max-width: 320px;
         height: 64px;
@@ -28,7 +28,7 @@ input{
 }
 
 @media screen and (max-width:992px) {
-    input{
+    .O-A-inputRegister{
         max-width: 100%;
         width: 100%;
         height: 56px;

@@ -7,21 +7,23 @@ import BtnAdd from "../../UI/BtnDashboard/BtnAdd/BtnAdd"
 const TableDashboard = ({title1 , title2 , children}) => {
     return (
         <>
-            <TitleDescription 
-                className ="" 
-                titleParts={[    
-                    {
-                        text: title1,
-                        className: "O-A-titleDashboard"
-                    },
-                    {
-                        text: title2,
-                        className: "DS_ColorLimeGreen O-A-titleDashboard"
-                    }
-                ]}
-                description= ""
-            />
-            <BtnAdd />
+            <div className="O-A-headerDash">
+                <TitleDescription 
+                    className ="" 
+                    titleParts={[    
+                        {
+                            text: title1,
+                            className: "O-A-titleDashboard"
+                        },
+                        {
+                            text: title2,
+                            className: "DS_ColorLimeGreen O-A-titleDashboard"
+                        }
+                    ]}
+                    description= ""
+                />
+                <BtnAdd />
+            </div>
             <div className="O-A-boxTable">
                 {children}
                 {/* <table>
