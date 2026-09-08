@@ -20,81 +20,61 @@ const FAQDashboard = () => {
   useEffect(() => {
     localStorage.setItem("faqs", JSON.stringify(faqs));
   }, [faqs]);
-const deleteFaq = (id) => {
-  const confirmDelete = window.confirm(
-    "Are you sure you want to delete this FAQ?"
-  );
+  const deleteFaq = (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this FAQ?",
+    );
 
-  if (!confirmDelete) return;
+    if (!confirmDelete) return;
 
-setFaqs((currentFaqs) => {
-  const updatedFaqs = currentFaqs.filter(
-    (faq) => faq.id !== id
-  );
+    setFaqs((currentFaqs) => {
+      const updatedFaqs = currentFaqs.filter((faq) => faq.id !== id);
 
-  localStorage.setItem(
-    "faqs",
-    JSON.stringify(updatedFaqs)
-  );
+      localStorage.setItem("faqs", JSON.stringify(updatedFaqs));
 
-  window.dispatchEvent(new Event("faqsUpdated"));
-
-  return updatedFaqs;
-});
-};
-  return <>
-     <ContaninerDashboard>
-
-      <TableDashboard
-        title1="FAQ"
-        title2="Management"
-      >
-
-        <table>
-
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Question</th>
-              <th>Answer</th>
-              <th className="O-A-action">Action</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {faqs.map((faq) => (
-              <tr key={faq.id}>
-
-                <td>{faq.id}</td>
-
-                <td>{faq.question}</td>
-
-                <td>{faq.answer}</td>
-
-                <td className="O-A-tdBtn">
-
-                  <BtnUpdate
-                    Funct={() => {
-                      console.log("Update:", faq.id);
-                    }}
-                  />
-
-                  <BtnDelete
-                    Funct={() => deleteFaq(faq.id)}
-                  />
-
-                </td>
-
+      return updatedFaqs;
+    });
+  };
+  return (
+    <>
+      <ContaninerDashboard>
+        <TableDashboard title1="FAQ" title2="Management">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Question</th>
+                <th>Answer</th>
+                <th className="O-A-action">Action</th>
               </tr>
-            ))}
-          </tbody>
+            </thead>
 
-        </table>
+            <tbody>
+              {faqs.map((faq) => (
+                <tr key={faq.id}>
+                  <td>{faq.id}</td>
 
-      </TableDashboard>
+                  <td>{faq.question}</td>
 
-    </ContaninerDashboard>
-  </>;
+                  <td>{faq.answer}</td>
+
+                  <td className="O-A-tdBtn">
+                    <BtnUpdate
+                      Funct={() => {
+                        console.log("Update:", faq.id);
+                      }}
+                    />
+
+                    <BtnDelete Funct={() => deleteFaq(faq.id)} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TableDashboard>
+      </ContaninerDashboard>
+    </>
+  );
 };
 
 export default FAQDashboard;

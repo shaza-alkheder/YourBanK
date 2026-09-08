@@ -3,6 +3,7 @@
   margin-bottom: 120px;
   display: flex;
   justify-content: space-around;
+  /* overflow: hidden; */
 }
 
 .MGhero-left {
@@ -314,7 +315,13 @@
       left: 350px;
       top: 24px;
       z-index: 2;
-
+      /* left: 50%;
+      top: 24px;
+      z-index: 2;
+      pointer-events: none; */
+      .S-K-arrows-mobile {
+        display: none;
+      }
       img {
         z-index: 0;
         /* display: block;
@@ -789,15 +796,18 @@
         }
       }
       .S-K-Arrows {
-        left: 60px;
-        top: -24px;
+        left: 120px;
+        top: -20px;
         max-width: 220px;
         width: 100%;
         height: 201px;
-        img {
-          z-index: 0;
-          /* width: 300px;
-        height: 275px; */
+        .S-K-arrows-desktop {
+          display: none;
+        }
+        .S-K-arrows-mobile {
+          display: block;
+          width: 100%;
+          height: auto;
         }
       }
       .S-K-Currency {

@@ -1,0 +1,12 @@
+table{
+    tbody{
+        tr{
+            .O-A-rowTitle{
+                padding: 10px 0;
+                color: #c1e757;
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+}

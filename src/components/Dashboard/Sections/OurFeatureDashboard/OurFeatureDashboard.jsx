@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import TableDashboard from "../../Layout/TableDashboard/TableDashboard"
-import ContaninerDashboard from "../../UI/ContaninerDashboard/ContaninerDashboard"
 import "./OurFeatureDashboard.css"
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
@@ -12,21 +11,26 @@ const OurFeatureDashboard = () => {
         localStorage.setItem("featuresCardData", JSON.stringify(featureData));
     }, [featureData]);
     
-    // const deleteOurProductForIndividuals = (id) => {
-    //     const updateDataProductForIndividuals = ProductData.ForIndividuals.filter((pro) => pro.id !== id)
-    //     let updateData = {...ProductData}
-    //     updateData.ForIndividuals = updateDataProductForIndividuals
-    //     setProductData(updateData)
-    // }
-    // const deleteOurProductForBusinesses = (id) => {
-    //     const updateDataProductForBusinesses = ProductData.ForBusinesses.filter((pro) => pro.id !== id)
-    //     let updateData = {...ProductData}
-    //     updateData.ForBusinesses = updateDataProductForBusinesses
-    //     setProductData(updateData)
-    // }
+    const deleteOurFeaturesOnlineBanking = (id) => {
+        const updateDataFeaturesOnlineBanking = featureData.OnlineBanking.filter((pro) => pro.id !== id)
+        let updateData = {...featureData}
+        updateData.OnlineBanking = updateDataFeaturesOnlineBanking
+        setFeatureData(updateData)
+    }
+    const deleteOurFeaturesFinancialTools = (id) => {
+        const updateDataFeaturesFinancialTools = featureData.FinancialTools.filter((pro) => pro.id !== id)
+        let updateData = {...featureData}
+        updateData.FinancialTools = updateDataFeaturesFinancialTools
+        setFeatureData(updateData)
+    }
+    const deleteOurFeaturesCustomerSupport = (id) => {
+        const updateDataFeaturesCustomerSupport = featureData.CustomerSupport.filter((pro) => pro.id !== id)
+        let updateData = {...featureData}
+        updateData.CustomerSupport = updateDataFeaturesCustomerSupport
+        setFeatureData(updateData)
+    }
     return (
         <>
-            <ContaninerDashboard>
                 <TableDashboard
                     title1 = "Our"
                     title2 = "Product"
@@ -42,7 +46,7 @@ const OurFeatureDashboard = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td colSpan={4} className="O-A-rowTitle">ForIndividuals</td>
+                                <td colSpan={4} className="O-A-rowTitle">OnlineBanking</td>
                             </tr>
                             {featureData.OnlineBanking?.map((feature) => {
                                 return(
@@ -54,7 +58,7 @@ const OurFeatureDashboard = () => {
                                             <div className="O-A-flex">
                                                 <BtnUpdate /> 
                                                 <BtnDelete 
-                                                    // Funct={() => deleteOurProductForIndividuals(product.id)}
+                                                    Funct={() => deleteOurFeaturesOnlineBanking(feature.id)}
                                                 />
                                             </div>
                                         </td>
@@ -62,7 +66,7 @@ const OurFeatureDashboard = () => {
                                 )
                             })}
                             <tr>
-                                <td colSpan={4} className="O-A-rowTitle">ForBusinesses</td>
+                                <td colSpan={4} className="O-A-rowTitle">FinancialTools</td>
                             </tr>
                             {featureData.FinancialTools?.map((feature) => {
                                 return(
@@ -74,13 +78,16 @@ const OurFeatureDashboard = () => {
                                             <div className="O-A-flex">
                                                 <BtnUpdate />
                                                 <BtnDelete 
-                                                    // Funct={() => deleteOurProductForBusinesses(product.id)}
+                                                    Funct={() => deleteOurFeaturesFinancialTools(feature.id)}
                                                 />
                                             </div>
                                         </td>
                                     </tr>
                                 )
                             })}
+                            <tr>
+                                <td colSpan={4} className="O-A-rowTitle">CustomerSupport</td>
+                            </tr>
                             {featureData.CustomerSupport?.map((feature) => {
                                 return(
                                     <tr key={feature.id}>
@@ -91,7 +98,7 @@ const OurFeatureDashboard = () => {
                                             <div className="O-A-flex">
                                                 <BtnUpdate />
                                                 <BtnDelete 
-                                                    // Funct={() => deleteOurProductForBusinesses(product.id)}
+                                                    Funct={() => deleteOurFeaturesCustomerSupport(feature.id)}
                                                 />
                                             </div>
                                         </td>
@@ -101,7 +108,6 @@ const OurFeatureDashboard = () => {
                         </tbody>
                     </table>
                 </TableDashboard>
-            </ContaninerDashboard>
         </>
     )
 }
