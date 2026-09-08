@@ -12,12 +12,18 @@ const OurFeatureDashboard = () => {
     }, [featureData]);
     
     const deleteOurFeaturesOnlineBanking = (id) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this feature?");
+        if (!confirmDelete) return;
+
         const updateDataFeaturesOnlineBanking = featureData.OnlineBanking.filter((pro) => pro.id !== id)
         let updateData = {...featureData}
         updateData.OnlineBanking = updateDataFeaturesOnlineBanking
         setFeatureData(updateData)
     }
     const deleteOurFeaturesFinancialTools = (id) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this feature?");
+        if (!confirmDelete) return;
+        
         const updateDataFeaturesFinancialTools = featureData.FinancialTools.filter((pro) => pro.id !== id)
         let updateData = {...featureData}
         updateData.FinancialTools = updateDataFeaturesFinancialTools
