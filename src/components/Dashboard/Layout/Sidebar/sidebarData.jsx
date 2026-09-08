@@ -1,9 +1,5 @@
 import { BiSolidHome } from "react-icons/bi";
-import {
-  MdWorkOutline,
-  MdSecurity,
-  MdOutlineInfo,
-} from "react-icons/md";
+import { MdWorkOutline, MdSecurity, MdOutlineInfo } from "react-icons/md";
 
 export const menuItems = [
   {

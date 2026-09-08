@@ -9,18 +9,45 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 const FAQ = () => {
   const [loadAll, setLoadAll] = useState(false);
   const [faqs, setFaqs] = useState(() => {
-    const FaqStored = localStorage.getItem("faqs");
-    return FaqStored ? JSON.parse(FaqStored) : FaqCardData;
-    // if (FaqStored) {
-    //   return JSON.parse(FaqStored);
-    // }
+    const storedFaqs = localStorage.getItem("faqs");
 
-    // localStorage.setItem("faqs", JSON.stringify(FaqCardData));
-    // return FaqCardData;
+    if (storedFaqs) {
+      return JSON.parse(storedFaqs);
+    }
+
+    localStorage.setItem(
+      "faqs",
+      JSON.stringify(FaqCardData)
+    );
+
+    return FaqCardData;
   });
+
   useEffect(() => {
-    localStorage.setItem("faqs", JSON.stringify(faqs));
-  }, [faqs]);
+    const handleStorageChange = (event) => {
+      if (event.key === "faqs") {
+        const storedFaqs = localStorage.getItem("faqs");
+
+        if (storedFaqs) {
+          setFaqs(JSON.parse(storedFaqs));
+        } else {
+          setFaqs([]);
+        }
+      }
+    };
+
+    window.addEventListener(
+      "storage",
+      handleStorageChange
+    );
+
+    return () => {
+      window.removeEventListener(
+        "storage",
+        handleStorageChange
+      );
+    };
+  }, []);
   const loadFaq = loadAll ? faqs : faqs.slice(0, 4);
   return (
     <>
