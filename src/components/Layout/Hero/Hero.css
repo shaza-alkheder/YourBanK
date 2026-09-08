@@ -3,6 +3,7 @@
   margin-bottom: 120px;
   display: flex;
   justify-content: space-around;
+  /* overflow: hidden; */
 }
 
 .MGhero-left {
@@ -314,6 +315,10 @@
       left: 350px;
       top: 24px;
       z-index: 2;
+      /* left: 50%;
+      top: 24px;
+      z-index: 2;
+      pointer-events: none; */
 
       img {
         z-index: 0;
