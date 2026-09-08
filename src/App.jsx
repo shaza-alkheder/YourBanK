@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import MissionVisionDashboard from "./components/Dashboard/Sections/MissionVisionDashboard/MissionVisionDashboard";
+import FAQDashboard from "./components/Dashboard/Sections/FAQDashboard/FAQDashboard";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 
@@ -95,7 +97,15 @@ function App() {
         }
       />
 
-       <Route path="/dashboard" element={<Dashboard />} />
+       <Route path="/dashboard" element={<Dashboard />} >
+       
+            <Route path="mission-vision" element={<MissionVisionDashboard />}/>
+
+            <Route path="faq" element={<FAQDashboard />} />
+       
+       </Route>
+
+       
       </Routes>
 
     </>

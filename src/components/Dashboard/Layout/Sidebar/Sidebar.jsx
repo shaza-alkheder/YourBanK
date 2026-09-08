@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Sidebar.css";
 import { menuItems } from "./sidebarData";
 import { RiArrowDownSLine, RiArrowRightSLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(null);
 
@@ -47,13 +48,17 @@ const Sidebar = () => {
                   {isOpen && (
                     <div className="S-K-Dashboard-Sidebar-submenu">
                       {item.sections.map((section) => (
-                        <button
-                          type="button"
-                          className="S-K-Dashboard-Sidebar-subitem"
-                          key={section}
+                     <NavLink
+                          to={section.path}
+                          className={({ isActive }) =>
+                            `S-K-Dashboard-Sidebar-subitem ${isActive ? "active" : ""}`
+                          }
+                          key={section.path}
                         >
-                          {section}
-                        </button>
+
+                          
+                          {section.label}
+                        </NavLink>
                       ))}
                     </div>
                   )}

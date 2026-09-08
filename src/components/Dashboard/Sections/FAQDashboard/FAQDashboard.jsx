@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./FAQDashboard.css";
 import FaqCardData from "../../../../data/FaqCardData.json";
-import ContaninerDashboard from "../../UI/ContaninerDashboard/ContaninerDashboard";
 import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
@@ -132,7 +131,7 @@ const FAQDashboard = () => {
   
   return (
     <>
-      <ContaninerDashboard>
+     
         <TableDashboard title1="FAQ" title2="Management">
           <table>
             <thead>
@@ -165,7 +164,6 @@ const FAQDashboard = () => {
             </tbody>
           </table>
         </TableDashboard>
-      </ContaninerDashboard>
        {isModalOpen && (
         <ModalDashboard
           title={editId !== null ? "Update FAQ" : "Add FAQ"}
