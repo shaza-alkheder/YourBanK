@@ -9,6 +9,16 @@ import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
 import Nav from "./components/Layout/Navbar/Nav";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import OurFeatures from "./components/Sections/OurFeatures/OurFeatures";
+import OurProduct from "./components/Sections/OurProduct/OurProduct";
+import FAQ from "./components/Sections/FAQ/FAQ";
+import Testimonials from "./components/Sections/Testimonials/Testimonials";
+import MissionVision from "./components/Sections/MissionVision/MissionVision";
+import PressReleases from "./components/Sections/PressReleases/PressReleases";
+import OurValues from "./components/Sections/OurValues/OurValues";
+import JobOpenings from "./components/Sections/JobOpenings/JobOpenings";
+import Protect from "./components/Sections/Protect/Protect";
+import Benefits from "./components/Sections/Benefits/Benefits";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 
@@ -95,7 +105,26 @@ function App() {
         }
       />
 
-       <Route path="/dashboard" element={<Dashboard />} />
+       <Route path="/dashboard" element={<Dashboard />} >
+
+         <Route path="our-products" element={<OurProduct />} />
+        <Route path="our-features" element={<OurFeatures />} />
+        <Route path="faq" element={<FAQ />} />
+        <Route path="testimonials" element={<Testimonials />} />
+
+        <Route path="mission-vision" element={<MissionVision />} />
+        <Route path="press-releases" element={<PressReleases />} />
+
+ 
+        <Route path="our-values" element={<OurValues />} />
+        <Route path="benefits" element={<Benefits />} />
+        <Route path="job-openings" element={<JobOpenings />} />
+
+        <Route path="protect" element={<Protect />}/>
+       
+       </Route>
+
+
       </Routes>
 
     </>
