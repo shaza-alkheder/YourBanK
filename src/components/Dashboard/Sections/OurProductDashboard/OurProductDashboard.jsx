@@ -1,16 +1,38 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import TableDashboard from "../../Layout/TableDashboard/TableDashboard"
-import ContaninerDashboard from "../../UI/ContaninerDashboard/ContaninerDashboard"
+// import ContaninerDashboard from "../../UI/ContaninerDashboard/ContaninerDashboard"
 import "./OurProductDashboard.css"
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
 
 const OurProductDashboard = () => {
-    const [ProductData] = useState(JSON.parse(localStorage.getItem("OurProducCardtData")))
+    const [ProductData , setProductData] = useState(JSON.parse(localStorage.getItem("OurProducCardtData")))
 
+    useEffect(() => {
+        localStorage.setItem("OurProducCardtData", JSON.stringify(ProductData));
+    }, [ProductData]);
+
+    const deleteOurProductForIndividuals = (id) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this product?");
+        if (!confirmDelete) return;
+
+        const updateDataProductForIndividuals = ProductData.ForIndividuals.filter((pro) => pro.id !== id)
+        let updateData = {...ProductData}
+        updateData.ForIndividuals = updateDataProductForIndividuals
+        setProductData(updateData)
+    }
+    const deleteOurProductForBusinesses = (id) => {
+        const confirmDelete = window.confirm("Are you sure you want to delete this product?");
+        if (!confirmDelete) return;
+        
+        const updateDataProductForBusinesses = ProductData.ForBusinesses.filter((pro) => pro.id !== id)
+        let updateData = {...ProductData}
+        updateData.ForBusinesses = updateDataProductForBusinesses
+        setProductData(updateData)
+    }
     return (
         <>
-            <ContaninerDashboard>
+            {/* <ContaninerDashboard> */}
                 <TableDashboard
                     title1 = "Our"
                     title2 = "Product"
@@ -37,7 +59,9 @@ const OurProductDashboard = () => {
                                         <td className="O-A-tdBtn">
                                             <div className="O-A-flex">
                                                 <BtnUpdate /> 
-                                                <BtnDelete />
+                                                <BtnDelete 
+                                                    Funct={() => deleteOurProductForIndividuals(product.id)}
+                                                />
                                             </div>
                                         </td>
                                     </tr>
@@ -55,7 +79,9 @@ const OurProductDashboard = () => {
                                         <td className="O-A-tdBtn">
                                             <div className="O-A-flex">
                                                 <BtnUpdate />
-                                                <BtnDelete />
+                                                <BtnDelete 
+                                                    Funct={() => deleteOurProductForBusinesses(product.id)}
+                                                />
                                             </div>
                                         </td>
                                     </tr>
@@ -64,7 +90,7 @@ const OurProductDashboard = () => {
                         </tbody>
                     </table>
                 </TableDashboard>
-            </ContaninerDashboard>
+            {/* </ContaninerDashboard> */}
         </>
     )
 }

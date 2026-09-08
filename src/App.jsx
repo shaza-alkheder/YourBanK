@@ -11,6 +11,8 @@ import Nav from "./components/Layout/Navbar/Nav";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import MissionVisionDashboard from "./components/Dashboard/Sections/MissionVisionDashboard/MissionVisionDashboard";
 import FAQDashboard from "./components/Dashboard/Sections/FAQDashboard/FAQDashboard";
+import OurProductDashboard from "./components/Dashboard/Sections/OurProductDashboard/OurProductDashboard";
+import OurFeatureDashboard from "./components/Dashboard/Sections/OurFeatureDashboard/OurFeatureDashboard";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 
@@ -102,6 +104,8 @@ function App() {
             <Route path="mission-vision" element={<MissionVisionDashboard />}/>
 
             <Route path="faq" element={<FAQDashboard />} />
+            <Route path="our-products" element={<OurProductDashboard />} />
+            <Route path="our-features" element={<OurFeatureDashboard />} />
        
        </Route>
 
