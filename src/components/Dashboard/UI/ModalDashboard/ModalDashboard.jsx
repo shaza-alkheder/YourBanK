@@ -10,6 +10,7 @@ const ModalDashboard = ({
   onSubmit,
   onClose,
   onDelete,
+    image = "",
 }) => {
   return (
     <>
@@ -29,7 +30,7 @@ const ModalDashboard = ({
           <div className="S-K-Dashboard-Modal-delete">
 
             <p>
-              Are you sure you want to delete this FAQ?
+              Are you sure you want to delete ?
             </p>
 
             <div className="S-K-Dashboard-Modal-delete-buttons">
@@ -54,7 +55,7 @@ const ModalDashboard = ({
 
           </div>
         ) : (
-          <FormDashboard fields={fields} data={data} onSubmit={onSubmit} />
+          <FormDashboard fields={fields} data={data} onSubmit={onSubmit} mode={mode} image={image}/>
             )}
 
         </div>

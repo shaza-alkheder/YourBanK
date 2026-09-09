@@ -11,6 +11,7 @@ const Textarea = ({ input = {} }) => {
       onChange={input.onChange || undefined}
       required={input.required ?? false}
       rows={input.rows || 5}
+        readOnly={input.readOnly ?? false}
     />
   );
 };

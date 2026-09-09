@@ -4,7 +4,8 @@ import FaqCardData from "../../../../data/FaqCardData.json";
 import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
-import ModalDashboard  from "../../UI/ModalDashboard/ModalDashboard"
+import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";
+import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
 
 const FAQDashboard = () => {
   const [faqs, setFaqs] = useState(() => {
@@ -22,25 +23,12 @@ const FAQDashboard = () => {
     question: "",
     answer: "",
   });
-   const [editId, setEditId] = useState(null);
+  const [editId, setEditId] = useState(null);
+  const [deleteFaqData, setDeleteFaqData] = useState(null);
+  const [viewFaqData, setViewFaqData] = useState(null);
   useEffect(() => {
     localStorage.setItem("faqs", JSON.stringify(faqs));
   }, [faqs]);
-  const deleteFaq = (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this FAQ?",
-    );
-
-    if (!confirmDelete) return;
-
-    setFaqs((currentFaqs) => {
-      const updatedFaqs = currentFaqs.filter((faq) => faq.id !== id);
-
-      localStorage.setItem("faqs", JSON.stringify(updatedFaqs));
-
-      return updatedFaqs;
-    });
-  };
 
   const faqFields = [
     {
@@ -61,7 +49,7 @@ const FAQDashboard = () => {
       rows: 6,
     },
   ];
-    const addBtn = () => {
+  const addBtn = () => {
     setEditId(null);
 
     setModalData({
@@ -71,7 +59,7 @@ const FAQDashboard = () => {
 
     setIsModalOpen(true);
   };
-   const editBtn = (faq) => {
+  const editBtn = (faq) => {
     setEditId(faq.id);
 
     setModalData({
@@ -81,18 +69,24 @@ const FAQDashboard = () => {
 
     setIsModalOpen(true);
   };
-   const closeBtn = () => {
+  const closeBtn = () => {
     setIsModalOpen(false);
     setEditId(null);
-
+    setDeleteFaqData(null);
+setViewFaqData(null);
     setModalData({
       question: "",
       answer: "",
     });
   };
-  const submitBtn = (formData) =>{
- if (editId !== null) {
-   setFaqs((currentFaqs) => {
+  const deleteBtn = (faq) => {
+    setDeleteFaqData(faq);
+    setEditId(null);
+    setIsModalOpen(true);
+  };
+  const submitBtn = (formData) => {
+    if (editId !== null) {
+      setFaqs((currentFaqs) => {
         const updatedFaqs = currentFaqs.map((faq) => {
           if (faq.id === editId) {
             return {
@@ -104,72 +98,96 @@ const FAQDashboard = () => {
 
           return faq;
         });
-         return updatedFaqs;
- });
-}
- else {
+        return updatedFaqs;
+      });
+    } else {
       setFaqs((currentFaqs) => {
-  const lastId =
-    currentFaqs.length > 0
-      ? currentFaqs[currentFaqs.length - 1].id
-      : 0;
+        const lastId =
+          currentFaqs.length > 0 ? currentFaqs[currentFaqs.length - 1].id : 0;
 
-  const newFaq = {
-    id: lastId + 1,
-    question: formData.question,
-    answer: formData.answer,
-  };
+        const newFaq = {
+          id: lastId + 1,
+          question: formData.question,
+          answer: formData.answer,
+        };
 
-  return [...currentFaqs, newFaq];
-});
+        return [...currentFaqs, newFaq];
+      });
     }
 
     closeBtn();
   };
+  const deleteFaq = (id) => {
+    setFaqs((currentFaqs) => {
+      const updatedFaqs = currentFaqs.filter((faq) => faq.id !== id);
 
- 
-  
+      return updatedFaqs;
+    });
+
+    closeBtn();
+  };
+  const viewBtn = (faq) => {
+    setViewFaqData(faq);
+    setEditId(null);
+    setDeleteFaqData(null);
+    setIsModalOpen(true);
+  };
+
   return (
     <>
-     
-        <TableDashboard title1="FAQ" title2="Management">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Question</th>
-                <th>Answer</th>
-                <th className="O-A-action">Action</th>
+      <TableDashboard title1="FAQ" title2="Management" addBtn={addBtn}>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Question</th>
+              <th>Answer</th>
+              <th className="O-A-action">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {faqs.map((faq) => (
+              <tr key={faq.id}>
+                <td>{faq.id}</td>
+
+                <td>{faq.question}</td>
+
+                <td>{faq.answer}</td>
+
+                <td className="O-A-tdBtn">
+                  <BtnView Funct={() => viewBtn(faq)} />
+                  <BtnUpdate Funct={() => editBtn(faq)} />
+
+                  <BtnDelete Funct={() => deleteBtn(faq)} />
+                </td>
               </tr>
-            </thead>
-
-            <tbody>
-              {faqs.map((faq) => (
-                <tr key={faq.id}>
-                  <td>{faq.id}</td>
-
-                  <td>{faq.question}</td>
-
-                  <td>{faq.answer}</td>
-
-                  <td className="O-A-tdBtn">
-                    <BtnUpdate
-                      Funct={() => editBtn(faq)}
-                    />
-
-                    <BtnDelete Funct={() => deleteFaq(faq.id)} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </TableDashboard>
-       {isModalOpen && (
+            ))}
+          </tbody>
+        </table>
+      </TableDashboard>
+     {isModalOpen && (
         <ModalDashboard
-          title={editId !== null ? "Update FAQ" : "Add FAQ"}
+          title={
+            deleteFaqData
+              ? "Delete FAQ"
+              : viewFaqData
+                ? "View FAQ"
+                : editId !== null
+                  ? "Update FAQ"
+                  : "Add FAQ"
+          }
+          mode={
+            deleteFaqData
+              ? "delete"
+              : viewFaqData
+                ? "view"
+                : "form"
+          }
           fields={faqFields}
-          data={modalData}
+          data={viewFaqData || modalData}
           onSubmit={submitBtn}
+          onDelete={() => deleteFaq(deleteFaqData.id)}
           onClose={closeBtn}
         />
       )}

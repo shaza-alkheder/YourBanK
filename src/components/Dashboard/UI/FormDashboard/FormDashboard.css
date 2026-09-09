@@ -78,4 +78,18 @@
       opacity: 0.9;
     }
   }
+  .S-K-Form-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--yb-color-dark-3);
+    }
+  }
 }
