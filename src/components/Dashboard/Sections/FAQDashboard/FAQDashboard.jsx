@@ -141,7 +141,6 @@ setViewFaqData(null);
             <tr>
               <th>ID</th>
               <th>Question</th>
-              <th>Answer</th>
               <th className="O-A-action">Action</th>
             </tr>
           </thead>
@@ -153,7 +152,6 @@ setViewFaqData(null);
 
                 <td>{faq.question}</td>
 
-                <td>{faq.answer}</td>
 
                 <td className="O-A-tdBtn">
                   <BtnView Funct={() => viewBtn(faq)} />
