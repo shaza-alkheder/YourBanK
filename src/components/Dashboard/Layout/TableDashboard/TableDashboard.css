@@ -44,7 +44,7 @@
             height: auto;
         }
         .O-A-tdBtn{
-            max-width: 177px;
+            /* max-width: 177px; */
             min-width: fit-content;
             .O-A-flex{
                 display: flex;

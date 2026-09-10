@@ -39,7 +39,7 @@ const OurFeatureDashboard = () => {
         <>
                 <TableDashboard
                     title1 = "Our"
-                    title2 = "Product"
+                    title2 = "Features"
                 >
                     <table>
                         <thead>
