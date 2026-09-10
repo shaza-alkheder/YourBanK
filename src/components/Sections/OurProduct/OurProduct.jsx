@@ -89,7 +89,12 @@ const OurProduct = () => {
                                         icon : "O-A-borderIconCardOurProduct"
                                         }}
                                     />
-                                    {index===0? <div className="O-A-line"></div>  : index===1? <div className="O-A-line"></div> :"" }
+                                    {/* {index===0? <div className="O-A-line"></div>  : index===1? <div className="O-A-line"></div> :"" } */}
+                                    {index===0? <div className="O-A-line"></div>  : index===1? <div className="O-A-line"></div> 
+                                    :index===3? <div className="O-A-line"></div>  : index===4? <div className="O-A-line"></div> 
+                                    :index===6? <div className="O-A-line"></div>  : index===7? <div className="O-A-line"></div> 
+                                    :""
+                                    }
                                 </React.Fragment>
                             )
                         })}

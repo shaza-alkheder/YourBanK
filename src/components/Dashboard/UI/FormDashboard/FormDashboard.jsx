@@ -3,8 +3,15 @@ import Button from "../../../UI/Button/Button";
 import Input from "../../../UI/Input/input";
 import Textarea from "../../../UI/Input/Textarea";
 import "./FormDashboard.css";
+import Select from "../../../UI/Input/Select";
 
-const FormDashboard = ({ fields = [], data = {}, onSubmit,  mode = "form",  image = "" }) => {
+const FormDashboard = ({
+  fields = [],
+  data = {},
+  onSubmit,
+  mode = "form",
+  image = "",
+}) => {
   const [formData, setFormData] = useState(data);
   const changeValue = (event) => {
     const { name, value } = event.target;
@@ -22,11 +29,11 @@ const FormDashboard = ({ fields = [], data = {}, onSubmit,  mode = "form",  imag
   return (
     <>
       <form className="S-K-form-dashboard" onSubmit={submitBtn}>
-              {image && (
-        <div className="S-K-Form-image">
-          <img src={image} alt="Preview" />
-        </div>
-      )}
+        {image && (
+          <div className="S-K-Form-image">
+            <img src={image} alt="Preview" />
+          </div>
+        )}
         {fields.map((field) => (
           <div key={field.name}>
             <label htmlFor={field.id}>{field.label}</label>
@@ -35,9 +42,17 @@ const FormDashboard = ({ fields = [], data = {}, onSubmit,  mode = "form",  imag
                 input={{
                   ...field,
                   value: formData[field.name],
-                  onChange: changeValue,  
-                   readOnly: mode === "view",
-
+                  onChange: changeValue,
+                  readOnly: mode === "view",
+                }}
+              />
+            ) : field.typeInput === "select" ? (
+              <Select
+                input={{
+                  ...field,
+                  value: formData[field.name],
+                  onChange: changeValue,
+                  readOnly: mode === "view",
                 }}
               />
             ) : (
@@ -46,17 +61,15 @@ const FormDashboard = ({ fields = [], data = {}, onSubmit,  mode = "form",  imag
                   ...field,
                   value: formData[field.name],
                   onChange: changeValue,
-                    readOnly: mode === "view",
+                  readOnly: mode === "view",
                 }}
               />
             )}
           </div>
         ))}
         {mode !== "view" && (
-        <Button
-        className="S-K-Form-Submit"
-        content="Save"
-      />)}
+          <Button className="S-K-Form-Submit" content="Save" />
+        )}
       </form>
     </>
   );

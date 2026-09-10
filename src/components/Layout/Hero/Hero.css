@@ -397,7 +397,8 @@
   .MGhero-right {
     .S-K-RightSection {
       .S-K-Transactions {
-        max-width: 410.192px;
+        /* max-width: 410.192px; */
+        max-width: 380px;
         width: 100%;
         border-radius: 8.26px;
         padding: 27.55px;
@@ -552,7 +553,8 @@
         }
       }
       .S-K-Arrows {
-        left: 240px;
+        /* left: 240px; */
+        left: 200px;
         top: 24px;
         img {
           z-index: 0;

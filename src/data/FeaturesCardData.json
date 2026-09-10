@@ -3,66 +3,78 @@
         {
             "id" : 1,
             "title": "24/7 Account Access",
-            "desc": "Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease."
+            "desc": "Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease.",
+            "category" : "ForBusinesses"
         },
         {
             "id" : 2,
             "title": "Mobile Banking App",
-            "desc": "Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet."
+            "desc": "Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet.",
+            "category" : "ForBusinesses"
         },
         {
             "id" : 3,
             "title": "Secure Transactions",
-            "desc": "Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information."
+            "desc": "Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information.",
+            "category" : "ForBusinesses"
         },
         {
             "id" : 4,
             "title": "Bill Pay and Transfers",
-            "desc": "Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks."
+            "desc": "Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks.",
+            "category" : "ForBusinesses"
         }
     ],
     "FinancialTools": [
         {
-            "id" : 1,
+            "id" : 5,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!"
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 2,
+            "id" : 6,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!"
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 3,
+            "id" : 7,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!"
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 4,
+            "id" : 8,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!"
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
+            "category" : "ForBusinesses"
         }
     ],
     "CustomerSupport": [
         {
-            "id" : 1,
+            "id" : 9,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti."
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti.",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 2,
+            "id" : 10,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti."
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti.",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 3,
+            "id" : 11,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti."
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti.",
+            "category" : "ForBusinesses"
         },
         {
-            "id" : 4,
+            "id" : 12,
             "title": "Lorem, ipsum dolor.",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti."
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti.",
+            "category" : "ForBusinesses"
         }
     ]
 }

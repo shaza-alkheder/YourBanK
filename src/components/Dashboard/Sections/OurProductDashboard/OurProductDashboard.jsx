@@ -145,7 +145,10 @@ const OurProductDashboard = () => {
             setProductData((currentData) => {
                 const targetCategory = formData.category || "ForIndividuals"; 
                 const currentList = currentData[targetCategory] || [];
-                const lastId = currentList.length > 0 ? currentList[currentList.length - 1].id : 0;
+                const lastId1 = currentData.ForIndividuals.length > 0 ? currentData.ForIndividuals[currentData.ForIndividuals.length - 1].id : 0;
+                const lastId2 = currentData.ForBusinesses.length > 0 ? currentData.ForBusinesses[currentData.ForBusinesses.length - 1].id : 0;
+                const lastId = lastId1 > lastId2 ? lastId1 : lastId2
+
 
                 const newProduct = {
                     id: lastId + 1,

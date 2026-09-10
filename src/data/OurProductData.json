@@ -27,7 +27,7 @@
     ],
     "ForBusinesses": [
         {
-            "id" : 1,
+            "id" : 4,
             "title": "Lorem, ipsum dolor sit.",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
             "imgSrc" : "/assets/img/HomePage/IconCardProduct2.webp",
@@ -35,7 +35,7 @@
             "icon" : "IoArchive"
         },
         {
-            "id" : 2,
+            "id" : 5,
             "title": "Lorem, ipsum dolor sit.",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
             "imgSrc" : "/assets/img/HomePage/IconCardProduct3.webp",
@@ -43,7 +43,7 @@
             "icon" : "HiBanknotes"
         },
         {
-            "id" : 3,
+            "id" : 6,
             "title": "Lorem, ipsum dolorsit.",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sit tenetur reiciendis a, inventore hic vel deleniti libero quas impedit!",
             "imgSrc" : "/assets/img/HomePage/IconCardProduct1.webp",

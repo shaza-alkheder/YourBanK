@@ -19,8 +19,18 @@
         rgba(202, 255, 51, 0) 27.86%
       ),
       url("/assets/img/SecurityPage/lg-bg.webp");
+    background-repeat: no-repeat;
     max-width: 1593px;
-    height: 631px;
+    /* height: 631px; */
+    --base-height: 631px;
+    --card-height: 330px;
+    --row-gap: 30px;
+
+    height: calc(
+      var(--base-height) + var(--extra-rows) *
+        (var(--card-height) + var(--row-gap))
+    );
+
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 20px;
@@ -33,7 +43,9 @@
     .S-K-cardProtectStyle {
       max-width: 688px;
       width: 100%;
-      height: 330px;
+      /* height: 330px; */
+      min-height: 330px;
+      height: auto;
       gap: 24px;
       border-radius: 20px;
       /* border-width: 1px; */
@@ -103,6 +115,7 @@
           font-size: var(--yb-font-size-title-lg);
           line-height: 150%;
           color: var(--yb-color-white);
+          margin: 0;
         }
       }
       .S-K-descriptionCardProtect {
@@ -123,14 +136,24 @@
 
       max-width: 1269px;
       width: 100%;
-      height: 549px;
+      /* height: 549px; */
+      --base-height: 549px;
+      --card-height: 296px;
+      --row-gap: 20px;
+
+      height: calc(
+        var(--base-height) + var(--extra-rows) *
+          (var(--card-height) + var(--row-gap))
+      );
 
       gap: 20px;
       padding-right: 74px;
       padding-left: 74px;
       .S-K-cardProtectStyle {
         max-width: 550px;
-        height: 296px;
+        /* height: 296px; */
+        min-height: 296px;
+        height: auto;
         width: 100%;
         border-radius: 20px;
         padding: 40px;
@@ -177,6 +200,7 @@
         width: 100%;
         gap: 18px;
         padding: 18px;
+        height: auto;
         max-width: fit-content;
 
         .S-K-headerCardProtect {

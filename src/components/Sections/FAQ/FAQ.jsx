@@ -24,7 +24,7 @@ const FAQ = () => {
   });
 
   useEffect(() => {
-    const handleStorageChange = (event) => {
+    const storageChange = (event) => {
       if (event.key === "faqs") {
         const storedFaqs = localStorage.getItem("faqs");
 
@@ -38,13 +38,13 @@ const FAQ = () => {
 
     window.addEventListener(
       "storage",
-      handleStorageChange
+      storageChange
     );
 
     return () => {
       window.removeEventListener(
         "storage",
-        handleStorageChange
+        storageChange
       );
     };
   }, []);

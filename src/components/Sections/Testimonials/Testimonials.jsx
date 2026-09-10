@@ -14,16 +14,27 @@ const Testimonials = () => {
     
     const sliderRef = useRef(null);
 
-    useEffect(() => {
-        const savedData = localStorage.getItem("testimonialsData");
-
-        if (savedData) {
-            setTestimonials(JSON.parse(savedData));
-        } else {
-            localStorage.setItem("testimonialsData", JSON.stringify(testimonialsData));
-            setTestimonials(testimonialsData);
+useEffect(() => {
+    const TestimonialsStorageChange = (event) => {
+        if (event.key === "testimonialsData") {
+            const savedData = localStorage.getItem("testimonialsData");
+            if (savedData) {
+                setTestimonials(JSON.parse(savedData));
+            }
         }
-    }, []);
+    };
+    const savedData = localStorage.getItem("testimonialsData");
+    if (savedData) {
+        setTestimonials(JSON.parse(savedData));
+    } else {
+        localStorage.setItem("testimonialsData", JSON.stringify(testimonialsData));
+        setTestimonials(testimonialsData);
+    }
+    window.addEventListener("storage", TestimonialsStorageChange);
+    return () => {
+        window.removeEventListener("storage", TestimonialsStorageChange);
+    };
+}, []);
 
     const currentTestimonials = testimonials[activeTab] || [];
     const maxIndex = currentTestimonials.length > 3 ? currentTestimonials.length - 3 : 0;

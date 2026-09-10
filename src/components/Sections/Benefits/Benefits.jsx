@@ -9,9 +9,42 @@ const Benefits = () => {
     const benefitsStored = localStorage.getItem("benefitsContent");
     return benefitsStored ? JSON.parse(benefitsStored) : BenefitsCardData;
   });
-  useEffect(() => {
-    localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
-  }, [benefitsContent]);
+  // useEffect(() => {
+  //   localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
+  // }, [benefitsContent]);
+
+     useEffect(() => {
+    const storageChange = (event) => {
+      if (event.key === "benefitsContent") {
+        const benefitsStored =
+          localStorage.getItem("benefitsContent");
+
+        if (benefitsStored) {
+          setBenefitsContent(
+            JSON.parse(benefitsStored)
+          );
+        } else {
+          setBenefitsContent([]);
+        }
+      }
+    };
+
+    window.addEventListener(
+      "storage",
+      storageChange
+    );
+
+    return () => {
+      window.removeEventListener(
+        "storage",
+        storageChange
+      );
+    };
+  }, []);
+
+
+
+
   return (
     <>
       <section className="S-K-Benefits">
