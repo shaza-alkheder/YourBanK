@@ -15,6 +15,9 @@ import OurProductDashboard from "./components/Dashboard/Sections/OurProductDashb
 import OurFeatureDashboard from "./components/Dashboard/Sections/OurFeatureDashboard/OurFeatureDashboard";
 import ProtectDashboard from "./components/Dashboard/Sections/ProtectDashboard/ProtectDashboard";
 import BenefitsDashboard from "./components/Dashboard/Sections/BenefitsDashboard/BenefitsDashboard";
+import TestimonialsDashboard from "./components/Dashboard/Sections/TestimonialsDashboard/TestimonialsDashboard";
+import PressReleasesDashboard from "./components/Dashboard/Sections/PressReleasesDashboard/PressReleasesDashboard";
+import JobOpeningsDashboard from "./components/Dashboard/Sections/JobOpeningsDashboard/JobOpeningsDashboard";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 function App() {
@@ -105,6 +108,9 @@ function App() {
           <Route path="faq" element={<FAQDashboard />} />
           <Route path="our-products" element={<OurProductDashboard />} />
           <Route path="our-features" element={<OurFeatureDashboard />} />
+            <Route path="Testimonials" element={<TestimonialsDashboard />} />
+            <Route path="Press-Releases" element={<PressReleasesDashboard />} />
+            <Route path="Job-Openings" element={<JobOpeningsDashboard />} />
           <Route path="protect" element={<ProtectDashboard />} />
           <Route path="benefits" element={<BenefitsDashboard />} />
         </Route>
