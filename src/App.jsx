@@ -13,11 +13,11 @@ import MissionVisionDashboard from "./components/Dashboard/Sections/MissionVisio
 import FAQDashboard from "./components/Dashboard/Sections/FAQDashboard/FAQDashboard";
 import OurProductDashboard from "./components/Dashboard/Sections/OurProductDashboard/OurProductDashboard";
 import OurFeatureDashboard from "./components/Dashboard/Sections/OurFeatureDashboard/OurFeatureDashboard";
+import ProtectDashboard from "./components/Dashboard/Sections/ProtectDashboard/ProtectDashboard";
+import BenefitsDashboard from "./components/Dashboard/Sections/BenefitsDashboard/BenefitsDashboard";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
-
 function App() {
-
   return (
     <>
       {/*<Nav logo="/assets/img/Logo/logoNavBar.webp" />
@@ -34,87 +34,83 @@ function App() {
       <Footer logo="/assets/img/Logo/logoNavBar.webp" /> */}
 
       <Routes>
-           <Route
-        path="/"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <Home />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
         <Route
-        path="/about"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <About />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
+          path="/"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <Home />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <About />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
 
-      <Route
-        path="/careers"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <Careers />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
+        <Route
+          path="/careers"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <Careers />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
 
-      <Route
-        path="/security"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <Security />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
+        <Route
+          path="/security"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <Security />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
 
-      <Route
-        path="/signup"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <SignUp />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
+        <Route
+          path="/signup"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <SignUp />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
 
-      <Route
-        path="/login"
-        element={
-          <>
-           <Nav logo="/assets/img/Logo/logoNavBar.webp" />
-            <Login />
-            <Footer logo="/assets/img/Logo/logoNavBar.webp" />
-          </>
-        }
-      />
+        <Route
+          path="/login"
+          element={
+            <>
+              <Nav logo="/assets/img/Logo/logoNavBar.webp" />
+              <Login />
+              <Footer logo="/assets/img/Logo/logoNavBar.webp" />
+            </>
+          }
+        />
 
-       <Route path="/dashboard" element={<Dashboard />} >
-       
-            <Route path="mission-vision" element={<MissionVisionDashboard />}/>
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="mission-vision" element={<MissionVisionDashboard />} />
 
-            <Route path="faq" element={<FAQDashboard />} />
-            <Route path="our-products" element={<OurProductDashboard />} />
-            <Route path="our-features" element={<OurFeatureDashboard />} />
-       
-       </Route>
-
-       
+          <Route path="faq" element={<FAQDashboard />} />
+          <Route path="our-products" element={<OurProductDashboard />} />
+          <Route path="our-features" element={<OurFeatureDashboard />} />
+          <Route path="protect" element={<ProtectDashboard />} />
+          <Route path="benefits" element={<BenefitsDashboard />} />
+        </Route>
       </Routes>
-
     </>
   );
 }
 
 export default App;
-
