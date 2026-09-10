@@ -7,7 +7,10 @@ const BtnAdd = ({Funct}) => {
         <div className='DS_DivBtnDash' title="Add">
             <Button 
                 className="DS_BtnDash  "
-                content = {<IoMdAddCircle className='DS_IconBtnDash' />}
+                content = {<div className="DS_BtnContent">
+                                <span>Add</span>
+                                <IoMdAddCircle className='DS_IconBtnDash' />
+                            </div>}
                 onClick={Funct}
                 /> 
         </div>
