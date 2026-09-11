@@ -13,11 +13,13 @@ import MissionVisionDashboard from "./components/Dashboard/Sections/MissionVisio
 import FAQDashboard from "./components/Dashboard/Sections/FAQDashboard/FAQDashboard";
 import OurProductDashboard from "./components/Dashboard/Sections/OurProductDashboard/OurProductDashboard";
 import OurFeatureDashboard from "./components/Dashboard/Sections/OurFeatureDashboard/OurFeatureDashboard";
+import OurValuesDashboard from "./components/Dashboard/Sections/OurValuesDashboard/OurValuesDashboard";
 import ProtectDashboard from "./components/Dashboard/Sections/ProtectDashboard/ProtectDashboard";
 import BenefitsDashboard from "./components/Dashboard/Sections/BenefitsDashboard/BenefitsDashboard";
 import TestimonialsDashboard from "./components/Dashboard/Sections/TestimonialsDashboard/TestimonialsDashboard";
 import PressReleasesDashboard from "./components/Dashboard/Sections/PressReleasesDashboard/PressReleasesDashboard";
 import JobOpeningsDashboard from "./components/Dashboard/Sections/JobOpeningsDashboard/JobOpeningsDashboard";
+
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 function App() {
@@ -104,13 +106,13 @@ function App() {
 
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="mission-vision" element={<MissionVisionDashboard />} />
-
+          <Route path="our-values" element={<OurValuesDashboard />} />
           <Route path="faq" element={<FAQDashboard />} />
           <Route path="our-products" element={<OurProductDashboard />} />
           <Route path="our-features" element={<OurFeatureDashboard />} />
-            <Route path="Testimonials" element={<TestimonialsDashboard />} />
-            <Route path="Press-Releases" element={<PressReleasesDashboard />} />
-            <Route path="Job-Openings" element={<JobOpeningsDashboard />} />
+          <Route path="Testimonials" element={<TestimonialsDashboard />} />
+          <Route path="Press-Releases" element={<PressReleasesDashboard />} />
+          <Route path="Job-Openings" element={<JobOpeningsDashboard />} />
           <Route path="protect" element={<ProtectDashboard />} />
           <Route path="benefits" element={<BenefitsDashboard />} />
         </Route>
