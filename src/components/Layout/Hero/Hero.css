@@ -52,7 +52,7 @@
       display: flex;
       flex-direction: column;
       max-width: 515.01px;
-      /* height: 624.48px; */
+
       height: auto;
       width: 100%;
       border-radius: 10.4px;
@@ -97,7 +97,7 @@
         flex-direction: column;
         max-width: 445.66px;
         width: 100%;
-        /* height: auto; */
+
         height: 225.02px;
         position: relative;
         gap: 17.34px;
@@ -106,7 +106,7 @@
           display: flex;
           max-width: 445.66px;
           width: 100%;
-          /* height: 181.68px; */
+
           height: auto;
           z-index: 5;
           .S-K-TransCardSec {
@@ -244,8 +244,6 @@
           }
         }
         .S-K-btn-change {
-          /* width: 445.6565246582031;
-        height: 50.74515151977539; */
           border-radius: 71.1px;
           gap: 8.67px;
           padding-top: 13.87px;
@@ -315,18 +313,13 @@
       left: 350px;
       top: 24px;
       z-index: 2;
-      /* left: 50%;
-      top: 24px;
-      z-index: 2;
-      pointer-events: none; */
+
       .S-K-arrows-mobile {
         display: none;
       }
       img {
         z-index: 0;
-        /* display: block;
-      max-width: 100%;
-      height: auto; */
+
         width: auto;
       }
     }
@@ -336,7 +329,7 @@
       width: 370.22px;
       height: 69.36px;
       justify-content: space-between;
-      /* justify-content: center; */
+
       align-items: center;
       padding-top: 8.67px;
       padding-right: 8.67px;
@@ -383,7 +376,6 @@
 @media screen and (max-width: 1440px) {
   .MGhome-hero {
     margin-top: 30px;
-    /*padding-top : 60px ;*/
   }
 
   .MGtitle1 {
@@ -397,7 +389,6 @@
   .MGhero-right {
     .S-K-RightSection {
       .S-K-Transactions {
-        /* max-width: 410.192px; */
         max-width: 380px;
         width: 100%;
         border-radius: 8.26px;
@@ -553,13 +544,12 @@
         }
       }
       .S-K-Arrows {
-        /* left: 240px; */
-        left: 200px;
+        left: 260px;
         top: 24px;
         img {
           z-index: 0;
-          /* width: 300px;
-        height: 275px; */
+
+          width: 200px;
         }
       }
       .S-K-Currency {
@@ -612,11 +602,12 @@
 @media screen and (max-width: 992px) {
   .MGhome-hero {
     flex-direction: column;
-    /* margin-top: 50px; */
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 80px;
+
+    gap: clamp(50px, 8vw, 80px);
+    width: 100%;
   }
 
   .MGhero-left {
@@ -628,7 +619,7 @@
   }
 
   .MGtitle1 {
-    margin: auto;
+    margin-inline: auto;
   }
   .DS_style {
     max-width: 100%;
@@ -636,153 +627,172 @@
     margin-bottom: 30px;
   }
   .MGhero-right {
+    position: relative;
+    width: min(100%, 305.45px);
+    max-width: 305.45px;
+    margin-inline: auto;
     .S-K-RightSection {
+      position: relative;
+      width: 100%;
+      max-width: 305.45px;
       .S-K-Transactions {
         max-width: 305.45px;
         width: 100%;
         border-radius: 6.15px;
-        padding: 20.51px;
-        gap: 15.38px;
+        padding: clamp(16px, 2.07vw, 20.51px);
+
+        gap: clamp(12px, 1.55vw, 15.38px);
         border-width: 0.51px;
         h2 {
-          font-size: 10.26px;
+          font-size: clamp(9px, 1.03vw, 10.26px);
           text-align: start;
         }
         .S-K-TransactionsCards {
+          width: 100%;
           max-width: 264.433px;
-          height: 132.77px;
-          gap: 10.26px;
 
+          height: clamp(120px, 13.38vw, 132.77px);
+          gap: clamp(9px, 1.03vw, 10.26px);
           .S-K-TransCard {
+            width: 100%;
             max-width: 264.43px;
             .S-K-TransCardSec {
+              width: 100%;
               width: 264.43px;
-              height: 45.41px;
 
-              padding-top: 8.2px;
-              padding-right: 12.31px;
-              padding-bottom: 8.2px;
-              padding-left: 12.31px;
+              height: clamp(42px, 4.58vw, 45.41px);
+
+              padding-top: clamp(7px, 0.83vw, 8.2px);
+              padding-right: clamp(10px, 1.24vw, 12.31px);
+              padding-bottom: clamp(7px, 0.83vw, 8.2px);
+              padding-left: clamp(10px, 1.24vw, 12.31px);
+
               border-radius: 6.15px;
               border-width: 0.51px;
 
               .S-K-TransCardLeft {
-                gap: 5.13px;
+                gap: clamp(4px, 0.52vw, 5.13px);
 
                 .S-K-TransCardLeftIcon {
-                  width: 22.598px;
-                  height: 22.53px;
-                  gap: 5.13px;
+                  width: clamp(20px, 2.28vw, 22.6px);
+                  height: clamp(20px, 2.28vw, 22.53px);
+
+                  gap: clamp(4px, 0.52vw, 5.13px);
                   border-radius: 27.18px;
                   padding: 5.13px;
                 }
                 .S-K-ContentLeft {
                   p {
-                    font-size: 9.23px;
+                    font-size: clamp(8px, 0.93vw, 9.23px);
                   }
                   h2 {
-                    font-size: 10.26px;
+                    font-size: clamp(9px, 1.03vw, 10.26px);
                   }
                 }
               }
             }
             &:nth-child(3) {
-              padding-right: 10.26px;
-              padding-left: 10.26px;
-              gap: 5.13px;
-
-              top: 58px;
+              padding-right: clamp(8px, 1.03vw, 10.26px);
+              padding-left: clamp(8px, 1.03vw, 10.26px);
+              gap: clamp(4px, 0.52vw, 5.13px);
+              top: clamp(52px, 5.85vw, 58px);
             }
             &:nth-child(4) {
-              padding-right: 20.51px;
-              padding-left: 20.51px;
-              gap: 5.13px;
-
-              top: 90px;
+              padding-right: clamp(16px, 2.07vw, 20.51px);
+              padding-left: clamp(16px, 2.07vw, 20.51px);
+              gap: clamp(4px, 0.52vw, 5.13px);
+              top: clamp(82px, 9.08vw, 90px);
             }
           }
         }
         .S-K-Exchange {
           /* */
-
-          gap: 14.87px;
+          gap: clamp(12px, 1.5vw, 14.87px);
 
           .S-K-ExchangeContainer {
-            gap: 14.87px;
-
+            gap: clamp(12px, 1.5vw, 14.87px);
             h1 {
-              font-size: 10.26px;
+              font-size: clamp(9px, 1.03vw, 10.26px);
             }
             .S-K-ExchangeCurrency {
               border-radius: 6.15px;
               border: 0.51px solid var(--yb-color-dark-3);
-
+              width: 100%;
               .S-K-ExchangeCurrencyCard {
                 border: 0.87px solid var(--yb-color-dark-3);
+                min-width: 0;
 
-                padding: 10.26px;
-                gap: 5.13px;
+                padding: clamp(8px, 1.03vw, 10.26px);
 
+                gap: clamp(4px, 0.52vw, 5.13px);
                 .S-K-CurrencyDivImg {
-                  gap: 6.89px;
+                  gap: clamp(4px, 0.69vw, 6.89px);
                   img {
-                    width: 20.57px;
-                    height: 20.46px;
+                    width: clamp(18px, 2.07vw, 20.57px);
+                    height: clamp(18px, 2.06vw, 20.46px);
                   }
                   h2 {
-                    font-size: 9.23px;
+                    font-size: clamp(8px, 0.93vw, 9.23px);
                   }
                 }
                 p {
-                  font-size: 8.2px;
+                  font-size: clamp(7px, 0.83vw, 8.2px);
                 }
               }
               .S-K-Price {
-                padding-top: 15.38px;
-                padding-right: 10.26px;
-                padding-bottom: 15.38px;
-                padding-left: 10.26px;
                 gap: 5.13px;
+                padding-top: clamp(12px, 1.55vw, 15.38px);
+                padding-right: clamp(8px, 1.03vw, 10.26px);
+                padding-bottom: clamp(12px, 1.55vw, 15.38px);
+                padding-left: clamp(8px, 1.03vw, 10.26px);
+                min-width: 0;
 
                 h2 {
-                  font-size: 10.26px;
+                  font-size: clamp(9px, 1.03vw, 10.26px);
                 }
               }
             }
           }
           .S-K-btn-change {
             border-radius: 42.05px;
-            gap: 5.13px;
-            font-size: 9.23px;
-            padding-top: 8.2px;
-            padding-right: 15.38px;
-            padding-bottom: 8.2px;
-            padding-left: 15.38px;
+
+            gap: clamp(4px, 0.52vw, 5.13px);
+
+            font-size: clamp(8px, 0.93vw, 9.23px);
+
+            padding-top: clamp(7px, 0.83vw, 8.2px);
+            padding-right: clamp(12px, 1.55vw, 15.38px);
+            padding-bottom: clamp(7px, 0.83vw, 8.2px);
+            padding-left: clamp(12px, 1.55vw, 15.38px);
           }
         }
       }
       .S-K-Income {
-        width: 111.24px;
-        height: 43.93px;
-        padding-top: 8.2px;
-        padding-right: 10.26px;
-        padding-bottom: 8.2px;
-        padding-left: 10.26px;
-        gap: 5.13px;
+        width: clamp(95px, 11.21vw, 111.24px);
+        height: clamp(38px, 4.43vw, 43.93px);
+
+        padding-top: clamp(7px, 0.83vw, 8.2px);
+        padding-right: clamp(8px, 1.03vw, 10.26px);
+        padding-bottom: clamp(7px, 0.83vw, 8.2px);
+        padding-left: clamp(8px, 1.03vw, 10.26px);
+
+        gap: clamp(4px, 0.52vw, 5.13px);
         border-radius: 6.15px;
-        top: -24px;
-        left: -35px;
 
+        top: clamp(-24px, -2.42vw, -15px);
+
+        left: clamp(-20px, -3.53vw, -35px);
         .S-K-IncomeDivImg {
-          width: 22.59px;
-          height: 22.53px;
-
-          gap: 5.13px;
           border-radius: 27.18px;
-          padding: 5.13px;
+          width: clamp(20px, 2.28vw, 22.59px);
+          height: clamp(20px, 2.28vw, 22.53px);
+
+          gap: clamp(4px, 0.52vw, 5.13px);
+
+          padding: clamp(4px, 0.52vw, 5.13px);
           img {
-            width: 12.34px;
-            height: 12.27px;
+            width: clamp(11px, 1.24vw, 12.34px);
+            height: clamp(11px, 1.23vw, 12.27px);
           }
         }
         .S-K-IncomeContent {
@@ -790,22 +800,30 @@
           gap: 0.51px;
 
           h2 {
-            font-size: 10.26px;
+            font-size: clamp(9px, 1.03vw, 10.26px);
           }
           p {
-            font-size: 8.2px;
+            font-size: clamp(7px, 0.83vw, 8.2px);
           }
         }
       }
       .S-K-Arrows {
-        left: 120px;
-        top: -20px;
+        position: absolute;
+
+        left: clamp(50%, 65vw, 80%);
+        transform: translateX(-50%);
+
+        top: clamp(-20px, -2.02vw, -10px);
+
+        width: clamp(170px, 22.18vw, 220px);
         max-width: 220px;
-        width: 100%;
-        height: 201px;
+
+        height: auto;
+
         .S-K-arrows-desktop {
           display: none;
         }
+
         .S-K-arrows-mobile {
           display: block;
           width: 100%;
@@ -813,32 +831,39 @@
         }
       }
       .S-K-Currency {
-        width: 219.57px;
-        height: 40.97px;
-
-        padding-top: 5.13px;
-        padding-right: 5.13px;
-        padding-bottom: 5.13px;
-        padding-left: 12.31px;
         border-radius: 41.02px;
-        bottom: -65px;
-        left: 120px;
+        width: clamp(200px, 22.13vw, 219.57px);
+        max-width: 219.57px;
+
+        height: clamp(38px, 4.13vw, 40.97px);
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        bottom: clamp(-65px, -6.55vw, -45px);
+
+        padding-top: clamp(4px, 0.52vw, 5.13px);
+        padding-right: clamp(4px, 0.52vw, 5.13px);
+        padding-bottom: clamp(4px, 0.52vw, 5.13px);
+        padding-left: clamp(10px, 1.24vw, 12.31px);
+
         p {
-          font-size: 9.23px;
+          font-size: clamp(8px, 0.93vw, 9.23px);
         }
 
         .S-K-CurrencyIcons {
-          width: 104.84px;
-          height: 30.71px;
+          width: clamp(95px, 10.57vw, 104.84px);
+          height: clamp(28px, 3.1vw, 30.71px);
 
-          gap: 4.1px;
+          gap: clamp(3px, 0.41vw, 4.1px);
           border-radius: 28.2px;
           border-width: 0.51px;
-          padding: 5.13px;
+
+          padding: clamp(4px, 0.52vw, 5.13px);
 
           .S-K-CurrIcon {
-            width: 20.57px;
-            height: 20.46px;
+            width: clamp(18px, 2.07vw, 20.57px);
+            height: clamp(18px, 2.06vw, 20.46px);
           }
         }
       }
