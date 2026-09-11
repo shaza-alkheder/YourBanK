@@ -9,12 +9,25 @@ const JobOpenings = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
+        const jobOpeningsStorageChange = (event) => {
+            if (event.key === "jobOpeningsData") {
+                const savedData = localStorage.getItem("jobOpeningsData");
+                if (savedData) {
+                    setJobs(JSON.parse(savedData));
+                }
+            }
+    };
+
         let storedJobs = localStorage.getItem('jobOpeningsData');
         if (!storedJobs) {
             localStorage.setItem('jobOpeningsData', JSON.stringify(jobOpeningsData));
             storedJobs = JSON.stringify(jobOpeningsData);
         }
         setJobs(JSON.parse(storedJobs));
+        window.addEventListener("storage",  jobOpeningsStorageChange);
+        return () => {
+            window.removeEventListener("storage",  jobOpeningsStorageChange);
+        };
         }, []);
 
     return (
