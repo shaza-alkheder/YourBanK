@@ -9,9 +9,45 @@ const Benefits = () => {
     const benefitsStored = localStorage.getItem("benefitsContent");
     return benefitsStored ? JSON.parse(benefitsStored) : BenefitsCardData;
   });
-  useEffect(() => {
-    localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
-  }, [benefitsContent]);
+  // useEffect(() => {
+  //   localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
+  // }, [benefitsContent]);
+
+     useEffect(() => {
+    const storageChange = (event) => {
+      if (event.key === "benefitsContent") {
+        const benefitsStored =
+          localStorage.getItem("benefitsContent");
+
+        if (benefitsStored) {
+          setBenefitsContent(
+            JSON.parse(benefitsStored)
+          );
+        } else {
+          setBenefitsContent([]);
+        }
+      }
+    };
+
+    window.addEventListener(
+      "storage",
+      storageChange
+    );
+
+    return () => {
+      window.removeEventListener(
+        "storage",
+        storageChange
+      );
+    };
+  }, []);
+
+  const cardsCount = benefitsContent.length;
+
+  const cardsType =
+    cardsCount % 2 === 0 ? "is-even" : "is-odd";
+
+
   return (
     <>
       <section className="S-K-Benefits">
@@ -30,7 +66,7 @@ const Benefits = () => {
             description="At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth."
           />
         </div>
-        <div className="S-K-BenefitsCard">
+        <div className={`S-K-BenefitsCard ${cardsType}`}>
           {benefitsContent.map((data) => (
             <Card
               key={data.id}
