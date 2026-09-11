@@ -1,12 +1,12 @@
-.O-A-headerDash{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .O-A-titleDashboard{
-        font-size: 72px;
-        font-weight: 500;
-    }
+.O-A-headerDash {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .O-A-titleDashboard {
+    font-size: 72px;
+    font-weight: 500;
+  }
 }
 
 .O-A-boxTable{
@@ -57,39 +57,40 @@
 }
 
 @media (max-width: 1440px) {
-    .O-A-boxTable{
-        table{
-            th , td {
-                max-width: 900px;
-            }
-            td{
-                font-size:14px;
-                padding: 2px 4px;
-            }
-            .O-A-tdBtn{
-                padding: 16px 10px;
-                gap: 3px;
-            }
-        }
+  .O-A-boxTable {
+    table {
+      th,
+      td {
+        max-width: 900px;
+      }
+      td {
+        font-size: 14px;
+        padding: 2px 4px;
+      }
+      .O-A-tdBtn {
+        padding: 16px 10px;
+        gap: 3px;
+      }
     }
+  }
 }
 
 @media (max-width: 992px) {
-    .O-A-headerDash{
-        .O-A-titleDashboard{
-            font-size: 24px;
-            font-weight: 400;
-        }
+  .O-A-headerDash {
+    .O-A-titleDashboard {
+      font-size: 24px;
+      font-weight: 400;
     }
-    .O-A-boxTable{
-        overflow-x: auto;
-        table{
-            min-width: 700px;
-            tr{
-                th{
-                    font-size: 22px;
-                }
-            }
+  }
+  .O-A-boxTable {
+    overflow-x: auto;
+    table {
+      min-width: 700px;
+      tr {
+        th {
+          font-size: 22px;
         }
+      }
     }
+  }
 }

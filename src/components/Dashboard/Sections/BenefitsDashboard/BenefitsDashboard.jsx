@@ -1,16 +1,15 @@
-import './BenefitsDashboard.css'
-import BenefitsCardData from "../../../../data/BenefitsCardData.json"
-import { useEffect, useState } from 'react';
+import "./BenefitsDashboard.css";
+import BenefitsCardData from "../../../../data/BenefitsCardData.json";
+import { useEffect, useState } from "react";
 import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
-import BtnView from '../../UI/BtnDashboard/BtnView/BtnView';
-import BtnUpdate from '../../UI/BtnDashboard/BtnUpdate/BtnUpdate';
-import BtnDelete from '../../UI/BtnDashboard/BtnDelete/BtnDelete';
-import ModalDashboard from '../../UI/ModalDashboard/ModalDashboard';
+import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
+import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
+import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
+import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";
 
 const BenefitsDashboard = () => {
-
-    const [benefitsContent, setBenefitsContent] = useState(() => {
-   const storedBenefitsContent = localStorage.getItem("benefitsContent");
+  const [benefitsContent, setBenefitsContent] = useState(() => {
+    const storedBenefitsContent = localStorage.getItem("benefitsContent");
 
     if (storedBenefitsContent) {
       return JSON.parse(storedBenefitsContent);
@@ -20,22 +19,22 @@ const BenefitsDashboard = () => {
 
     return BenefitsCardData;
   });
-   const [isModalOpen, setIsModalOpen] = useState(false);
-     const [modalData, setModalData] = useState({
-      image: "",
-      title: "",
-      desc: "",
-    });
-    
-       const [editId, setEditId] = useState(null);
-    
-      const [deleteBenefitsData, setDeleteBenefitsData] = useState(null);
-    
-      const [viewBenefitsData, setViewBenefitsData] = useState(null);
-      useEffect(() => {
-        localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
-      }, [benefitsContent]);
-        const benefitsFields = [
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalData, setModalData] = useState({
+    image: "",
+    title: "",
+    desc: "",
+  });
+
+  const [editId, setEditId] = useState(null);
+
+  const [deleteBenefitsData, setDeleteBenefitsData] = useState(null);
+
+  const [viewBenefitsData, setViewBenefitsData] = useState(null);
+  useEffect(() => {
+    localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
+  }, [benefitsContent]);
+  const benefitsFields = [
     {
       label: "Image",
       typeInput: "text",
@@ -61,9 +60,8 @@ const BenefitsDashboard = () => {
       id: "benefits-desc",
       rows: 6,
     },
-    
   ];
-    const addBtn = () => {
+  const addBtn = () => {
     setEditId(null);
 
     setDeleteBenefitsData(null);
@@ -134,20 +132,18 @@ const BenefitsDashboard = () => {
   const submitBtn = (formData) => {
     if (editId !== null) {
       setBenefitsContent((currentBenefits) => {
-        const updatedBenefits = currentBenefits.map(
-          (benefit) => {
-            if (benefit.id === editId) {
-              return {
-                ...benefit,
-                image: formData.image,
-                title: formData.title,
-                desc: formData.desc,
-              };
-            }
-
-            return benefit;
+        const updatedBenefits = currentBenefits.map((benefit) => {
+          if (benefit.id === editId) {
+            return {
+              ...benefit,
+              image: formData.image,
+              title: formData.title,
+              desc: formData.desc,
+            };
           }
-        );
+
+          return benefit;
+        });
 
         return updatedBenefits;
       });
@@ -155,9 +151,7 @@ const BenefitsDashboard = () => {
       setBenefitsContent((currentBenefits) => {
         const lastId =
           currentBenefits.length > 0
-            ? currentBenefits[
-                currentBenefits.length - 1
-              ].id
+            ? currentBenefits[currentBenefits.length - 1].id
             : 0;
 
         const newBenefit = {
@@ -177,7 +171,7 @@ const BenefitsDashboard = () => {
   const deleteBenefit = (id) => {
     setBenefitsContent((currentBenefits) => {
       const updatedBenefits = currentBenefits.filter(
-        (benefit) => benefit.id !== id
+        (benefit) => benefit.id !== id,
       );
 
       return updatedBenefits;
@@ -187,11 +181,7 @@ const BenefitsDashboard = () => {
   };
   return (
     <>
-           <TableDashboard
-        title1="Benefits"
-        title2="Management"
-        addBtn={addBtn}
-      >
+      <TableDashboard title1="Benefits" title2="Management" addBtn={addBtn}>
         <table>
           <thead>
             <tr>
@@ -221,17 +211,13 @@ const BenefitsDashboard = () => {
                 <td>{benefit.desc}</td>
 
                 <td className="O-A-tdBtn">
-                  <BtnView
-                    Funct={() => viewBtn(benefit)}
-                  />
+                  <div className="O-A-flex">
+                    <BtnView Funct={() => viewBtn(benefit)} />
 
-                  <BtnUpdate
-                    Funct={() => editBtn(benefit)}
-                  />
+                    <BtnUpdate Funct={() => editBtn(benefit)} />
 
-                  <BtnDelete
-                    Funct={() => deleteBtn(benefit)}
-                  />
+                    <BtnDelete Funct={() => deleteBtn(benefit)} />
+                  </div>
                 </td>
               </tr>
             ))}
@@ -251,24 +237,18 @@ const BenefitsDashboard = () => {
                   : "Add Benefit"
           }
           mode={
-            deleteBenefitsData
-              ? "delete"
-              : viewBenefitsData
-                ? "view"
-                : "form"
+            deleteBenefitsData ? "delete" : viewBenefitsData ? "view" : "form"
           }
           fields={benefitsFields}
           data={viewBenefitsData || modalData}
           image={viewBenefitsData?.image || ""}
           onSubmit={submitBtn}
-          onDelete={() =>
-            deleteBenefit(deleteBenefitsData.id)
-          }
+          onDelete={() => deleteBenefit(deleteBenefitsData.id)}
           onClose={closeBtn}
         />
       )}
     </>
-  )
-}
+  );
+};
 
-export default BenefitsDashboard
+export default BenefitsDashboard;

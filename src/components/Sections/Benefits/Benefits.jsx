@@ -42,7 +42,10 @@ const Benefits = () => {
     };
   }, []);
 
+  const cardsCount = benefitsContent.length;
 
+  const cardsType =
+    cardsCount % 2 === 0 ? "is-even" : "is-odd";
 
 
   return (
@@ -63,7 +66,7 @@ const Benefits = () => {
             description="At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth."
           />
         </div>
-        <div className="S-K-BenefitsCard">
+        <div className={`S-K-BenefitsCard ${cardsType}`}>
           {benefitsContent.map((data) => (
             <Card
               key={data.id}
