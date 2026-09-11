@@ -73,7 +73,7 @@ const FAQDashboard = () => {
     setIsModalOpen(false);
     setEditId(null);
     setDeleteFaqData(null);
-setViewFaqData(null);
+    setViewFaqData(null);
     setModalData({
       question: "",
       answer: "",
@@ -152,19 +152,20 @@ setViewFaqData(null);
 
                 <td>{faq.question}</td>
 
-
                 <td className="O-A-tdBtn">
-                  <BtnView Funct={() => viewBtn(faq)} />
-                  <BtnUpdate Funct={() => editBtn(faq)} />
+                  <div className="O-A-flex">
+                    <BtnView Funct={() => viewBtn(faq)} />
+                    <BtnUpdate Funct={() => editBtn(faq)} />
 
-                  <BtnDelete Funct={() => deleteBtn(faq)} />
+                    <BtnDelete Funct={() => deleteBtn(faq)} />
+                  </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </TableDashboard>
-     {isModalOpen && (
+      {isModalOpen && (
         <ModalDashboard
           title={
             deleteFaqData
@@ -175,13 +176,7 @@ setViewFaqData(null);
                   ? "Update FAQ"
                   : "Add FAQ"
           }
-          mode={
-            deleteFaqData
-              ? "delete"
-              : viewFaqData
-                ? "view"
-                : "form"
-          }
+          mode={deleteFaqData ? "delete" : viewFaqData ? "view" : "form"}
           fields={faqFields}
           data={viewFaqData || modalData}
           onSubmit={submitBtn}

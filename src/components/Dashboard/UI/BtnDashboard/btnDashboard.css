@@ -1,36 +1,36 @@
-.DS_BtnDash {
-    width:100%;
-    height: 100%;
-    padding: 10px;
-    background-color: var(--yb-color-primary);
-    border-radius: 16px;
-    color: var(--yb-color-white);
+.DS_DivBtnDash{
+    margin: 4px;
+}
+.DS_DivBtnDash .DS_BtnDash {
+        width: clamp(30px, 2.08vw, 50px);
+    height: clamp(30px, 2.08vw, 50px);
+    background-color:var(--yb-color-dark-1);
     border: none;
-    font-weight: var(--yb-font-weight-rg);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
     transition: all 0.3s ease; 
 }
-.DS_DivBtnDash{
-    width: clamp(50px, 3.47vw, 90px);
-    height: clamp(50px, 3.47vw, 90px);
-    margin: 10px;
-    display: inline-flex;
-    flex-direction: column;
+.DS_DivBtnDash .DS_BtnDash:has( .DS_BtnContent){
+    max-width: 400px;
+    width: clamp(70px, 4.86vw, 200px);
 }
-.DS_IconBtnDash {
-    color: #000000;
-    font-size: clamp(var(--yb-font-size-heading-sm), 3.33vw, var(--yb-font-size-heading-lg));
+.DS_BtnDash .DS_IconBtnDash {
+    color: var(--yb-color-primary);
+    font-size: clamp(var(--yb-font-size-heading-sm), 1.94vw, var(--yb-font-size-heading-md));
 }
-
+        .DS_BtnContent {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--yb-color-primary);
+            font-size: clamp(var(--yb-font-size-title-sm), 1.25vw, var(--yb-font-size-heading-sm));
+            font-weight: 500;
+        }
 
 .DS_BtnDash:hover {
-    background-color: #b3e62e; 
-    color: var(--yb-color-dark-2);
     transform: translateY(-3px); 
-    box-shadow: 0 10px 16px rgba(202, 255, 51, 0.25); 
 }
 
