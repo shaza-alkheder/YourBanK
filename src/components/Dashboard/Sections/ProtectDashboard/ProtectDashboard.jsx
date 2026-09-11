@@ -217,7 +217,8 @@ const ProtectDashboard = () => {
                 <td>{security.desc}</td>
 
                 <td className="O-A-tdBtn">
-                  <BtnView
+                    <div className="O-A-flex">
+    <BtnView
                     Funct={() => viewBtn(security)}
                   />
 
@@ -228,6 +229,9 @@ const ProtectDashboard = () => {
                   <BtnDelete
                     Funct={() => deleteBtn(security)}
                   />
+
+                    </div>
+              
                 </td>
               </tr>
             ))}
