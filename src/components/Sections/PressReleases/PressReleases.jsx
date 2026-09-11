@@ -9,12 +9,25 @@ const PressReleases = () => {
         const [newsCards, setNewsCards] = useState([]);
 
     useEffect(() => {
+        const PressReleasesStorageChange = (event) => {
+            if (event.key === "PressReleasesData") {
+                const savedData = localStorage.getItem("PressReleasesData");
+                if (savedData) {
+                    setNewsCards(JSON.parse(savedData));
+                }
+            }
+    };
         let news = localStorage.getItem('PressReleasesData');
         if (!news) {
             localStorage.setItem('PressReleasesData', JSON.stringify(PressReleasesData));
             news = JSON.stringify(PressReleasesData);
         }
         setNewsCards(JSON.parse(news));
+
+        window.addEventListener("storage", PressReleasesStorageChange);
+            return () => {
+                window.removeEventListener("storage", PressReleasesStorageChange);
+            };
         }, []);
     return (
         <div className='DS_PressReleases'>
