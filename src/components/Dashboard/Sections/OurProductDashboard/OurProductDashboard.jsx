@@ -47,6 +47,14 @@ const OurProductDashboard = () => {
             rows: 6,
         },
         {
+            label: "ImageUrl",
+            typeInput: "text",
+            classNameInput: "S-K-Form-input",
+            placeholderInput: "Enter Image Url",
+            name: "imgSrc",
+            id: "product-img",
+        },
+        {
             label: "Category",
             typeInput: "select",
             classNameInput: "S-K-Form-input",
@@ -56,15 +64,8 @@ const OurProductDashboard = () => {
                 { value: "ForIndividuals", label: "For Individuals" },
                 { value: "ForBusinesses", label: "For Businesses" }
             ]
-        },
-        {
-            label: "ImageUrl",
-            typeInput: "text",
-            classNameInput: "S-K-Form-input",
-            placeholderInput: "Enter Image Url",
-            name: "imgSrc",
-            id: "product-img",
         }
+        
     ];
 
     const addBtn = () => {
@@ -83,7 +84,7 @@ const OurProductDashboard = () => {
         setModalData({
             title: product.title,
             description: product.desc, 
-            category: product.category || "ForIndividuals",
+            category: product.category,
             imgSrc: product.imgSrc || "" 
         });
         setIsModalOpen(true);
@@ -143,7 +144,7 @@ const OurProductDashboard = () => {
             });
         } else {
             setProductData((currentData) => {
-                const targetCategory = formData.category || "ForIndividuals"; 
+                const targetCategory = formData.category; 
                 const currentList = currentData[targetCategory] || [];
                 const lastId1 = currentData.ForIndividuals.length > 0 ? currentData.ForIndividuals[currentData.ForIndividuals.length - 1].id : 0;
                 const lastId2 = currentData.ForBusinesses.length > 0 ? currentData.ForBusinesses[currentData.ForBusinesses.length - 1].id : 0;
@@ -185,7 +186,7 @@ const OurProductDashboard = () => {
         const formattedProduct = {
             ...product,
             description: product.desc, 
-            category: product.category || "ForIndividuals"
+            category: product.category
         };
         setviewProductData(formattedProduct);
         setEditId(null);

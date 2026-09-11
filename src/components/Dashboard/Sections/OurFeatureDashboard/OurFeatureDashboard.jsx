@@ -7,7 +7,10 @@ import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard"
 import BtnView from "../../UI/BtnDashboard/BtnView/BtnView"
 
 const OurFeatureDashboard = () => {
-    const [featureData , setFeatureData] = useState(JSON.parse(localStorage.getItem("featuresCardData")))
+    const [featureData, setFeatureData] = useState(() => {
+    const stored = localStorage.getItem("featuresCardData");
+        return stored ? JSON.parse(stored) : {OnlineBanking: [], FinancialTools: [], CustomerSupport: [] };
+    });
 
     useEffect(() => {
         localStorage.setItem("featuresCardData", JSON.stringify(featureData));
@@ -73,7 +76,7 @@ const OurFeatureDashboard = () => {
         setModalData({
             title: feature.title,
             description: feature.desc, 
-            category: feature.category || "OnlineBanking",
+            category: feature.category,
         });
         setIsModalOpen(true);
     };
@@ -98,7 +101,7 @@ const OurFeatureDashboard = () => {
 
     const submitBtn = (formData) => {
         if (editId !== null) {
-            setviewFeatureData((currentData) => {
+            setFeatureData((currentData) => {
                 const updatedOnlineBanking = currentData.OnlineBanking.map((feature) => {
                     if (feature.id === editId) {
                         return { 
@@ -140,7 +143,7 @@ const OurFeatureDashboard = () => {
             });
         } else {
             setFeatureData((currentData) => {
-                const targetCategory = formData.category || "OnlineBanking"; 
+                const targetCategory = formData.category; 
                 const currentList = currentData[targetCategory] || [];
                 const lastId1 = currentData.OnlineBanking.length > 0 ? currentData.OnlineBanking[currentData.OnlineBanking.length - 1].id : 0;
                 const lastId2 = currentData.FinancialTools.length > 0 ? currentData.FinancialTools[currentData.FinancialTools.length - 1].id : 0;
@@ -183,7 +186,7 @@ const OurFeatureDashboard = () => {
         const formattedfeature = {
             ...feature,
             description: feature.desc, 
-            category: feature.category || "OnlineBanking"
+            category: feature.category
         };
         setviewFeatureData(formattedfeature);
         setEditId(null);

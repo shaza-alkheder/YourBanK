@@ -23,15 +23,15 @@
         }
         th , td {
             /* max-width: 180px; */
-            padding: 4px 10px;
+            /* padding: 4px 10px; */
             border: 1px solid white;
         }
         th{
-            padding: 16px 16px;
+            padding: 18px 16px;
             color: var(--yb-color-primary);
             background: linear-gradient(180deg, #323131 0%, #5a5656 100%);
-            font-size: 32px;
-            font-weight: 300;
+            font-size: 24px;
+            font-weight: 400;
         }
         .O-A-action{
             max-width: 177px;
@@ -39,6 +39,7 @@
         }
         td{
             font-weight: 300;
+            padding: 16px 10px;
             word-break: break-word;
             text-align: center;
             height: auto;
