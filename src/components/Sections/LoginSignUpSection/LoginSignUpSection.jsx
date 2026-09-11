@@ -1,8 +1,19 @@
+import { useState } from "react"
 import FormAuth from "../../UI/FormAuth/FormAuth"
 import TitleDescription from "../../UI/TitleDescription/TitleDescription"
 import "./LoginSignUpSection.css"
 
 const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+
+    const handleEmailChange = (e) => setEmail(e.target.value)
+    const handlePasswordChange = (e) => setPassword(e.target.value)
+    const handleFirstNameChange = (e) => setFirstName(e.target.value)
+    const handleLastNameChange = (e) => setLastName(e.target.value)
+
     return (
         <>
             {login? 
@@ -46,7 +57,9 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         typeInput : "email",
                         placeholderInput : "Enter your Email",
                         name : "email",
-                        id : "emailInput"
+                        id : "emailInput",
+                        value: email,
+                        onChange: handleEmailChange
                     }}
                     password = "Enter your Password"
                     inputInfoPass ={{
@@ -54,7 +67,9 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         typeInput : "password",
                         placeholderInput : "Enter your Password",
                         name : "password",
-                        id : "passwordInput"
+                        id : "passwordInput",
+                        value: password,
+                        onChange: handlePasswordChange
                     }}
                     forgetPassword = "Forgot Password?"
                     btn1 = "Login"
@@ -70,21 +85,29 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         typeInput : "text",
                         placeholderInput : "Enter First Name",
                         name : "firstName",
-                        id : "firstNameInput"
+                        id : "firstNameInput",
+                        value: firstName,
+                        onChange: handleFirstNameChange
                     }}
                     lastName = "Enter lastName"
                     inputInfoLN = {{
                         typeInput : "text",
                         placeholderInput : "Enter Last Name",
                         name : "lastName",
-                        id : "lastNameInput"
+                        id : "lastNameInput",
+                        // value : "",
+                        // onChange : onChangeInput
+                        value: lastName,
+                        onChange: handleLastNameChange
                     }}
                     email = "Enter your Email"
                     inputInfoEm = {{
                         typeInput : "email",
                         placeholderInput : "Enter your Email",
                         name : "email",
-                        id : "emailInput"
+                        id : "emailInput",
+                        value: email,
+                        onChange: handleEmailChange
                     }}
                     password = "Enter your Password"
                     inputInfoPass ={{
@@ -92,7 +115,9 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         typeInput : "password",
                         placeholderInput : "Enter your Password",
                         name : "password",
-                        id : "passwordInput"
+                        id : "passwordInput",
+                        value: password,
+                        onChange: handlePasswordChange
                     }}
                     forgetPassword = "Forgot Password?"
                     btn1 = "Sign Up"

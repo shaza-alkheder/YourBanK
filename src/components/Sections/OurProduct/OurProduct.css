@@ -35,10 +35,13 @@
         }
     }
     .O-A-boxCardsOurProduct{
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 2px;
+        align-items: center; */
+        display: grid;
+        grid-template-columns:  1fr 1px 1fr 1px 1fr;
+        column-gap: 16px;
+        row-gap: 140px;
         .O-A-cardStyleOueProduct{
             max-width: 465px;
             height: 319px;
@@ -146,6 +149,8 @@
             }
         }
         .O-A-boxCardsOurProduct{
+            column-gap: 8px;
+            row-gap: 80px;
             .O-A-cardStyleOueProduct{
                 max-width: 373px;
                 height: 262px;
@@ -194,6 +199,9 @@
             }
         }
         .O-A-boxCardsOurProduct{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: nowrap;
             flex-direction: column;
             gap: 30px;
