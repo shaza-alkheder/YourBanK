@@ -13,6 +13,7 @@ import MissionVisionDashboard from "./components/Dashboard/Sections/MissionVisio
 import FAQDashboard from "./components/Dashboard/Sections/FAQDashboard/FAQDashboard";
 import OurProductDashboard from "./components/Dashboard/Sections/OurProductDashboard/OurProductDashboard";
 import OurFeatureDashboard from "./components/Dashboard/Sections/OurFeatureDashboard/OurFeatureDashboard";
+import OurValuesDashboard from "./components/Dashboard/Sections/OurValuesDashboard/OurValuesDashboard";
 // import Dashboard from "./pages/DashBoard/DashBoard";
 
 
@@ -106,6 +107,7 @@ function App() {
             <Route path="faq" element={<FAQDashboard />} />
             <Route path="our-products" element={<OurProductDashboard />} />
             <Route path="our-features" element={<OurFeatureDashboard />} />
+            <Route path="our-values" element={<OurValuesDashboard />} />
        
        </Route>
 
