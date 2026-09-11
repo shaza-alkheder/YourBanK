@@ -2,9 +2,9 @@
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 100px 20px;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2000;
   .S-K-Dashboard-Modal-box {
@@ -55,42 +55,43 @@
       }
     }
     .S-K-Dashboard-Modal-delete {
-        text-align: center;
+      text-align: center;
 
-  p {
-    margin: 10px 0 30px;
-    color: var(--yb-color-white);
-    font-size: var(--yb-font-size-body-md);
-  }
-.S-K-Dashboard-Modal-delete-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    button {
-      min-width: 110px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 82px;
-      font-family: var(--yb-font-family-primary);
-      font-size: var(--yb-font-size-body-sm);
-      cursor: pointer;
-      transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-      &:hover {
-        transform: translateY(-2px);
-        opacity: 0.9;
+      p {
+        margin: 10px 0 30px;
+        color: var(--yb-color-white);
+        font-size: var(--yb-font-size-body-md);
       }
-    }
-     .S-K-Dashboard-Modal-cancel {
-      background-color: var(--yb-color-dark-3);
-      color: var(--yb-color-white);
-    }
+      .S-K-Dashboard-Modal-delete-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        button {
+          min-width: 110px;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 82px;
+          font-family: var(--yb-font-family-primary);
+          font-size: var(--yb-font-size-body-sm);
+          cursor: pointer;
+          transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+          &:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+          }
+        }
+        .S-K-Dashboard-Modal-cancel {
+          background-color: var(--yb-color-dark-3);
+          color: var(--yb-color-white);
+        }
 
-    .S-K-Dashboard-Modal-delete-btn {
-      background-color: #dc3545;
-      color: var(--yb-color-white);
-    }
+        .S-K-Dashboard-Modal-delete-btn {
+          background-color: #dc3545;
+          color: var(--yb-color-white);
+        }
+      }
     }
   }
 }
