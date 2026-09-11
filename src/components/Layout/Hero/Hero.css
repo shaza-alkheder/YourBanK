@@ -554,12 +554,14 @@
       }
       .S-K-Arrows {
         /* left: 240px; */
-        left: 200px;
+        /* left: 200px; */
+        left: 260px;
         top: 24px;
         img {
           z-index: 0;
           /* width: 300px;
         height: 275px; */
+          width: 200px;
         }
       }
       .S-K-Currency {
