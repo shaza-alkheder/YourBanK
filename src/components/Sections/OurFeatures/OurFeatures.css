@@ -7,7 +7,7 @@
         display: flex;
         gap: 30px;
         .O-A-box{
-            height: 373px;
+            height: 337px;
             padding: 50px;
             background-color: var(--yb-color-dark-2);
             border-radius: 10px;

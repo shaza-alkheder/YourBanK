@@ -23,7 +23,8 @@
                 width: 177px;
                 height: 55px;
                 border: none;
-                background-color:var(--yb-color-dark-1); 
+                /* background-color:var(--yb-color-dark-1);  */
+                background: none;
                 color:var(--yb-color-white);
                 cursor: pointer;
                 transition: 0.3s all;
@@ -41,11 +42,10 @@
         align-items: center; */
         display: grid;
         grid-template-columns:  1fr 1px 1fr 1px 1fr;
-        column-gap: 16px;
+        column-gap: 80px;
         row-gap: 140px;
         .O-A-cardStyleOueProduct{
             max-width: 465px;
-            max-width: 334px;
             text-align: center;
             display: flex;
             flex-direction: column;
