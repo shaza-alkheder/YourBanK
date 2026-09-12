@@ -206,7 +206,7 @@ const OurProductDashboard = () => {
                         <tr>
                             <th>Id</th>
                             <th>Title</th>
-                            <th>Description</th>
+                            <th className="O-A-descriptionDisplay">Description</th>
                             <th className="O-A-action">Action</th>
                         </tr>
                     </thead>
@@ -219,7 +219,7 @@ const OurProductDashboard = () => {
                                 <tr key={product.id}>
                                     <td>{product.id}</td>
                                     <td>{product.title}</td>
-                                    <td>{product.desc}</td>
+                                    <td className="O-A-descriptionDisplay">{product.desc}</td>
                                     <td className="O-A-tdBtn">
                                         <div className="O-A-flex">
                                             <BtnView Funct={() => viewBtn(product)} />
@@ -238,7 +238,7 @@ const OurProductDashboard = () => {
                                 <tr key={product.id}>
                                     <td>{product.id}</td>
                                     <td>{product.title}</td>
-                                    <td>{product.desc}</td>
+                                    <td className="O-A-descriptionDisplay">{product.desc}</td>
                                     <td className="O-A-tdBtn">
                                         <div className="O-A-flex">
                                             <BtnView Funct={() => viewBtn(product)} />

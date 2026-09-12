@@ -48,17 +48,3 @@ body {
   color: var(--yb-color-white);
   font-family: var(--yb-font-family-primary);
 }
-
-main {
-  padding-top: var(--yb-spacing-y-lg);
-}
-@media screen and (max-width: 1440px) {
-  main {
-    padding-top: var(--yb-spacing-y-md);
-  }
-}
-@media screen and (max-width: 992px) {
-  main {
-    padding-top: var(--yb-spacing-y-sm-2);
-  }
-}
