@@ -261,12 +261,17 @@ const MissionVisionDashboard = () => {
                 <td>{item.title}</td>
 
                 <td className="O-A-tdBtn">
+                    <div className=" O-A-flex">
 
+                        
                     <BtnView Funct={() => viewBtn(item)} />
 
                     <BtnUpdate Funct={() => editBtn(item)} />
 
                     <BtnDelete Funct={() => deleteBtn(item)} />
+                    </div>
+
+                   
 
                 </td>
 
