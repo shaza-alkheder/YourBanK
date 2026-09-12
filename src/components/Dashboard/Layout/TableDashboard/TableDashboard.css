@@ -83,13 +83,25 @@
     }
   }
   .O-A-boxTable {
-    overflow-x: auto;
+    /* overflow-x: auto; */
     table {
-      min-width: 700px;
+      /* min-width: 700px; */
+      width: 100%;
       tr {
         th {
-          font-size: 22px;
+          padding: 12px 8px;
+          font-size: 16px;
         }
+        /* td{
+          padding: ;
+        } */
+      }
+      .O-A-action{
+        max-width: 70px;
+        width: 32px;
+      }
+      .O-A-tdBtn{
+        padding: 2px 4px;
       }
     }
   }

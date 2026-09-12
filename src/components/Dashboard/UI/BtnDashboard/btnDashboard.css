@@ -2,8 +2,8 @@
     margin: 4px;
 }
 .DS_DivBtnDash .DS_BtnDash {
-        width: clamp(30px, 2.08vw, 50px);
-    height: clamp(30px, 2.08vw, 50px);
+        width: clamp(18px, 2.08vw, 50px);
+    height: clamp(18px, 2.08vw, 50px);
     background-color:var(--yb-color-dark-1);
     border: none;
     display: flex;
