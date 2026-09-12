@@ -620,6 +620,9 @@
 
   .MGtitle1 {
     margin-inline: auto;
+    img {
+      object-fit: contain;
+    }
   }
   .DS_style {
     max-width: 100%;
