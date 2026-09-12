@@ -195,9 +195,9 @@ import  { useState, useEffect } from 'react';
                     {/* <th>Image Path</th>
                     <th>Image Alt</th> */}
                     <th>Title</th>
-                    <th>Location</th>
-                    {/* <th>Date</th>
-                    <th>Description</th>  */}
+                    <th className='DS_TableLocation'>Location</th>
+                    <th>Date</th>
+                    {/* <th>Description</th>  */}
                     <th className="O-A-action">Action</th>
                     </tr>
                 </thead>
@@ -208,9 +208,9 @@ import  { useState, useEffect } from 'react';
                         {/* <td>{item.image.path}</td>
                         <td>{item.image.altImg}</td> */}
                         <td>{item.title}</td>
-                        <td>{item.location}</td>
-                        {/* <td>{item.date}</td>
-                        <td>{item.desc}</td>  */}
+                        <td className='DS_TableLocation'>{item.location}</td>
+                        <td>{item.date}</td>
+                        {/* <td>{item.desc}</td>  */}
                         <td className="O-A-tdBtn">
                             <div  className='O-A-flex'>
                             <BtnView Funct={() => viewBtn(item)} />

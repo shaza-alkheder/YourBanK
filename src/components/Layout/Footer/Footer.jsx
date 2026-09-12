@@ -4,15 +4,26 @@ import { FaLocationDot } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 
 function Footer({ logo}) {
+  const icons=[
+  {
+    "url": "https://www.facebook.com/",
+    "icon": FaFacebook
+  },
+  {
+    "url": "https://www.x.com/",
+    "icon": FaTwitter
+  },
+  {
+    "url": "https://www.linkedin.com/",
+    "icon": FaLinkedin
+  }
+]
 
-    const icons= [
-      FaFacebook, FaTwitter, FaLinkedin 
-    ]
   return (
     <footer>
       <div className="mmContainer">
         <div className="mmTitle">
-           <img src={logo} alt="" className='mmLogo'/>
+          <img src={logo} alt="" className='mmLogo'/>
             <ul>
                 <li><NavLink to = "/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink></li>
                 <li><NavLink to = "/about" className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
@@ -22,9 +33,9 @@ function Footer({ logo}) {
         </div>
 
         <div className="mmContact">
-                <p><FaEnvelope className='mmContactIcon'/>hello@skillbirdge.com</p>
-                <p><FaPhoneAlt className='mmContactIcon'/>+91 91813 23 2309</p>
-                <p><FaLocationDot className='mmContactIcon'/>Somewhere in the World</p>
+                <p><FaEnvelope className='mmContactIcon'/><a className='DS_a' href="mailto:hello@skillbirdge.com">hello@skillbirdge.com</a></p>
+                <p><FaPhoneAlt className='mmContactIcon'/><a className='DS_a' href="tel:+91 91813 23 2309">+91 91813 23 2309</a></p>
+                <p><FaLocationDot className='mmContactIcon'/> <a className='DS_a' href="">Somewhere in the World</a></p>
 
         </div>
 
@@ -34,7 +45,7 @@ function Footer({ logo}) {
             <div className="mmIcons">
               {icons.map((Icon, index) => (
                   <div className="mmCircle" key={index}>
-                    <Icon className='mmSocialIcon' />
+                    <a className='DS_aIcon' href={Icon.url}><Icon.icon className='mmSocialIcon' /></a>
                   </div>
               ))}
                 

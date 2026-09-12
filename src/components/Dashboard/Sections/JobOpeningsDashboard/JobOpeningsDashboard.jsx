@@ -183,9 +183,9 @@
                     <tr>
                     <th>ID</th>
                     <th>Job Title</th>
-                    <th>Location</th>
-                    {/* <th>Department</th>
-                    <th>About Job</th>
+                    <th className='DS_LocDep'>Location</th>
+                    <th className='DS_LocDep'>Department</th>
+                    {/* <th>About Job</th>
                     <th>Requirements</th> */}
                     <th className="O-A-action">Action</th>
                     </tr>
@@ -195,9 +195,9 @@
                     <tr key={index}>
                         <td >{index + 1}</td>
                         <td>{item.title}</td>
-                        <td>{item.location}</td>
-                        {/* <td>{item.department}</td>
-                        <td>{item.about}</td>
+                        <td className='DS_LocDep'>{item.location}</td>
+                        <td className='DS_LocDep'>{item.department}</td>
+                        {/* <td>{item.about}</td>
                         <td>
                         <ul>
                             {item.requirements?.map((req, reqIndex) => (
