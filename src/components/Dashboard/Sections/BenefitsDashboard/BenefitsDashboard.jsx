@@ -1,7 +1,7 @@
 import "./BenefitsDashboard.css";
 import BenefitsCardData from "../../../../data/BenefitsCardData.json";
 import { useEffect, useState } from "react";
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
+import TableDashboard from "../../UI/TableDashboard/TableDashboard";
 import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
@@ -186,7 +186,7 @@ const BenefitsDashboard = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Image</th>
+              <th className="value-imge-column">Image</th>
               <th>Title</th>
               {/* <th>Description</th> */}
               <th className="O-A-action">Action</th>
@@ -198,7 +198,7 @@ const BenefitsDashboard = () => {
               <tr key={benefit.id}>
                 <td>{benefit.id}</td>
 
-                <td>
+                <td className="value-imge-column">
                   <img
                     src={benefit.image}
                     alt={benefit.title}
