@@ -620,6 +620,9 @@
 
   .MGtitle1 {
     margin-inline: auto;
+    img {
+      object-fit: contain;
+    }
   }
   .DS_style {
     max-width: 100%;
@@ -779,9 +782,9 @@
         gap: clamp(4px, 0.52vw, 5.13px);
         border-radius: 6.15px;
 
-        top: clamp(-24px, -2.42vw, -15px);
+        top: clamp(-24px, -2.42vw, -24px);
 
-        left: clamp(-20px, -3.53vw, -35px);
+        left: clamp(-10px, -3.53vw, -35px);
         .S-K-IncomeDivImg {
           border-radius: 27.18px;
           width: clamp(20px, 2.28vw, 22.59px);

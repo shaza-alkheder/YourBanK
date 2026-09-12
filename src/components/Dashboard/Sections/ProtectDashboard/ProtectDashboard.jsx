@@ -4,7 +4,7 @@ import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
 import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
+import TableDashboard from "../../UI/TableDashboard/TableDashboard";
 import { useEffect, useState } from "react";
 
 const ProtectDashboard = () => {
@@ -192,7 +192,7 @@ const ProtectDashboard = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Image</th>
+              <th className="value-imge-column">Image</th>
               <th>Title</th>
               {/* <th>Description</th> */}
               <th className="O-A-action">Action</th>
@@ -204,7 +204,7 @@ const ProtectDashboard = () => {
               <tr key={security.id}>
                 <td>{security.id}</td>
 
-                <td>
+                <td className="value-imge-column">
                   <img
                     src={security.image}
                     alt={security.title}
