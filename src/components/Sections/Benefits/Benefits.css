@@ -211,6 +211,12 @@
         width: 100%;
         gap: 20px;
         padding: 24px;
+
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px;
+
         &::before {
           display: none !important;
           content: none !important;
