@@ -160,6 +160,7 @@ function OurValuesDashboard() {
                                 <td>{value.title}</td>
                                 <td>{value.description}</td>
                                 <td className="O-A-tdBtn">
+                                    <div className="O-A-flex">
                                     <BtnView
                                         Funct={() => handleView(value)}
                                     />
@@ -169,6 +170,7 @@ function OurValuesDashboard() {
                                     <BtnDelete
                                         Funct={() => handleDelete(value)}
                                     />
+                                    </div>
                                 </td>
                             </tr>
                         ))}
