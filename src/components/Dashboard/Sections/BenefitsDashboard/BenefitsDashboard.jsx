@@ -188,7 +188,7 @@ const BenefitsDashboard = () => {
               <th>ID</th>
               <th>Image</th>
               <th>Title</th>
-              <th>Description</th>
+              {/* <th>Description</th> */}
               <th className="O-A-action">Action</th>
             </tr>
           </thead>
@@ -208,7 +208,7 @@ const BenefitsDashboard = () => {
 
                 <td>{benefit.title}</td>
 
-                <td>{benefit.desc}</td>
+                {/* <td>{benefit.desc}</td> */}
 
                 <td className="O-A-tdBtn">
                   <div className="O-A-flex">
