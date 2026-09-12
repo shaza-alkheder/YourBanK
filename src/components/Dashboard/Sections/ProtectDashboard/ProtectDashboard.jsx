@@ -194,7 +194,7 @@ const ProtectDashboard = () => {
               <th>ID</th>
               <th>Image</th>
               <th>Title</th>
-              <th>Description</th>
+              {/* <th>Description</th> */}
               <th className="O-A-action">Action</th>
             </tr>
           </thead>
@@ -214,7 +214,7 @@ const ProtectDashboard = () => {
 
                 <td>{security.title}</td>
 
-                <td>{security.desc}</td>
+                {/* <td>{security.desc}</td> */}
 
                 <td className="O-A-tdBtn">
                     <div className="O-A-flex">

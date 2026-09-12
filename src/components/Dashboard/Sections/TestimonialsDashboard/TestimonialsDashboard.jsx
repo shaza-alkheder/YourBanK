@@ -3,6 +3,7 @@ import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
 import './TestimonialsDashboard.css';
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
+import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
 import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";
 import testimonialsData from "../../../../data/TestimonialsCardData.json";
 
@@ -31,6 +32,7 @@ const TestimonialsDashboard = () => {
     
     const [editInfo, setEditInfo] = useState({ category: null, index: null });
     const [deleteInfo, setDeleteInfo] = useState({ category: null, index: null });
+    const [viewTestiData, setViewTestiData] = useState(null);
     const testimonialEditFields = [
         {
             label: "Client Name",
@@ -69,6 +71,7 @@ const TestimonialsDashboard = () => {
     const addBtn = () => {
         setEditInfo({ category: null, index: null });
         setDeleteInfo({ category: null, index: null });
+        setViewTestiData(null);
         setModalTestiData({
             name: "",
             opinion: "",
@@ -79,6 +82,19 @@ const TestimonialsDashboard = () => {
 
     const editBtn = (item, category, index) => {
         setEditInfo({ category, index });
+        setDeleteInfo({ category: null, index: null });
+        setViewTestiData(null);
+        setModalTestiData({
+            name: item.name,
+            opinion: item.opinion,
+            category: category,
+        });
+        setIsModalTestiOpen(true);
+    };
+
+    const viewBtn = (item, category) => {
+        setViewTestiData(item);
+        setEditInfo({ category: null, index: null });
         setDeleteInfo({ category: null, index: null });
         setModalTestiData({
             name: item.name,
@@ -91,6 +107,7 @@ const TestimonialsDashboard = () => {
     const deleteBtn = (category, index) => {
         setDeleteInfo({ category, index });
         setEditInfo({ category: null, index: null });
+        setViewTestiData(null);
         setIsModalTestiOpen(true);
     };
 
@@ -98,6 +115,7 @@ const TestimonialsDashboard = () => {
         setIsModalTestiOpen(false);
         setEditInfo({ category: null, index: null });
         setDeleteInfo({ category: null, index: null });
+        setViewTestiData(null);
         setModalTestiData({
             name: "",
             opinion: "",
@@ -139,7 +157,10 @@ const submitBtn = (formData) => {
     };
 
     const currentFields = editInfo.category !== null ? testimonialEditFields : addFields;
-
+    const formattedViewData = viewTestiData ? {
+            name: viewTestiData.name,
+            opinion: viewTestiData.opinion,
+        } : modalTestiData;
     return (
         <>
             <TableDashboard 
@@ -152,7 +173,7 @@ const submitBtn = (formData) => {
                             <tr>
                                 <th>ID</th>
                                 <th>Client Name</th>
-                                <th>Opinion</th>
+                                <th className='DS_TableOpinion'>Opinion</th>
                                 <th className="O-A-action">Action</th>
                             </tr>
                         </thead>
@@ -164,9 +185,10 @@ const submitBtn = (formData) => {
                                 <tr key={`ind-${index}`}>
                                     <td>{index + 1}</td>
                                     <td>{item.name}</td>
-                                    <td>{item.opinion}</td>
+                                    <td className='DS_TableOpinion'>{item.opinion}</td>
                                     <td className="O-A-tdBtn">
                                         <div className='O-A-flex'>
+                                            <BtnView Funct={() => viewBtn(item, 'individuals')} />
                                             <BtnUpdate Funct={() => editBtn(item, 'individuals', index)} /> 
                                             <BtnDelete Funct={() => deleteBtn('individuals', index)} />
                                         </div>
@@ -180,9 +202,10 @@ const submitBtn = (formData) => {
                                 <tr key={`bus-${index}`}>
                                     <td>{index + 1}</td>
                                     <td>{item.name}</td>
-                                    <td>{item.opinion}</td>
+                                    <td className='DS_TableOpinion'>{item.opinion}</td>
                                     <td className="O-A-tdBtn">
                                         <div className='O-A-flex'>
+                                            <BtnView Funct={() => viewBtn(item, 'businesses')} />
                                             <BtnUpdate Funct={() => editBtn(item, 'businesses', index)} /> 
                                             <BtnDelete Funct={() => deleteBtn('businesses', index)} />
                                             </div>
@@ -199,6 +222,8 @@ const submitBtn = (formData) => {
                     title={
                         deleteInfo.category !== null
                             ? "Delete Testimonial"
+                            : viewTestiData
+                                ? "View Testimonial"
                                 : editInfo.category !== null
                                     ? "Update Testimonial"
                                     : "Add Testimonial"
@@ -206,10 +231,12 @@ const submitBtn = (formData) => {
                     mode={
                         deleteInfo.category !== null
                             ? "delete"
+                            : viewTestiData
+                                ? "view"
                                 : "form"
                     }
                     fields={currentFields}
-                    data={modalTestiData}
+                    data={formattedViewData}
                     onSubmit={submitBtn}
                     onDelete={deleteTesti}
                     onClose={closeBtn}

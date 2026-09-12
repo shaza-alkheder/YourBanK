@@ -20,6 +20,12 @@
             font-weight: var(--yb-font-weight-rg);
             font-size:clamp(var(--yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg)); 
             line-height: 1.5;
+            cursor: pointer;
+            transition: 0.7s all;
+            &:hover{
+                    color:var(--yb-color-dark-2);
+                    background-color: var(--yb-color-primary);
+                }
         }
 
         .DS_styleTest.active {
@@ -187,8 +193,6 @@
         .DS_testimonialCard {
             width: 100%;
             padding: 20px;
-            /* border-radius: 12px; */
-            /* border: 2px solid var(--yb-color-dark-3); */
             gap: 30px;
             mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 92%);
 

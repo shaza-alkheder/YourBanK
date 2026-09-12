@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import ValuesCardData from "../../../../data/ValuesCardData.json";
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
-import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";
-import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
-import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
-import BtnView from "../../UI/BtnDashboard/BtnView/BtnView";
+import ValuesCardData from "../../../../data/ValuesCardData.json"
+import TableDashboard from "../../Layout/TableDashboard/TableDashboard"
+import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard"
+import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
+import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
+import BtnView from "../../UI/BtnDashboard/BtnView/BtnView"
+import "./OurValuesDahsboard.css"
 
 function OurValuesDashboard() {
     const [values, setValues] = useState(() => {
@@ -147,7 +148,7 @@ function OurValuesDashboard() {
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
-                            <th>Description</th>
+                            <th className="value-description-column">Description</th>
                             <th className="O-A-action"> Action</th>
                         </tr>
                     </thead>
@@ -158,7 +159,7 @@ function OurValuesDashboard() {
                             <tr key={value.id}>
                                 <td>{value.id}</td>
                                 <td>{value.title}</td>
-                                <td>{value.description}</td>
+                                <td className="value-description-column">{value.description}</td>
                                 <td className="O-A-tdBtn">
                                     <div className="O-A-flex">
                                     <BtnView

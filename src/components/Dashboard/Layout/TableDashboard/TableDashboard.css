@@ -22,8 +22,6 @@
 
         }
         th , td {
-            /* max-width: 180px; */
-            /* padding: 4px 10px; */
             border: 1px solid white;
         }
         th{
@@ -45,7 +43,6 @@
             height: auto;
         }
         .O-A-tdBtn{
-            /* max-width: 177px; */
             min-width: fit-content;
             .O-A-flex{
                 display: flex;
@@ -78,23 +75,18 @@
 @media (max-width: 992px) {
   .O-A-headerDash {
     .O-A-titleDashboard {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 400;
     }
   }
   .O-A-boxTable {
-    /* overflow-x: auto; */
     table {
-      /* min-width: 700px; */
       width: 100%;
       tr {
         th {
           padding: 12px 8px;
           font-size: 16px;
         }
-        /* td{
-          padding: ;
-        } */
       }
       .O-A-action{
         max-width: 70px;

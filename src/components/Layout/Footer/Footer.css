@@ -44,7 +44,7 @@ footer{
             border-bottom: 1px solid var( --yb-color-dark-3);
 
             padding: 50px 0;
-            p{
+            p {
                 font-family: var(--yb-font-family-primary);
                 font-weight: var(--yb-font-weight-rg);
                 font-size: var(--yb-font-size-body-lg);
@@ -52,7 +52,10 @@ footer{
                 display: flex;
                 align-items: center;
                 gap: 5px;
-
+                .DS_a{
+                    text-decoration: none;
+                    color: var(--yb-color-text-tertiary);
+                }
                 .mmContactIcon{
                     width: var(--yb-font-size-title-lg)px;
                     height: var(--yb-font-size-title-lg)px;
@@ -91,6 +94,10 @@ footer{
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        .DS_aIcon{
+                            width: var(--yb-font-size-title-lg);
+                            height: var(--yb-font-size-title-lg);
+                        }
                         .mmSocialIcon{
                             width: var(--yb-font-size-title-lg);
                             height: var(--yb-font-size-title-lg);
