@@ -3,3 +3,8 @@
   height: 50px;
   object-fit: contain;
 }
+@media screen and (max-width : 992px){
+    .value-imge-column {
+        display: none;
+    }
+}

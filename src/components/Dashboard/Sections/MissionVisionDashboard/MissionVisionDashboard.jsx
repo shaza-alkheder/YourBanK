@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import MissionVisionData from "../../../../data/MissionVisionData.json";
 
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
+import TableDashboard from "../../UI/TableDashboard/TableDashboard";
 
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
 
