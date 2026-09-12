@@ -206,7 +206,7 @@ const OurFeatureDashboard = () => {
                             <tr>
                                 <th>Id</th>
                                 <th>Title</th>
-                                <th>Description</th>
+                                <th className="O-A-descriptionDisplay">Description</th>
                                 <th className="O-A-action">Action</th>
                             </tr>
                         </thead>
@@ -219,7 +219,7 @@ const OurFeatureDashboard = () => {
                                     <tr key={feature.id}>
                                         <td>{feature.id}</td>
                                         <td>{feature.title}</td>
-                                        <td>{feature.desc}</td>
+                                        <td className="O-A-descriptionDisplay">{feature.desc}</td>
                                         <td className="O-A-tdBtn">
                                             <div className="O-A-flex">
                                                 <BtnView Funct={() => viewBtn(feature)} />
@@ -238,7 +238,7 @@ const OurFeatureDashboard = () => {
                                     <tr key={feature.id}>
                                         <td>{feature.id}</td>
                                         <td>{feature.title}</td>
-                                        <td>{feature.desc}</td>
+                                        <td className="O-A-descriptionDisplay">{feature.desc}</td>
                                         <td className="O-A-tdBtn">
                                             <div className="O-A-flex">
                                                 <BtnView Funct={() => viewBtn(feature)} />
@@ -257,7 +257,7 @@ const OurFeatureDashboard = () => {
                                     <tr key={feature.id}>
                                         <td>{feature.id}</td>
                                         <td>{feature.title}</td>
-                                        <td>{feature.desc}</td>
+                                        <td className="O-A-descriptionDisplay">{feature.desc}</td>
                                         <td className="O-A-tdBtn">
                                             <div className="O-A-flex">
                                                 <BtnView Funct={() => viewBtn(feature)} />
