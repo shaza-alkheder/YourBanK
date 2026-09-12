@@ -11,7 +11,7 @@
     url("/assets/img/HomePage/bg-cat.webp");
   border: 1px solid rgba(255, 255, 255, 0.05);
 
-  border-image-source:
+  border-image:
     linear-gradient(0deg, #262626, #262626),
     linear-gradient(
       95.43deg,

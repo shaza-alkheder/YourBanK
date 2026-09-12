@@ -74,7 +74,7 @@
       background-size: cover;
       background-repeat: no-repeat;
 
-      border-image-source:
+      border-image:
         linear-gradient(0deg, var(--yb-color-dark-3), var(--yb-color-dark-3)),
         linear-gradient(
           214.24deg,
