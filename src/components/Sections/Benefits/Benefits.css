@@ -26,22 +26,6 @@
         transparent 20px
       );
     }
-    /* &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 1px;
-      background: repeating-linear-gradient(
-        to right,
-        #262626 0,
-        #262626 10px,
-        transparent 10px,
-        transparent 20px
-      );
-    } */
 
     .S-K-cardBenefitsStyle {
       position: relative;
@@ -73,17 +57,14 @@
         rgba(38, 38, 38, 0) 68.88%,
         rgba(38, 38, 38, 0.8) 100%
       );
-      &:nth-child(odd)::after {
+      &:nth-child(2n + 3)::before {
         content: "";
 
         position: absolute;
-
         left: 0;
+        top: -50px;
 
         width: calc(200% + 100px);
-
-        bottom: -50px;
-
         height: 1px;
 
         background: repeating-linear-gradient(
@@ -96,76 +77,63 @@
       }
     }
 
-    /* 4, 6, 8, 10... */
-    &.is-even {
-      .S-K-cardBenefitsStyle:nth-last-child(-n + 2)::after {
-        display: none;
-      }
-    }
-
-    /* 5, 7, 9, 11... */
-    &.is-odd {
-      .S-K-cardBenefitsStyle:last-child::after {
-        display: none;
-      }
-      .S-K-headerCardBenefits {
+    .S-K-headerCardBenefits {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .S-K-titleIcon {
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
-        .S-K-titleIcon {
+        order: 1;
+        width: 98px;
+        height: 98px;
+        gap: 10px;
+        border-radius: 70px;
+        padding: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(202, 255, 51, 0.05) 0%,
+          rgba(202, 255, 51, 0) 100%
+        );
+
+        .borderImage {
           display: flex;
           justify-content: center;
           align-items: center;
-          order: 1;
-          width: 98px;
-          height: 98px;
+          width: 74px;
+          height: 74px;
           gap: 10px;
-          border-radius: 70px;
-          padding: 12px;
+          border-radius: 50px;
+          border-width: 1px;
+          padding: 20px;
           background: linear-gradient(
             180deg,
-            rgba(202, 255, 51, 0.05) 0%,
-            rgba(202, 255, 51, 0) 100%
+            rgba(202, 255, 51, 0.1) -66.22%,
+            rgba(202, 255, 51, 0) 85.46%
           );
+          border: 1px solid;
 
-          .borderImage {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 74px;
-            height: 74px;
-            gap: 10px;
-            border-radius: 50px;
-            border-width: 1px;
-            padding: 20px;
-            background: linear-gradient(
-              180deg,
-              rgba(202, 255, 51, 0.1) -66.22%,
-              rgba(202, 255, 51, 0) 85.46%
-            );
-            border: 1px solid;
-
-            border-image-source: linear-gradient(
-              180deg,
-              rgba(202, 255, 51, 0.2) -173.65%,
-              rgba(202, 255, 51, 0) 87.22%
-            );
-          }
-        }
-        .S-K-titleCardBenefits {
-          order: 2;
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 150%;
-          color: #ffffff;
+          border-image-source: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.2) -173.65%,
+            rgba(202, 255, 51, 0) 87.22%
+          );
         }
       }
-      .S-K-descriptionCardBenefits {
-        font-weight: 300;
-        font-size: 18px;
+      .S-K-titleCardBenefits {
+        order: 2;
+        font-weight: 400;
+        font-size: 24px;
         line-height: 150%;
-        color: #b3b3b3;
+        color: #ffffff;
       }
+    }
+    .S-K-descriptionCardBenefits {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      color: #b3b3b3;
     }
   }
 }
@@ -190,11 +158,11 @@
         border-top-right-radius: 14px;
         border-bottom-right-radius: 40px;
         border-bottom-left-radius: 14px;
-
-        &:nth-child(odd)::after {
+        &:nth-child(2n + 3)::before {
+          top: -30px;
           width: calc(200% + 60px);
-          bottom: -30px;
         }
+
         .S-K-headerCardBenefits {
           gap: 14px;
           .S-K-titleIcon {
@@ -243,16 +211,23 @@
         width: 100%;
         gap: 20px;
         padding: 24px;
-        &:nth-child(odd)::after {
-          display: none;
+        &::before {
+          display: none !important;
+          content: none !important;
         }
-        &::after {
+        &:not(:last-child)::after {
           content: "";
+          display: block;
+
           position: absolute;
           left: 0;
           right: 0;
           bottom: -24px;
+
+          width: 100%;
+          max-width: 100%;
           height: 1px;
+
           background: repeating-linear-gradient(
             to right,
             #262626 0,
@@ -261,9 +236,7 @@
             transparent 20px
           );
         }
-        &:last-child::after {
-          display: none;
-        }
+
         .S-K-headerCardBenefits {
           gap: 10px;
           .S-K-titleIcon {
