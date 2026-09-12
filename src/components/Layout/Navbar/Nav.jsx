@@ -9,6 +9,9 @@ function Nav({logo}) {
   const [show , setShow] = useState(false)
   const navigate = useNavigate()
   const [userFound , SetuserFound] = useState(localStorage.getItem("userFound") || "false")
+  const closeMenu = () => {
+  setShow(false)
+}
   return (
     <>
     <nav className="MGnav">
@@ -72,10 +75,10 @@ function Nav({logo}) {
     </nav>
     <div className={`navMenu ${show ? "show" : ""}`}>
       <ul>
-          <li><NavLink to = "/" className={({isActive}) => isActive ? "active" : ""}>Home</NavLink></li>
-          <li><NavLink to = "/about" className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
-          <li><NavLink to = "/careers" className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
-          <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
+          <li><NavLink to = "/"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Home</NavLink></li>
+          <li><NavLink to = "/about"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
+          <li><NavLink to = "/careers"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
+          <li><NavLink to = "/security"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
         </ul>
         
       {userFound==="true"? (
