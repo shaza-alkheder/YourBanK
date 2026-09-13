@@ -75,7 +75,7 @@
             }
         }
 
-        .MM-MissionVisionItem:nth-child(1) {
+        .MM-MissionVisionItem:nth-child(odd) {
             flex-direction: row;
 
             .MM-MissionVisionText {
@@ -88,7 +88,7 @@
             }
         }
 
-        .MM-MissionVisionItem:nth-child(2) {
+        .MM-MissionVisionItem:nth-child(even) {
             flex-direction: row-reverse;
             margin-top: -84px;
 
@@ -105,8 +105,9 @@
 
         .MM-MissionVisionContent {
             margin-top: 60px;
+            gap: 50px;
 
-            .MM-MissionVisionItem:nth-child(2) {
+            .MM-MissionVisionItem:nth-child(even) {
                 margin-top: -10px;
             }
         }
@@ -162,7 +163,7 @@
                 }
             }
 
-            .MM-MissionVisionItem:nth-child(1) {
+            .MM-MissionVisionItem:nth-child(odd) {
                 flex-direction: column;
 
                 .MM-MissionVisionText {
@@ -171,7 +172,7 @@
                 }
             }
 
-            .MM-MissionVisionItem:nth-child(2) {
+            .MM-MissionVisionItem:nth-child(even) {
                 flex-direction: column;
                 margin-top: 0;
 

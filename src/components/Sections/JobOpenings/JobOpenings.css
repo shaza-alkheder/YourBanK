@@ -10,7 +10,7 @@
 }
 
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .DS_TitleDescriptionJob{
     width: 100%;
     text-align: center;

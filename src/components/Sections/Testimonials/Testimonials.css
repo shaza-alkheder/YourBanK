@@ -8,6 +8,8 @@
         border: 1px solid var(--yb-color-dark-3);
         border-radius: 82px;
         display: flex;
+        justify-content: center;
+        align-items: center;
 
 
         .DS_styleTest {
@@ -38,8 +40,7 @@
     }
 
     .DS_slider {
-        max-width: 1980px;
-        width: 100%;
+        width:clamp(700px, 87vw, 1596px);
         margin: auto;
         display: flex;
         flex-direction: row;
@@ -47,12 +48,11 @@
         align-items: center;
         gap: 40px;
         position: relative;
-        overflow: hidden;
     }
 
 
     .DS_testimonialsSlider {
-        width:clamp(700px, 88vw, 1594px);
+        width:clamp(700px, 87vw, 1594px);
         padding-inline:clamp(63px, 6.40vw, 113px); 
         display: flex;
         justify-content: space-between;
@@ -60,11 +60,10 @@
         gap: clamp(60px, 4.17vw, 80px);
         flex-shrink: 0;
         transition: transform 0.4s ease-in-out;
-        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 92%);
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 97%);
         overflow-x: auto;
         overflow-y: hidden;
         scroll-behavior: smooth;
-        overflow: hidden;
 
         .DS_testimonialCard {
             width: clamp(193px, 22.5vw, 325px);
@@ -84,7 +83,7 @@
             }
 
             .DS_opinionText {
-                font-size:clamp(var(--yb-font-size-body-md), 1.1vw, var(--yb-font-size-body-lg)); 
+                font-size:clamp(var(--yb-font-size-body-sm), 1.1vw, var(--yb-font-size-body-lg)); 
                 order: 1;
                 text-align: center;
                 line-height: 1.5;
@@ -92,7 +91,6 @@
 
             .DS_clientName {
                 text-align: center;
-                margin-top: 15px;
                 font-family: Lexend;
                 font-weight: var(--yb-font-weight-md);
                 font-size:clamp(var(--yb-font-size-body-md), 1.1vw, var(--yb-font-size-body-lg)); 
@@ -132,7 +130,6 @@
         transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
-
         .DS_Arrow{
             width: clamp(52px, 3.3vw, 62px); 
             height: clamp(52px, 3.3vw, 62px);
@@ -147,6 +144,7 @@
 
             .DS_FaArrow{
                 font-size: clamp(24px, 1.9vw, 30px); 
+                cursor: pointer;
             }
 
         }
@@ -168,8 +166,20 @@
 .DS_SizeTitleDescription p{
     font-size: clamp(var( --yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg));
 }
+.disabled-arrow{
+    color:#D8FF66;
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+    }
+@media screen and (max-width: 1440px){
+    .DS_Testimonials {    
+        .DS_testimonialsSlider {
+        gap: clamp(30px, 4vw,60px)
+    }}
 
-@media (max-width: 992px) {
+} 
+@media screen and (max-width: 992px) {
     .DS_Testimonials {
         .DS_SizeTitleDescription {
             width: 100%;
@@ -178,6 +188,7 @@
             margin-bottom: 40px;
             flex-direction: column;
             align-items: center;
+            gap: 20px;
         }
         .DS_testimonialsSlider{
             max-width: 600px;
@@ -194,19 +205,15 @@
             width: 100%;
             padding: 20px;
             gap: 30px;
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 92%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 43%, rgba(0, 0, 0, 0) 100%);
 
         }
     }
         .DS_btnFilter {
-        width: clamp(250px, 78vw, 310px); }
-        
-            .DS_opinionText {
-                font-size: var(--yb-font-size-body-sm); 
-                order: 1;
-            }
+        width: clamp(251px, 77.7vw, 310px); }
 
         .DS_slider {
+            width: 100%;
             flex-direction: column;
             align-items: center;
         }
@@ -223,7 +230,7 @@
     }
 }
 
-@media (min-width: 1441px) {
+@media screen and (min-width: 1441px) {
         .DS_Testimonials {
             .DS_testimonialsSlider{
         .DS_testimonialCard {

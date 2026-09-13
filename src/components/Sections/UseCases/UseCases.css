@@ -25,10 +25,8 @@
     padding: clamp(20px, 2.77vw, 50px);
     border-radius: 20px;
     background-color: var(--yb-color-dark-2);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap:clamp(10px, 0.7vw, 20px); 
     position: relative; 
     background-image: url('assets/img/HomePage/AbstractDesign.webp'); 
@@ -42,9 +40,10 @@
 }
 
 .DS_CardStyleUseCase{
-    width: clamp(260px, 18vw, 314px);
+    /* width: clamp(260px, 18vw, 314px); */
+    width: 100%;
     padding: clamp(24px, 1.66vw, 30px);
-    flex: 1 1 260px;
+    flex: 1 1 150px;
     border-radius: 16px;
     background-color: var(--yb-color-dark-1);
     border: 1px solid var(--yb-color-dark-3);
@@ -155,7 +154,7 @@
         padding: 0px clamp(5px, 3.47vw, 50px) ;
         display: flex;
         flex-direction: column;
-        align-items: s;
+        align-items: start;
         gap: 5px;
         border-right: 2px dashed var( --yb-color-dark-3);
         border-left: 2px dashed var( --yb-color-dark-3);
@@ -177,7 +176,7 @@
 }
 
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .DS_TitleDescUseCases{
         width: 100%;
         text-align: center;
@@ -193,14 +192,16 @@
 }
 
     .DS_ContainerCard{
-        width: 100%;
+        max-width: 777px;
+        width: 91.79vw;
     }
     .DS_Container2Card{
     background-position: top left;
 }
 
     .DS_CardStyleUseCase{
-        width:  clamp(154px, 39.7vw, 314px);
+        /* width:  clamp(145px, 39vw, 314px); */
+        width: 100%;
         padding: 20px 14px;
 }
 .DS_TitleTextContent{
@@ -208,6 +209,7 @@
     text-align: center;
 }
 .DS_DescTextContent{
+    max-width: 505px;
     font-size: 14px;
     text-align: center;
 }
