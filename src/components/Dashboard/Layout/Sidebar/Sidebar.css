@@ -118,6 +118,56 @@
       }
     }
   }
+
+  .S-K-Dashboard-Sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--yb-color-dark-3);
+    .S-K-Dashboard-Sidebar-home {
+      min-height: 46px;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 12px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      color: var(--yb-color-text-secondary);
+
+      font-family: var(--yb-font-family-primary);
+      font-size: 14px;
+      font-weight: var(--yb-font-weight-rg);
+
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+      &:hover {
+        background-color: var(--yb-color-dark-3);
+        color: var(--yb-color-white);
+      }
+
+      .S-K-Dashboard-Sidebar-icon {
+        width: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 10px;
+
+        font-size: 20px;
+      }
+
+      .S-K-Dashboard-Sidebar-label {
+        flex: 1;
+      }
+    }
+  }
 }
 @media screen and (max-width: 992px) {
   .S-K-Dashboard-Sidebar {
@@ -192,6 +242,25 @@
               }
             }
           }
+        }
+      }
+    }
+
+    .S-K-Dashboard-Sidebar-bottom {
+      padding-top: 15px;
+
+      .S-K-Dashboard-Sidebar-home {
+        justify-content: center;
+        padding: 0;
+
+        .S-K-Dashboard-Sidebar-icon {
+          width: 24px;
+          margin-right: 0;
+          font-size: 21px;
+        }
+
+        .S-K-Dashboard-Sidebar-label {
+          display: none;
         }
       }
     }
