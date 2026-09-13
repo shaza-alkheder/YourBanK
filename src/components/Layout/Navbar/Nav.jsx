@@ -22,6 +22,7 @@ function Nav({logo}) {
           <li><NavLink to = "/about" className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
           <li><NavLink to = "/careers" className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
           <li><NavLink to = "/security" className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
+          <li><NavLink to = "/dashboard" className={({isActive}) => isActive ? "active" : ""}>Dash</NavLink></li>
         </ul>
       </div>
       {userFound==="true"? (
@@ -79,6 +80,7 @@ function Nav({logo}) {
           <li><NavLink to = "/about"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>About</NavLink></li>
           <li><NavLink to = "/careers"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Careers</NavLink></li>
           <li><NavLink to = "/security"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Security</NavLink></li>
+          <li><NavLink to = "/dashboard"  onClick={closeMenu} className={({isActive}) => isActive ? "active" : ""}>Dash</NavLink></li>
         </ul>
         
       {userFound==="true"? (
