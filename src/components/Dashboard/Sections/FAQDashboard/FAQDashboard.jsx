@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./FAQDashboard.css";
 import FaqCardData from "../../../../data/FaqCardData.json";
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard";
+import TableDashboard from "../../UI/TableDashboard/TableDashboard";
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete";
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate";
 import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard";

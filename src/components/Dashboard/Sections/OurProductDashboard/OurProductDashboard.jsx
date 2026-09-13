@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import TableDashboard from "../../Layout/TableDashboard/TableDashboard"
+import TableDashboard from "../../UI/TableDashboard/TableDashboard"
 import "./OurProductDashboard.css"
 import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
