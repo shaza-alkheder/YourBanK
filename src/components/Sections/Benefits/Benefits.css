@@ -207,7 +207,7 @@
       .S-K-cardBenefitsStyle {
         position: relative;
         height: auto;
-        max-width: fit-content;
+        max-width: stretch;
         width: 100%;
         gap: 20px;
         padding: 24px;
