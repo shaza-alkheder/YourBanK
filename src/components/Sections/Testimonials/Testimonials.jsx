@@ -35,11 +35,16 @@ useEffect(() => {
         window.removeEventListener("storage", TestimonialsStorageChange);
     };
 }, []);
-
+    const number = () => {
+    if (window.innerWidth <= 992) return 1;
+    return 3;
+};
     const currentTestimonials = testimonials[activeTab] || [];
-    const maxIndex = currentTestimonials.length > 3 ? currentTestimonials.length - 3 : 0;
-
+    const maxIndex = Math.max(0, currentTestimonials.length - number());
+    const isAtStart = currentIndex === 0;
+    const isAtEnd = currentIndex >= maxIndex;
     const handleNext = () => {
+        if (currentIndex >= maxIndex) return;
         if (sliderRef.current) {
             const card = sliderRef.current.querySelector('.DS_testimonialCard');
             if (card) {
@@ -53,8 +58,8 @@ useEffect(() => {
         setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
     };
 
-
     const handlePrev = () => {
+        if (currentIndex <= 0) return;
         if (sliderRef.current) {
             const card = sliderRef.current.querySelector('.DS_testimonialCard');
             if (card) {
@@ -67,7 +72,6 @@ useEffect(() => {
         }
         setCurrentIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
     };
-
     return (
         <div className="DS_Testimonials">
             <div className="DS_Container">          
@@ -132,8 +136,8 @@ useEffect(() => {
                 </div>
 
                 <div className="DS_arrows"> 
-                    <button className="DS_Arrow" onClick={handlePrev}><FaArrowLeft className="DS_FaArrow"/></button>
-                    <button className="DS_Arrow" onClick={handleNext}><FaArrowRight  className="DS_FaArrow"/></button>              
+                    <button className="DS_Arrow"  onClick={handlePrev}><FaArrowLeft className={`DS_FaArrow ${isAtStart ? "disabled-arrow" : ""}`}/></button>
+                    <button className="DS_Arrow"  onClick={handleNext}><FaArrowRight  className={`DS_FaArrow ${isAtEnd ? "disabled-arrow" : ""}`}/></button>              
                 </div>
             </div>
         </div>
