@@ -195,6 +195,7 @@
       padding-top: 0;
       height: auto;
       justify-items: center;
+      background: none;
 
       .S-K-cardProtectStyle {
         width: 100%;
