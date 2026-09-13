@@ -42,7 +42,7 @@
         align-items: center; */
         display: grid;
         grid-template-columns:  1fr 1px 1fr 1px 1fr;
-        column-gap: 80px;
+        column-gap: 32px;
         row-gap: 140px;
         .O-A-cardStyleOueProduct{
             max-width: 465px;
