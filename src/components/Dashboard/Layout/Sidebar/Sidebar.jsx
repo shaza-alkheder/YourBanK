@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./Sidebar.css";
-import { menuItems } from "./sidebarData";
+import { menuItems ,bottomMenuItems} from "./sidebarData";
 import { RiArrowDownSLine, RiArrowRightSLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { GiFastBackwardButton } from "react-icons/gi";
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(null);
 
@@ -67,6 +68,26 @@ const Sidebar = () => {
             })}
           </div>
         </nav>
+     
+<div className="S-K-Dashboard-Sidebar-bottom">
+  <div className="S-K-Dashboard-Sidebar-Menu">
+    {bottomMenuItems.map((item) => (
+      <NavLink
+        to={item.path}
+        className="S-K-Dashboard-Sidebar-home"
+        key={item.label}
+      >
+        <span className="S-K-Dashboard-Sidebar-icon">
+          {item.icon}
+        </span>
+
+        <span className="S-K-Dashboard-Sidebar-label">
+          {item.label}
+        </span>
+      </NavLink>
+    ))}
+  </div>
+</div>
       </aside>
     </>
   );

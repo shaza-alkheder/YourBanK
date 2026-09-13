@@ -1,4 +1,5 @@
 import { BiSolidHome } from "react-icons/bi";
+import { GiFastBackwardButton } from "react-icons/gi";
 import { MdWorkOutline, MdSecurity, MdOutlineInfo } from "react-icons/md";
 
 export const menuItems = [
@@ -68,5 +69,14 @@ export const menuItems = [
         path: "/dashboard/protect",
       },
     ],
+  },
+];
+
+
+export const bottomMenuItems = [
+  {
+    label: "Back to Website",
+    path: "/",
+    icon: <GiFastBackwardButton />,
   },
 ];
