@@ -51,10 +51,14 @@ color: var(--yb-color-white);
   }
 
   .DS_title {
+    max-width: 490px;
+    margin: auto;
     font-size: var(--yb-font-size-heading-sm);
   }
 
   .DS_description {
+    max-width: 600px;
+    margin: auto;
     font-size: var(--yb-font-size-body-sm);
   }
 }

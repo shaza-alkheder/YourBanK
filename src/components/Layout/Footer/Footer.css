@@ -212,6 +212,10 @@ footer{
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        .DS_aIcon{
+                            width:20px;
+                            height:20px;
+                        }
                         .mmSocialIcon{
                             width:20px;
                             height:20px;
