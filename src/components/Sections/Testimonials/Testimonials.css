@@ -48,7 +48,6 @@
         align-items: center;
         gap: 40px;
         position: relative;
-        overflow: hidden;
     }
 
 
@@ -65,7 +64,6 @@
         overflow-x: auto;
         overflow-y: hidden;
         scroll-behavior: smooth;
-        overflow: hidden;
 
         .DS_testimonialCard {
             width: clamp(193px, 22.5vw, 325px);
@@ -174,14 +172,14 @@
     cursor: not-allowed;
     pointer-events: none;
     }
-@media (max-width: 1440px){
+@media screen and (max-width: 1440px){
     .DS_Testimonials {    
         .DS_testimonialsSlider {
         gap: clamp(30px, 4vw,60px)
     }}
 
 } 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .DS_Testimonials {
         .DS_SizeTitleDescription {
             width: 100%;
@@ -212,7 +210,7 @@
         }
     }
         .DS_btnFilter {
-        width: clamp(251px, 77.7vw, 299px); }
+        width: clamp(251px, 77.7vw, 310px); }
 
         .DS_slider {
             width: 100%;
@@ -232,7 +230,7 @@
     }
 }
 
-@media (min-width: 1441px) {
+@media screen and (min-width: 1441px) {
         .DS_Testimonials {
             .DS_testimonialsSlider{
         .DS_testimonialCard {
