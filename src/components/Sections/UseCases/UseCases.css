@@ -192,7 +192,7 @@
 }
 
     .DS_ContainerCard{
-        max-width: 500px;
+        max-width: 777px;
         width: 91.79vw;
     }
     .DS_Container2Card{
@@ -209,6 +209,7 @@
     text-align: center;
 }
 .DS_DescTextContent{
+    max-width: 505px;
     font-size: 14px;
     text-align: center;
 }
