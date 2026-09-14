@@ -873,3 +873,9 @@
     }
   }
 }
+
+@media screen and (min-width: 680px) and (max-width: 992px) {
+      .MGhero-right {
+        transform: scale(1.5, 1.2);
+    }
+}
