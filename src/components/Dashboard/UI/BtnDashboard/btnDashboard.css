@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     transition: all 0.3s ease; 
 }
 .DS_DivBtnDash .DS_BtnDash:has( .DS_BtnContent){
