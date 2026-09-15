@@ -1,7 +1,60 @@
+import { useRef, useEffect, useState } from 'react'
+import { motion, useInView } from 'motion/react'
 import TitleDescription from '../../UI/TitleDescription/TitleDescription'
 import Card from "../../UI/Card/Card"
 import './UseCases.css'
 import Button from '../../UI/Button/Button'
+
+const Counter = ({ target, isInView }) => {
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        if (!isInView) return
+
+        let start = 0
+        const duration = 1000 
+        const incrementTime = 25 
+        const step = (target / duration) * incrementTime
+
+        const timer = setInterval(() => {
+            start += step
+            if (start >= target) {
+                setCount(target)
+                clearInterval(timer)
+            } else {
+                setCount(Math.floor(start))
+            }
+        }, incrementTime)
+
+        return () => clearInterval(timer)
+    }, [isInView, target])
+
+    return <span>{count}</span>
+}
+
+const AnimatedNumber = ({ value }) => {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: "-50px" })
+    const numericValue = parseInt(value, 10)
+
+    return (
+        <motion.div 
+            ref={ref}
+            initial={{ opacity: 0, y: 40 }} 
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ 
+                type: "tween",   
+                duration: 1,        
+                ease: "easeInOut"  
+            }}
+            style={{ perspective: 1000 }}
+        >
+            <h3 className='DS_NumStatistic'>
+                <Counter target={numericValue} isInView={isInView} />%
+            </h3>
+        </motion.div>
+    )
+}
 
 const UseCases = () => {
     return (
@@ -65,15 +118,15 @@ const UseCases = () => {
                     
                     <div className='DS_Statistics'>
                         <div className='DS_Statistic'>
-                            <h3 className='DS_NumStatistic'>78%</h3>
+                            <AnimatedNumber value="78" />
                             <p className='DS_DescStatistic'>Secure Retirement Planning</p>
                         </div>
                         <div className=' DS_BorderDashed'>
-                            <h3 className='DS_NumStatistic'>63%</h3>
+                            <AnimatedNumber value="63" />
                             <p className='DS_DescStatistic'>Manageable Debt Consolidation</p>
                         </div>
                         <div className='DS_Statistic'>
-                            <h3 className='DS_NumStatistic'>91%</h3>
+                            <AnimatedNumber value="91" />
                             <p className='DS_DescStatistic'>Reducing financial burdens</p>
                         </div>
                         
@@ -133,15 +186,15 @@ const UseCases = () => {
                     <p className='DS_DescTextContent'> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
                     <div className='DS_Statistics'>
                         <div className='DS_Statistic'>
-                            <h3 className='DS_NumStatistic'>65%</h3>
+                            <AnimatedNumber value="65" />
                             <p className='DS_DescStatistic'>Cash Flow Management</p>
                         </div>
                         <div className='DS_BorderDashed'>
-                            <h3 className='DS_NumStatistic'>70%</h3>
+                            <AnimatedNumber value="70" />
                             <p className='DS_DescStatistic'>Drive Business Expansion</p>
                         </div>
                         <div className='DS_Statistic'>
-                            <h3 className='DS_NumStatistic'>45%</h3>
+                            <AnimatedNumber value="45" />
                             <p className='DS_DescStatistic'>Streamline payroll processing</p>
                         </div>
                     </div>

@@ -18,7 +18,7 @@
             background-color: var(--yb-color-dark-2); 
             color: var(--yb-color-white);
             border: none;
-            font-family: Lexend;
+            font-family: var(--yb-font-family-primary);
             font-weight: var(--yb-font-weight-rg);
             font-size:clamp(var(--yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg)); 
             line-height: 1.5;
@@ -32,7 +32,7 @@
 
         .DS_styleTest.active {
             padding-block: clamp(10px, 0.69vw, 14px); 
-            padding-inline: clamp(18px, 0.24vw, 24px);
+            padding-inline: clamp(18px, 1.25vw, 24px);
             background-color: var(--yb-color-primary); 
             color: var(--yb-color-dark-2);
             border: none;
@@ -91,7 +91,7 @@
 
             .DS_clientName {
                 text-align: center;
-                font-family: Lexend;
+                font-family: var(--yb-font-family-primary);
                 font-weight: var(--yb-font-weight-md);
                 font-size:clamp(var(--yb-font-size-body-md), 1.1vw, var(--yb-font-size-body-lg)); 
                 line-height: 1.5;

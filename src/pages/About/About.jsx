@@ -22,6 +22,8 @@ function About() {
       <main>
       <Container>
         <MissionVision/>
+        </Container>
+        <Container animateOnScroll>
         <PressReleases />
       </Container>
       </main>
