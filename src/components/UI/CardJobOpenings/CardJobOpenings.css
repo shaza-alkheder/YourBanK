@@ -84,7 +84,7 @@
     border-radius: 82px;
     background-color: var(--yb-color-primary);
     font-size: clamp(var(--yb-font-size-body-sm), 0.98vw, var(--yb-font-size-body-lg)); 
-    font-family: Lexend;
+    font-family: var(--yb-font-family-primary);
     font-weight: var(--yb-font-weight-md);
     line-height: 1.5;
     color:var(--yb-color-dark-2) ;

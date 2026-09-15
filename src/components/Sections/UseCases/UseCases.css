@@ -137,7 +137,7 @@
     .DS_NumStatistic{
         font-family:var(--yb-font-family-primary);
         font-weight: var(--yb-font-weight-md);
-        font-size: clamp(40px, 2.78vw, 58px);
+        font-size: clamp(40px, 3vw, 58px);
         line-height: 1.5;
         color: var(--yb-color-primary);
     }
