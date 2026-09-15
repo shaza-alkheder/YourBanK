@@ -8,9 +8,16 @@
     position: relative;
     padding-top: 80px;
     align-items: stretch;
+    > * {
+      width: 100%;
+      max-width: 782.5px;
+      min-width: 0;
+      height: 100%;
+    }
     .S-K-cardFaqStyle {
       max-width: 782.5px;
       width: 100%;
+      height: 100%;
       gap: 30px;
       border-radius: 14px;
       border: 1px solid var(--yb-color-dark-3);
@@ -42,8 +49,10 @@
     &.S-K-FaqCard-collapsed {
       border: none !important;
 
-      .S-K-cardFaqStyle:nth-child(3),
-      .S-K-cardFaqStyle:nth-child(4) {
+      /* .S-K-cardFaqStyle:nth-child(3),
+      .S-K-cardFaqStyle:nth-child(4) { */
+      > :nth-child(3) .S-K-cardFaqStyle,
+      > :nth-child(4) .S-K-cardFaqStyle {
         position: relative;
         border-bottom: none;
         .S-K-descriptionCardFaq {
@@ -73,12 +82,9 @@
     width: 193px;
     height: 63px;
     gap: 4px;
+    margin-top: 8px;
     border-radius: 100px;
-    /* border-width: 1px; */
-    padding-top: 18px;
-    padding-right: 24px;
-    padding-bottom: 18px;
-    padding-left: 24px;
+    padding: 18px 24px;
     background: var(--yb-color-dark-2);
     border: 1px solid var(--yb-color-dark-3);
     font-weight: var(--yb-font-weight-rg);
@@ -89,6 +95,43 @@
     place-self: center;
     position: relative;
     z-index: 10;
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+    transition: color 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: -50%;
+      right: -35%;
+
+      width: 20%;
+      height: 200%;
+
+      background: var(--yb-color-primary);
+
+      transform: skewX(-20deg);
+
+      z-index: 0;
+
+      transition:
+        width 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+        right 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    &:hover::before {
+      width: 160%;
+      right: -35%;
+    }
+    & span,
+    & svg {
+      position: relative;
+      z-index: 1;
+    }
+    &:hover {
+      color: var(--yb-color-dark-1);
+    }
   }
 }
 
@@ -97,6 +140,10 @@
     .S-K-FaqCard {
       gap: 20px;
       padding-top: 60px;
+      > * {
+        width: 100%;
+        max-width: 629.5px;
+      }
       .S-K-cardFaqStyle {
         max-width: 629.5px;
         width: 100%;
@@ -134,7 +181,10 @@
       padding-top: 50px;
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
-
+      > * {
+        width: 100%;
+        max-width: fit-content;
+      }
       .S-K-cardFaqStyle {
         width: 100%;
         max-width: fit-content;
@@ -148,7 +198,8 @@
         }
       }
       &.S-K-FaqCard-collapsed {
-        .S-K-cardFaqStyle:nth-child(3) {
+        /* .S-K-cardFaqStyle:nth-child(3) { */
+        > :nth-child(3) .S-K-cardFaqStyle {
           opacity: 1;
           filter: none;
           .S-K-descriptionCardFaq {
@@ -160,11 +211,10 @@
             border-bottom-color: var(--yb-color-dark-3);
           }
         }
-        .S-K-cardFaqStyle:nth-child(4) {
+        /* .S-K-cardFaqStyle:nth-child(4) { */
+        > :nth-child(4) .S-K-cardFaqStyle {
           display: block;
-          /* opacity: 0.5; */
-          /* opacity: 0.5;
-          filter: blur(0.9px); */
+
           .S-K-descriptionCardFaq {
             opacity: 0.5;
             filter: blur(0.9px);
