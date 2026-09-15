@@ -43,16 +43,10 @@ const FAQ = () => {
   const loadFaq = loadAll ? faqs : faqs.slice(0, 4);
   return (
     <>
-      <motion.section
-        className="S-K-FAQ"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
-        transition={{
-          duration: 1.6,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      >
+    
+      <section  className="S-K-FAQ">
+
+     
         <TitleDescription
           titleParts={[
             {
@@ -132,7 +126,7 @@ const FAQ = () => {
             onClick={() => setLoadAll(!loadAll)}
           />
         </motion.div>
-      </motion.section>
+       </section>
     </>
   );
 };

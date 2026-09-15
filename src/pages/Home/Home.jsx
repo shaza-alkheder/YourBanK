@@ -27,28 +27,28 @@ function Home() {
       <main>
       
 
-        <Container>
+        <Container >
           <OurProduct />
         </Container>
 
-        <Container>
+        <Container animateOnScroll >
           <UseCases/>
         </Container>
 
-        <Container>
+        <Container >
           <OurFeatures /> 
         </Container>
 
 
-        <Container>
+        <Container animateOnScroll>
           <FAQ /> 
         </Container>
 
-        <Container>
+        <Container animateOnScroll>
           <Testimonials/>
         </Container>
 
-        <Container>
+        <Container animateOnScroll>
           <CTA /> 
         </Container>
 
