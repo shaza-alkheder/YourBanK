@@ -49,8 +49,8 @@ const FAQ = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{
-          duration: 0.7,
-          ease: "easeOut",
+          duration: 1.6,
+          ease: [0.22, 1, 0.36, 1],
         }}
       >
         <TitleDescription
@@ -113,7 +113,6 @@ const FAQ = () => {
             ease: "easeOut",
           }}
           whileTap={{ scale: 0.97 }}
-          
         >
           <Button
             className="S-K-styleButton"
