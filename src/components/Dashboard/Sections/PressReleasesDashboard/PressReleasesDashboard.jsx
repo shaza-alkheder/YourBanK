@@ -146,27 +146,34 @@ import  { useState, useEffect } from 'react';
                 });
             };
             const submitBtn = (formData) => {
-                const formattedData = {
-                title: formData.title,
-                desc: formData.desc,
-                location: formData.location,
-                date: formData.date,
-                image: {
-                    path: formData.imagePath,
-                    altImg: formData.altImg,
-                },
+                let formattedDate = formData.date;
+                    if (formattedDate && formattedDate.includes("-")) {
+                        const parts = formattedDate.split("-");
+                        if (parts.length === 3) {
+                            formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
+                        }
+                    }
+                    const formattedData = {
+                    title: formData.title,
+                    desc: formData.desc,
+                    location: formData.location,
+                    date: formattedDate,
+                    image: {
+                        path: formData.imagePath,
+                        altImg: formData.altImg,
+                    },
+                    };
+                    if (editIndex !== null) {
+                        setPressReleasesDashboard((current) => {
+                        const updated = [...current];
+                        updated[editIndex] = formattedData;
+                        return updated;
+                    });
+                    } else {
+                        setPressReleasesDashboard((current) => [...current, formattedData]);
+                    }
+                    closeBtn();
                 };
-                if (editIndex !== null) {
-                    setPressReleasesDashboard((current) => {
-                    const updated = [...current];
-                    updated[editIndex] = formattedData;
-                    return updated;
-                });
-                } else {
-                    setPressReleasesDashboard((current) => [...current, formattedData]);
-                }
-                closeBtn();
-            };
             const confirmDelete = (index) => {
                 setPressReleasesDashboard((current) => current.filter((_, i) => i !== index));
                 closeBtn();
@@ -209,7 +216,9 @@ import  { useState, useEffect } from 'react';
                         <td>{item.image.altImg}</td> */}
                         <td>{item.title}</td>
                         <td className='DS_TableLocDate'>{item.location}</td>
-                        <td className='DS_TableLocDate'>{item.date}</td>
+                        <td className='DS_TableLocDate'>
+                            {item.date ? item.date.split("-").reverse().join("/") : ""}
+                        </td>
                         {/* <td>{item.desc}</td>  */}
                         <td className="O-A-tdBtn">
                             <div  className='O-A-flex'>
