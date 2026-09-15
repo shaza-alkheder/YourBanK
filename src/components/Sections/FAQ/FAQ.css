@@ -82,12 +82,9 @@
     width: 193px;
     height: 63px;
     gap: 4px;
+    margin-top: 8px;
     border-radius: 100px;
-    /* border-width: 1px; */
-    padding-top: 18px;
-    padding-right: 24px;
-    padding-bottom: 18px;
-    padding-left: 24px;
+    padding: 18px 24px;
     background: var(--yb-color-dark-2);
     border: 1px solid var(--yb-color-dark-3);
     font-weight: var(--yb-font-weight-rg);
@@ -98,6 +95,43 @@
     place-self: center;
     position: relative;
     z-index: 10;
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+    transition: color 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: -50%;
+      right: -35%;
+
+      width: 20%;
+      height: 200%;
+
+      background: var(--yb-color-primary);
+
+      transform: skewX(-20deg);
+
+      z-index: 0;
+
+      transition:
+        width 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+        right 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    &:hover::before {
+      width: 160%;
+      right: -35%;
+    }
+    & span,
+    & svg {
+      position: relative;
+      z-index: 1;
+    }
+    &:hover {
+      color: var(--yb-color-dark-1);
+    }
   }
 }
 

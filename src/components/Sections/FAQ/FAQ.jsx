@@ -70,9 +70,9 @@ const FAQ = () => {
         <div
           className={`S-K-FaqCard ${!loadAll ? "S-K-FaqCard-collapsed" : ""}`}
         >
-            <AnimatePresence initial={false}>
-          {loadFaq.map((faq, index) => (
-               <motion.div
+          <AnimatePresence initial={false}>
+            {loadFaq.map((faq, index) => (
+              <motion.div
                 key={faq.id}
                 initial={index >= 4 ? { opacity: 0, y: 30 } : false}
                 animate={{
@@ -88,39 +88,51 @@ const FAQ = () => {
                   delay: index >= 4 ? (index - 4) * 0.08 : 0,
                 }}
               >
-            <Card
-              key={faq.id}
-              title={faq.question}
-              desc={faq.answer}
-              classNames={{
-                imgTitleDiv: "S-K-headerCardFAQ",
-                card: "S-K-cardFaqStyle",
-                title: "S-K-titleCardFAQ",
-                desc: "S-K-descriptionCardFaq",
-              }}
-            />
-            </motion.div>
-          ))}
+                <Card
+                  key={faq.id}
+                  title={faq.question}
+                  desc={faq.answer}
+                  classNames={{
+                    imgTitleDiv: "S-K-headerCardFAQ",
+                    card: "S-K-cardFaqStyle",
+                    title: "S-K-titleCardFAQ",
+                    desc: "S-K-descriptionCardFaq",
+                  }}
+                />
+              </motion.div>
+            ))}
           </AnimatePresence>
         </div>
-
-        <Button
-          className="S-K-styleButton"
-          content={
-            loadAll ? (
-              <>
-                <span>See Less </span>
-                <MdKeyboardArrowUp />
-              </>
-            ) : (
-              <>
-                <span>Load All FAQ’s </span>
-                <MdKeyboardArrowDown />
-              </>
-            )
-          }
-          onClick={() => setLoadAll(!loadAll)}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: "easeOut",
+          }}
+          whileTap={{ scale: 0.97 }}
+          
+        >
+          <Button
+            className="S-K-styleButton"
+            content={
+              loadAll ? (
+                <>
+                  <span>See Less </span>
+                  <MdKeyboardArrowUp />
+                </>
+              ) : (
+                <>
+                  <span>Load All FAQ’s </span>
+                  <MdKeyboardArrowDown />
+                </>
+              )
+            }
+            onClick={() => setLoadAll(!loadAll)}
+          />
+        </motion.div>
       </motion.section>
     </>
   );
