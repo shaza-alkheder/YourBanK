@@ -2,19 +2,19 @@
     width: 100%;
 
     .DS_btnFilter {
-        width: clamp(310px, 20.8vw, 386px); 
+        width: clamp(320px, 20.8vw, 386px); 
         padding: clamp(12px, 0.83vw, 14px);  
         background-color: var(--yb-color-dark-2);
         border: 1px solid var(--yb-color-dark-3);
         border-radius: 82px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
 
         .DS_styleTest {
             padding-block: clamp(10px, 0.69vw, 14px); 
-            padding-inline: clamp(18px, 1.25vw, 24px);
+            padding-inline: clamp(8px, 1vw, 24px);
             background-color: var(--yb-color-dark-2); 
             color: var(--yb-color-white);
             border: none;
@@ -210,7 +210,7 @@
         }
     }
         .DS_btnFilter {
-        width: clamp(251px, 77.7vw, 310px); }
+        width: clamp(260px, 77.7vw, 310px); }
 
         .DS_slider {
             width: 100%;
