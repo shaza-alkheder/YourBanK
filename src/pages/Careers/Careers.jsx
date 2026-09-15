@@ -23,19 +23,19 @@ function Careers() {
     </header>
 
     <main>
-    <Container> 
+    <Container animateOnScroll> 
       <OurValues/>
     </Container>
 
-      <Container>
+      <Container animateOnScroll>
           <Benefits /> 
         </Container>
 
-          <Container>
+          <Container animateOnScroll>
             <JobOpenings />
           </Container>
 
-            <Container>
+            <Container animateOnScroll>
             <FAQ /> 
           </Container>
 

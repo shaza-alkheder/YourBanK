@@ -18,10 +18,10 @@ function Security() {
       </Container> 
       </header>
     <main>
-     <Container>
+     <Container animateOnScroll>
           <Protect /> 
         </Container>
-          <Container>
+          <Container animateOnScroll>
           <FAQ /> 
         </Container>
     </main>
