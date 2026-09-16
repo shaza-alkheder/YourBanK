@@ -5,11 +5,18 @@ import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
 import BtnView from "../../UI/BtnDashboard/BtnView/BtnView"
 import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard"
+import OurProductData from "../../../../data/OurProductData.json"
 
 const OurProductDashboard = () => {
     const [ProductData, setProductData] = useState(() => {
-        const saved = localStorage.getItem("OurProducCardtData");
-        return saved ? JSON.parse(saved) : { ForIndividuals: [], ForBusinesses: [] };
+        let ourProducCardtData = localStorage.getItem("OurProducCardtData")
+        if (ourProducCardtData) {
+            return JSON.parse(ourProducCardtData) 
+        }
+
+        localStorage.setItem("OurProducCardtData" , JSON.stringify(OurProductData))
+
+        return OurProductData
     });
 
     useEffect(() => {

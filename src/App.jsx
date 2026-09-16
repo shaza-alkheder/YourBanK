@@ -22,7 +22,6 @@ import ScrollToTop from "./components/UI/ScrollToTop/ScrollToTop";
 
 
 function App() {
-  localStorage.clear()
   return (
     <>
     <ScrollToTop />

@@ -5,11 +5,17 @@ import BtnUpdate from "../../UI/BtnDashboard/BtnUpdate/BtnUpdate"
 import BtnDelete from "../../UI/BtnDashboard/BtnDelete/BtnDelete"
 import ModalDashboard from "../../UI/ModalDashboard/ModalDashboard"
 import BtnView from "../../UI/BtnDashboard/BtnView/BtnView"
+import featuresCardData from "../../../../data/FeaturesCardData.json"
 
 const OurFeatureDashboard = () => {
     const [featureData, setFeatureData] = useState(() => {
-    const stored = localStorage.getItem("featuresCardData");
-        return stored ? JSON.parse(stored) : {OnlineBanking: [], FinancialTools: [], CustomerSupport: [] };
+        let featurescardData = localStorage.getItem("featuresCardData")
+        if (featurescardData) {
+            return JSON.parse(featurescardData)
+        }
+        localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
+
+        return featuresCardData
     });
 
     useEffect(() => {
