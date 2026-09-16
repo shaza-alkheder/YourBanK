@@ -15,7 +15,7 @@
 }
 .DS_NewsCardImg{
     width: 100%;
-    min-height: 207px;
+    height:clamp(277px, 19.23vw, 333px);
     margin-bottom:clamp(30px, 2.77vw, 51px);
     border-radius: 30px 30px 12px 12px;
 }
