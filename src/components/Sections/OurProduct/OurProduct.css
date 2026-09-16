@@ -105,9 +105,8 @@
                     rgba(202, 255, 51, 0.2) -173.65%,
                     rgba(202, 255, 51, 0) 87.22%
                     );
-                    svg{
-                        font-size: 34px;
-                        color: var(--yb-color-primary);
+                    .O-A-imageOurProduct{
+                        width: 34px;
                     }
                 }
             }
