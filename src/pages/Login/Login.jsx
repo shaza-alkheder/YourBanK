@@ -10,6 +10,10 @@ function Login() {
     const email = document.getElementById("emailInput").value
     const password = document.getElementById("passwordInput").value
 
+    if (email === "" || password === "") {
+      alert("you are not enter email or password")
+      return
+    }
     let users = JSON.parse(localStorage.getItem("SignUp"))
     if (!users) {
         alert("you not registed")
