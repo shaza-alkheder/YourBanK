@@ -876,7 +876,25 @@
 }
 
 @media screen and (min-width: 680px) and (max-width: 992px) {
-      .MGhero-right {
-        transform: scale(1.5, 1.2);
-    }
+  .MGhero-right {
+    transform: scale(1.5, 1.2);
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--yb-color-primary);
+  font-weight: 400;
+  animation: typingCursorBlink 0.8s infinite;
+}
+@keyframes typingCursorBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }

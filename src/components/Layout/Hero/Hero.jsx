@@ -2,9 +2,24 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../UI/Button/Button";
 import TitleDescription from "../../UI/TitleDescription/TitleDescription";
 import "./Hero.css";
+import { useEffect, useState } from "react";
 
 function Hero({ iconHero }) {
   const navigate = useNavigate();
+  const description =
+    "At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.";
+  const [displayedText, setDisplayedText] = useState("");
+  useEffect(() => {
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setDisplayedText(description.slice(0, index + 1));
+      index++;
+      if (index === description.length) {
+        clearInterval(typingInterval);
+      }
+    }, 25);
+    return () => clearInterval(typingInterval);
+  }, []);
   return (
     <div className="MGhome-hero">
       <div className="MGhero-left">
@@ -25,9 +40,15 @@ function Hero({ iconHero }) {
               className: "DS_ColorLimeGreen",
             },
           ]}
-          description="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and 
-      businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our 
-      customers' needs."
+          //     description="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and
+          // businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our
+          // customers' needs."
+          description={
+            <>
+              
+              {displayedText} <span className="typing-cursor">|</span>
+            </>
+          }
         />
 
         <Button
@@ -133,8 +154,16 @@ function Hero({ iconHero }) {
             </div>
           </div>
           <div className="S-K-Arrows">
-            <img className="S-K-arrows-desktop" src="/assets/img/HomePage/AbstractDesign2.webp" alt="" />
-            <img  className="S-K-arrows-mobile" src="/assets/img/HomePage/arrows3.webp" alt="" />
+            <img
+              className="S-K-arrows-desktop"
+              src="/assets/img/HomePage/AbstractDesign2.webp"
+              alt=""
+            />
+            <img
+              className="S-K-arrows-mobile"
+              src="/assets/img/HomePage/arrows3.webp"
+              alt=""
+            />
           </div>
 
           <div className="S-K-Currency">
