@@ -75,6 +75,7 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                     btn1 = "Login"
                     click1={onclick1}
                     btn2 = "Sign Up"
+                    click2={onclick2}
                 />
             :""
             }
@@ -117,7 +118,6 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         value: password,
                         onChange: handlePasswordChange
                     }}
-                    forgetPassword = "Forgot Password?"
                     btn1 = "Sign Up"
                     click1={onclick1}
                     btn2 = "Login"
