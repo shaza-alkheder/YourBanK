@@ -7,7 +7,6 @@ import "./Login.css"
 function Login() {
   const navigate = useNavigate()
   const submitLogin = () => {
-    // event.preventDefault()
     const email = document.getElementById("emailInput").value
     const password = document.getElementById("passwordInput").value
 
@@ -21,9 +20,8 @@ function Login() {
         if (user.Email === email && user.pass === password) {
             localStorage.setItem("register" , "true")
             const userName = user.name
-            localStorage.setItem("userLoginNow" , "@"+userName)
+            localStorage.setItem("userLoginNow" , userName)
             localStorage.setItem("userFound" , "true")
-            // window.location.href="/"
             navigate("/")
         }
     });

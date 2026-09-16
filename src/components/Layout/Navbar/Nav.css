@@ -134,6 +134,11 @@
 .MGnav .O-A-alignCenter{
   align-items: center;
   gap: 24px !important;
+  p{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
   .O-A-logout{
     background-color: red !important;
     color: var(--yb-color-white) !important;
