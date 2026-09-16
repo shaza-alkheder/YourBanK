@@ -40,7 +40,6 @@
 }
 
 .DS_CardStyleUseCase{
-    /* width: clamp(260px, 18vw, 314px); */
     width: 100%;
     padding: clamp(24px, 1.66vw, 30px);
     flex: 1 1 150px;
@@ -200,7 +199,6 @@
 }
 
     .DS_CardStyleUseCase{
-        /* width:  clamp(145px, 39vw, 314px); */
         width: 100%;
         padding: 20px 14px;
 }

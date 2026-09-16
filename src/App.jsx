@@ -20,7 +20,6 @@ import JobOpeningsDashboard from "./components/Dashboard/Sections/JobOpeningsDas
 import NavFooterLayout from "./components/Layout/NavFooterLayout/NavFooterLayout";
 import ScrollToTop from "./components/UI/ScrollToTop/ScrollToTop";
 
-// import Dashboard from "./pages/DashBoard/DashBoard";
 
 function App() {
   return (
