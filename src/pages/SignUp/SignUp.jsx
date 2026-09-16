@@ -18,6 +18,10 @@ function SignUp() {
       Email : email,
       pass : password
     }
+    if (email === "" || password === "" || firstName === "" || lasttName ==="") {
+      alert("you are not enter data in all input")
+      return
+    }
     if (users.find((user) => user.Email === newUser.Email)) {
         alert("The Email Is Used")
         return
