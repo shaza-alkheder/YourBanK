@@ -37,7 +37,7 @@ function SignUp() {
   }
   return (
     <div>
-        <ContainerLoginAndSignUp><LoginSignUpSection  signup = "true" onclick1 = {() => submitSignUp()}/></ContainerLoginAndSignUp>
+        <ContainerLoginAndSignUp><LoginSignUpSection  signup = "true" onclick1 = {() => submitSignUp()} onclick2 = {() => navigate("/login")} /></ContainerLoginAndSignUp>
         <Container  animateOnScroll>
           <Testimonials/>
         </Container>

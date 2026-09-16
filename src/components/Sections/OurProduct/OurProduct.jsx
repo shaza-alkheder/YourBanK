@@ -9,14 +9,15 @@ import { AnimatePresence, motion } from "motion/react"
 const OurProduct = () => {
     const [filterOurProduct , setFilterOurProduct] = useState("forIndividuals")
     const [ourProductData] = useState(()=>{
-        let ourProducCardtData = JSON.parse(localStorage.getItem("OurProducCardtData"))
-        if (ourProducCardtData === null) {
-            localStorage.setItem("OurProducCardtData" , JSON.stringify(OurProductData))
-            ourProducCardtData = JSON.parse(localStorage.getItem("OurProducCardtData"))
+        let ourProducCardtData = localStorage.getItem("OurProducCardtData")
+        if (ourProducCardtData) {
+            return JSON.parse(ourProducCardtData) 
         }
-        return ourProducCardtData
+
+        localStorage.setItem("OurProducCardtData" , JSON.stringify(OurProductData))
+
+        return OurProductData
     })
-    console.log(ourProductData)
     useEffect(()=> {
         const buttonsProduct = document.querySelectorAll(".O-A-ourProduct .O-A-headerOurProduct .O-A-boxButtonsOurProduct .O-A-styleButtonOurProduct")
         if (filterOurProduct === "forIndividuals") {

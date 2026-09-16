@@ -11,12 +11,13 @@ import { AnimatePresence, motion } from "motion/react"
 const OurFeatures = () => {
     const [filter , setFilter] = useState("OnlineBanking")
     const [featureData] = useState(()=>{
-        let featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
-        if (featurescardData === null) {
-            localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
-            featurescardData = JSON.parse(localStorage.getItem("featuresCardData"))
+        let featurescardData = localStorage.getItem("featuresCardData")
+        if (featurescardData) {
+            return JSON.parse(featurescardData)
         }
-        return featurescardData
+        localStorage.setItem("featuresCardData" , JSON.stringify(featuresCardData))
+
+        return featuresCardData
     })
     useEffect(()=> {
         const buttons = document.querySelectorAll(".O-A-ourFeatures .O-A-groupFeatures .O-A-box .O-A-styleButton")
