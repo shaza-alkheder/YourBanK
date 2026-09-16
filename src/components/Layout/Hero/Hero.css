@@ -14,6 +14,7 @@
     padding-inline: clamp(24px, 1.6vw, 30px);
     background-color: var(--yb-color-primary);
     color: var(--yb-color-dark-2);
+    cursor: pointer;
     border: none;
   }
 }

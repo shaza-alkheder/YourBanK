@@ -23,11 +23,35 @@
             font-size:clamp(var(--yb-font-size-body-sm), 0.97vw, var(--yb-font-size-body-lg)); 
             line-height: 1.5;
             cursor: pointer;
-            transition: 0.7s all;
-            &:hover{
-                    color:var(--yb-color-dark-2);
-                    background-color: var(--yb-color-primary);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            isolation: isolate;
+            transition: color 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                right: -35%;
+                width: 20%;
+                height: 200%;
+                background: var(--yb-color-primary);
+                transform: skewX(-20deg);
+                z-index: -1;
+                transition:
+                    width 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+                    right 1.2s cubic-bezier(0.65, 0, 0.35, 1);
                 }
+
+            &:hover::before {
+                width: 160%;
+                right: -35%;
+            }
+
+            &:hover{
+                color:var(--yb-color-dark-2);
+            }
         }
 
         .DS_styleTest.active {
