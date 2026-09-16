@@ -4,6 +4,9 @@
     border-radius: 16px;
     background-color: var(--yb-color-dark-2);
     border: 1px solid var(--yb-color-dark-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .DS_jobTitle{
@@ -88,11 +91,14 @@
     font-weight: var(--yb-font-weight-md);
     line-height: 1.5;
     color:var(--yb-color-dark-2) ;
+    align-self: flex-start;
     cursor: pointer;
     border: none;
     &:hover{
         transform: scale(0.97);
-        color:#656567;
+        background-color: var(--yb-color-dark-2);
+        color: var(--yb-color-primary);
+        border: 1px solid var(--yb-color-primary);
     }
 }
 
