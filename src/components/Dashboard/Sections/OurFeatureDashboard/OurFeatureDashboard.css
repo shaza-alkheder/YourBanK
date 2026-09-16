@@ -1,0 +1,27 @@
+table{
+    tbody , thead{
+        tr{
+            .O-A-rowTitle{
+                padding: 10px 0;
+                color: #c1e757;
+                font-size: 18px;
+                font-weight: 300;
+            }
+            .O-A-descriptionDisplay{
+                display: table-cell;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    table{
+        tbody , thead{
+            tr{
+                .O-A-descriptionDisplay{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.O-A-containerDashboard{
+    margin-left: 270px;
+    padding: 30px 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1440px) {
+    .O-A-containerDashboard{
+        padding: 30px 8px 0;
+    }
+}
+@media (max-width: 992px) {
+    .O-A-containerDashboard{
+        margin-left: 80px;
+        padding: 24px 8px 0;
+        align-items: start;
+    }
+}

@@ -1,0 +1,34 @@
+.home {
+  position: relative;
+}
+.MGobjects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 759px;
+  height: auto;
+  position: fixed;
+}
+
+header {
+  padding-top: 198px;
+}
+@media screen and (max-width: 1440px) {
+  header {
+    padding-top: 133px;
+  }
+  .MGobjects {
+    width: 546.745px;
+    height: 440px;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    padding-top: 158px;
+  }
+  .MGobjects {
+    width: 382px;
+    height: 307.42px;
+  }
+}

@@ -1,0 +1,10 @@
+        .DS_button{
+            font-weight: var(--yb-font-weight-rg);
+            font-size: clamp(var(--yb-font-size-body-sm), 0.95vw, var(--yb-font-size-title-sm));
+            border-radius: 82px;
+            line-height: 1.5;
+        }
+
+
+
+

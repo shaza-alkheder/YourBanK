@@ -1,0 +1,11 @@
+.S-K-Benefits-table-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@media screen and (max-width : 992px){
+    .value-imge-column {
+        display: none;
+    }
+}

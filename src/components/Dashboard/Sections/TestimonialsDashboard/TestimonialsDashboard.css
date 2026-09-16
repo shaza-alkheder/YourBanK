@@ -1,0 +1,18 @@
+table{
+    tbody{
+        tr{
+            .DS_rowTitle{
+                padding: 10px 0;
+                color: #c1e757;
+                font-size: 24px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .DS_TableOpinion{
+        display: none;
+    }
+}

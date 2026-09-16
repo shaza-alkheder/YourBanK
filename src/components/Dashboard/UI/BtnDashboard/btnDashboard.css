@@ -1,0 +1,37 @@
+.DS_DivBtnDash{
+    margin: 4px;
+}
+.DS_DivBtnDash .DS_BtnDash {
+        width: clamp(18px, 2.08vw, 50px);
+    height: clamp(18px, 2.08vw, 50px);
+    background-color:var(--yb-color-dark-1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+.DS_DivBtnDash .DS_BtnDash:has( .DS_BtnContent){
+    max-width: 400px;
+    width: clamp(70px, 4.86vw, 200px);
+}
+.DS_BtnDash .DS_IconBtnDash {
+    color: var(--yb-color-primary);
+    font-size: clamp(var(--yb-font-size-heading-sm), 1.94vw, var(--yb-font-size-heading-md));
+}
+        .DS_BtnContent {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--yb-color-primary);
+            font-size: clamp(var(--yb-font-size-title-sm), 1.25vw, var(--yb-font-size-heading-sm));
+            font-weight: 500;
+        }
+
+.DS_BtnDash:hover {
+    transform: translateY(-3px); 
+}
+

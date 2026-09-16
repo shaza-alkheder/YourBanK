@@ -1,0 +1,235 @@
+.O-A-ourProduct{
+    padding-top: var(--yb-spacing-y-lg);
+    .O-A-headerOurProduct{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        gap: 10px;
+        .O-A-titleOurProduct{
+            max-width: 910px;
+        }
+        .O-A-boxButtonsOurProduct{
+            max-width: 386px;
+            height:83px;
+            padding: 14px;
+            background-color: var(--yb-color-dark-2);
+            border: 1px solid var(--yb-color-dark-3);
+            border-radius: 82px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+            .O-A-styleButtonOurProduct{
+                width: 177px;
+                height: 55px;
+                border: none;
+                background: none;
+                color:var(--yb-color-white);
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                isolation: isolate;
+                transition: color 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    right: -35%;
+                    width: 20%;
+                    height: 200%;
+                    background: var(--yb-color-primary);
+                    transform: skewX(-20deg);
+                    z-index: -1;
+                    transition:
+                        width 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+                        right 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+                }
+
+                &:hover::before {
+                    width: 160%;
+                    right: -35%;
+                }
+
+                &:hover{
+                    color:var(--yb-color-dark-2);
+                }
+            }
+        }
+    }
+    .O-A-boxCardsOurProduct{
+        display: grid;
+        grid-template-columns:  1fr 1px 1fr 1px 1fr;
+        column-gap: 32px;
+        row-gap: 140px;
+        .O-A-cardStyleOueProduct{
+            max-width: 465px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            .O-A-borderIconCardOurProduct {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 98px;
+                height: 98px;
+                padding: 12px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.05) 0%,
+                    rgba(202, 255, 51, 0) 100%
+                );
+
+                .O-A-borderImage {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 74px;
+                    height: 74px;
+                    border-width: 1px;
+                    padding: 20px;
+                    border-radius: 50%;
+                    background: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.1) -66.22%,
+                    rgba(202, 255, 51, 0) 85.46%
+                    );
+                    border: 1px solid;
+
+                    border-image: linear-gradient(
+                    180deg,
+                    rgba(202, 255, 51, 0.2) -173.65%,
+                    rgba(202, 255, 51, 0) 87.22%
+                    );
+                    .O-A-imageOurProduct{
+                        width: 34px;
+                    }
+                }
+            }
+            .O-A-titleCardOurProduct{
+                margin-top: 30px;
+                margin-bottom: 20px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                color: var(--yb-color-white);
+            }
+            .O-A-descCardOurProduct{
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 150%;
+                color: var(--yb-color-text-secondary);
+            }
+        }
+        .O-A-line{
+            height: 100%;
+            width: 1px;
+            background-color: var(--yb-color-dark-3);
+        }
+    }
+}
+
+.O-A-active{
+    color:var(--yb-color-dark-2) !important;
+    background-color: var(--yb-color-primary) !important;
+}
+
+@media screen and (max-width:1440px) {
+    .O-A-ourProduct{
+        padding-top: var(--yb-spacing-y-md);
+        .O-A-headerOurProduct{
+            margin-bottom: 80px;
+            .O-A-titleOurProduct{
+                max-width: 831px;
+            }
+            .O-A-boxButtonsOurProduct{
+                max-width: 300px;
+                height: 65px;
+                padding: 12px;
+                .O-A-styleButtonOurProduct{
+                    width: 136px;
+                    height: 41px;
+                }
+            }
+        }
+        .O-A-boxCardsOurProduct{
+            column-gap: 8px;
+            row-gap: 80px;
+            .O-A-cardStyleOueProduct{
+                max-width: 373px;
+                max-height: 334px;
+                .O-A-titleCardOurProduct{
+                    margin-top: 24px;
+                    margin-bottom: 16px;
+                    font-size: 20px;
+                }
+                .O-A-descCardOurProduct{
+                    font-size: 16px;
+                }
+                .O-A-borderIconCardOurProduct {
+                    width: 72px;
+                    height: 72px;
+                    padding: 8px;
+                    .O-A-borderImage {
+                        width: 56px;
+                        height: 56px;
+                        padding: 17px;
+                        .O-A-imageOurProduct{
+                            width: 26px;
+                        }
+                        svg{
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }        
+}
+
+@media screen and (max-width:992px) {
+    .O-A-ourProduct{
+        padding-top: var(--yb-spacing-y-sm-2);
+        .O-A-headerOurProduct{
+            flex-direction: column;
+            gap: 20px;
+            .O-A-titleOurProduct{
+                max-width: 100%;
+            }
+            .O-A-boxButtonsOurProduct{
+                align-self: center;
+            }
+        }
+        .O-A-boxCardsOurProduct{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            .O-A-cardStyleOueProduct{
+                max-width: 100%;
+                height: max-content;
+                .O-A-titleCardOurProduct{
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                }
+                .O-A-descCardOurProduct{
+                    max-width: 460px;
+                    font-size: 14px;
+                }
+            }
+            .O-A-line{
+                height: 1px;
+                width: 100%;
+            }
+        }
+    }
+}

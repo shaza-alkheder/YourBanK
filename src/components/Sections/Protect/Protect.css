@@ -1,0 +1,240 @@
+.S-K-Protect {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  gap: 118px;
+  .S-K-ProdectCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 82px;
+    background:
+      linear-gradient(
+        267.5deg,
+        var(--yb-color-dark-2) 40.67%,
+        rgba(28, 28, 28, 0) 99.81%
+      ),
+      linear-gradient(
+        106.06deg,
+        rgba(202, 255, 51, 0.05) -29.45%,
+        rgba(202, 255, 51, 0) 27.86%
+      ),
+      url("/assets/img/SecurityPage/lg-bg.webp");
+    background-repeat: no-repeat;
+    max-width: 1593px;
+   
+    --base-height: 631px;
+    --card-height: 330px;
+    --row-gap: 30px;
+
+    height: calc(
+      var(--base-height) + var(--extra-rows) *
+        (var(--card-height) + var(--row-gap))
+    );
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    gap: 30px;
+    padding-right: 93px;
+    padding-left: 93px;
+    position: relative;
+    z-index: 1;
+    .S-K-cardProtectStyle {
+      max-width: 688px;
+      width: 100%;
+     
+      min-height: 330px;
+      height: auto;
+      gap: 24px;
+      border-radius: 20px;
+    
+      padding: 46px;
+      background:
+        linear-gradient(
+          267.5deg,
+          var(--yb-color-dark-2) 40.67%,
+          rgba(28, 28, 28, 0) 99.81%
+        ),
+        linear-gradient(
+          106.06deg,
+          rgba(202, 255, 51, 0.05) -29.45%,
+          rgba(202, 255, 51, 0) 27.86%
+        ),
+        url("/assets/img/SecurityPage/bg.webp");
+      border: 1px solid var(--yb-color-dark-3);
+      position: relative;
+      z-index: 2;
+     
+      .S-K-headerCardProtect {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .S-K-titleIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          order: 1;
+          width: 98px;
+          height: 98px;
+          gap: 10px;
+          border-radius: 70px;
+          padding: 12px;
+          background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.05) 0%,
+            rgba(202, 255, 51, 0) 100%
+          );
+          .borderImage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 74px;
+            height: 74px;
+            gap: 10px;
+            border-radius: 50px;
+          
+            padding: 20px;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            border: 1px solid;
+
+            border-image: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.2) -173.65%,
+              rgba(202, 255, 51, 0) 87.22%
+            );
+            img {
+              width: 34px;
+              height: 34px;
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+              display: block;
+            }
+          }
+        }
+        .S-K-titleCardProtect {
+          order: 2;
+          font-weight: var(--yb-font-weight-rg);
+          font-size: var(--yb-font-size-title-lg);
+          line-height: 150%;
+          color: var(--yb-color-white);
+          margin: 0;
+        }
+      }
+      .S-K-descriptionCardProtect {
+        font-weight: var(--yb-font-weight-lt);
+        font-size: var(--yb-font-size-body-lg);
+        line-height: 150%;
+        color: var(--yb-color-text-secondary);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .S-K-Protect {
+    gap: 58px;
+    .S-K-ProdectCard {
+      padding-top: 62px;
+
+      max-width: 1269px;
+      width: 100%;
+    
+      --base-height: 549px;
+      --card-height: 296px;
+      --row-gap: 20px;
+
+      height: calc(
+        var(--base-height) + var(--extra-rows) *
+          (var(--card-height) + var(--row-gap))
+      );
+
+      gap: 20px;
+      padding-right: 74px;
+      padding-left: 74px;
+      .S-K-cardProtectStyle {
+        max-width: 550px;
+      
+        min-height: 296px;
+        height: auto;
+        width: 100%;
+        border-radius: 20px;
+        padding: 40px;
+
+        .S-K-headerCardProtect {
+          gap: 23px;
+          .S-K-titleIcon {
+            width: 76px;
+            height: 76px;
+            padding: 8px;
+
+            .borderImage {
+              width: 60px;
+              height: 60px;
+              padding: 16px;
+            }
+          }
+          .S-K-titleCardProtect {
+            font-size: var(--yb-font-size-title-md);
+          }
+        }
+        .S-K-descriptionCardProtect {
+          font-size: var(--yb-font-size-body-md);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .S-K-Protect {
+   
+    padding-bottom: 0;
+    gap: 40px;
+    .S-K-ProdectCard {
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 0;
+      height: auto;
+      justify-items: center;
+      background: none;
+
+      .S-K-cardProtectStyle {
+        width: 100%;
+        gap: 18px;
+        padding: 18px;
+        height: auto;
+        max-width: stretch;
+
+        .S-K-headerCardProtect {
+          gap: 14px;
+          .S-K-titleIcon {
+            width: 68px;
+            height: 68px;
+
+            .borderImage {
+              width: 52px;
+              height: 52px;
+              .iconImage {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          .S-K-titleCardProtect {
+            font-size: var(--yb-font-size-title-sm);
+          }
+        }
+        .S-K-descriptionCardProtect {
+          font-size: var(--yb-font-size-body-sm);
+        }
+      }
+    }
+  }
+}
