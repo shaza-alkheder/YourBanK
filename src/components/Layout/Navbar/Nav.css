@@ -133,6 +133,7 @@
 }
 .MGnav .O-A-alignCenter{
   align-items: center;
+  gap: 24px !important;
   .O-A-logout{
     background-color: red !important;
     color: var(--yb-color-white) !important;
@@ -165,6 +166,18 @@
   }
   .MGlogin-btn {
     padding: 12px 24px;
+  }
+  .MGnavbar-links ul {
+    gap: 15px;
+  }
+  .MGnav .O-A-alignCenter{
+    gap: 8px !important;
+    p{
+      font-size: 12px;
+    }
+    .O-A-logout{
+      padding: 8px 16px;
+    }
   }
 }
 
