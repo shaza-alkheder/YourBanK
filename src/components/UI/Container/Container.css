@@ -1,6 +1,4 @@
 .O-A-container {
-  /* padding-left: var(--yb-spacing-x-lg);
-    padding-right: var(--yb-spacing-x-lg); */
   padding-inline: clamp(80px, 9vw, 162px);
   margin-bottom: var(--yb-spacing-y-lg);
 }
@@ -13,8 +11,6 @@
 }
 @media screen and (max-width: 992px) {
   .O-A-container {
-    /* padding-left: 192px;
-        padding-right: 192px; */
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: var(--yb-spacing-y-sm);
@@ -22,8 +18,6 @@
 }
 @media screen and (max-width: 768px) {
   .O-A-container {
-    /* padding-left: 120px;
-        padding-right: 120px; */
     padding-left: 72px;
     padding-right: 72px;
   }

@@ -3,6 +3,7 @@ import Button from "../../UI/Button/Button"
 import './Nav.css'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useState } from "react"
+import { FaUser } from "react-icons/fa";
 
 
 function Nav({logo}) {
@@ -41,7 +42,7 @@ function Nav({logo}) {
           </div>
       
           <div  className = "MGnavbar-buttons O-A-alignCenter">
-            <p>{localStorage.getItem("userLoginNow")}</p>
+            <p><FaUser /> {localStorage.getItem("userLoginNow")}</p>
             <Button
               className="MGlogin-btn O-A-logout"
               content = "LogOut" 
@@ -98,7 +99,7 @@ function Nav({logo}) {
             onClick={()=>navigate("/login")}/>
           </div>
           <div className = "MGmobile-buttons O-A-boxLogOut">
-          <p>{localStorage.getItem("userLoginNow")}</p>
+          <p><FaUser /> {localStorage.getItem("userLoginNow")}</p>
 
           <Button
             className="MGlogin-mobile O-A-menuLogOut"

@@ -49,11 +49,34 @@
         border: 1px solid #333333;
         cursor: pointer;
         font-family: var(--yb-font-family-primary);
-        &:hover {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+        &::before {
+          content: "";
+          position: absolute;
+          top: -50%;
+          right: -35%;
+          width: 20%;
+          height: 200%;
+          background: var(--yb-color-primary);
+          transform: skewX(-20deg);
+          z-index: -1;
+          transition:
+            width 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+            right 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+          }
+          &:hover::before {
+            width: 160%;
+            right: -35%;
+          }
+        /* &:hover {
           background-color: var(--yb-color-primary);
           color: var(--yb-color-dark-3);
           border: none;
-        }
+        } */
       }
       .O-A-orContinueWith {
         width: 100%;

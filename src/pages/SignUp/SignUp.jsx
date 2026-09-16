@@ -8,7 +8,6 @@ import ContainerLoginAndSignUp from "../../components/UI/ContainerLoginAndSignUp
 function SignUp() {
   const navigate = useNavigate()
   const submitSignUp = () => {
-    // event.preventDefault()
     let users = JSON.parse(localStorage.getItem("SignUp")) || []
     const firstName = document.getElementById("firstNameInput").value
     const lasttName = document.getElementById("lastNameInput").value
@@ -32,9 +31,8 @@ function SignUp() {
       users.push(newUser)
     }
     localStorage.setItem("register" , "true")
-    localStorage.setItem("userLoginNow" , "@"+newUser.name)
+    localStorage.setItem("userLoginNow" , newUser.name)
     localStorage.setItem("userFound" , "true")
-    // window.location.href="/"
     navigate("/")
   }
   return (

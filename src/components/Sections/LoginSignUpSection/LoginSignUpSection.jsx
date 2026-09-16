@@ -95,8 +95,6 @@ const LoginSignUpSection = ({login , signup , onclick1 , onclick2}) => {
                         placeholderInput : "Enter Last Name",
                         name : "lastName",
                         id : "lastNameInput",
-                        // value : "",
-                        // onChange : onChangeInput
                         value: lastName,
                         onChange: handleLastNameChange
                     }}

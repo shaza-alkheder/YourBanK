@@ -13,10 +13,6 @@ const FormAuth = ({firstName , inputInfoFN , lastName , inputInfoLN, email , inp
                     {lastName? <Input input={inputInfoLN} /> :""}
                     {email? <Input input={inputInfoEm} /> :""}
                     {password? <div className="O-A-boxPassInput"><Input input={inputInfoPass} /> <IoEye className="O-A-iconPass"/> </div> :""}
-                    {/* {firstName? <input type="text" className="O-A-inputStyle" placeholder={firstName} /> :""}
-                    {lastName? <input type="text" className="O-A-inputStyle" placeholder={lastName} /> :""}
-                    {email? <input type="email" className="O-A-inputStyle" placeholder={email} /> :""}
-                    {password? <input type="password" className="O-A-inputStyle" placeholder={password} /> :""} */}
                 </div>
                 {forgetPassword? <p className="O-A-forgetPassword">{forgetPassword}</p> :""}
                 <div className="O-A-boxBtnForm">
