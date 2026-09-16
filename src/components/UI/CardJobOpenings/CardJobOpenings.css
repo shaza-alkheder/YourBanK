@@ -1,5 +1,4 @@
 .DS_CardJobOpenings{
-    /* width: clamp(630px, 40.8vw, 800px); */
     padding: clamp(24px, 2.77vw, 50px);
     border-radius: 16px;
     background-color: var(--yb-color-dark-2);

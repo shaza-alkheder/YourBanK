@@ -5,7 +5,6 @@
     grid-template-columns: repeat(2, 1fr);
 }
 .DS_NewsCard{
-    /* width: clamp(400px, 43.7vw, 783px); */
     padding:clamp(20px, 1.66vw, 30px);
     background-color: var(--yb-color-dark-2);
     border: 1px solid var(--yb-color-dark-3);
