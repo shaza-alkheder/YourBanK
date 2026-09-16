@@ -2,7 +2,7 @@ import TitleDescription from '../../UI/TitleDescription/TitleDescription'
 
 import './MissionVision.css'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import MissionVisionData from "../../../data/MissionVisionData.json";
 
@@ -11,7 +11,7 @@ import { motion } from "motion/react";
 
 function MissionVision() {
 
-  const [missionVision] = useState(() => {
+  const [missionVision, setMissionVision]= useState(() => {
 
     let data = localStorage.getItem("MissionVisionData");
 
@@ -29,6 +29,30 @@ function MissionVision() {
     return JSON.parse(data);
 
   });
+
+  useEffect(() => {
+
+    const storageChange = (event) => {
+
+        if (event.key === "MissionVisionData") {
+
+            if (event.newValue) {
+                setMissionVision(JSON.parse(event.newValue));
+            } else {
+                setMissionVision([]);
+            }
+
+        }
+
+    };
+
+    window.addEventListener("storage", storageChange);
+
+    return () => {
+        window.removeEventListener("storage", storageChange);
+    };
+
+}, []);
 
 
   return (
