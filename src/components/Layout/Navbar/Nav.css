@@ -134,17 +134,25 @@
 .MGnav .O-A-alignCenter{
   align-items: center;
   gap: 24px !important;
-  p{
+  div{
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
+    font-size: 16px;
+    color: var(--yb-color-primary);
   }
   .O-A-logout{
-    background-color: red !important;
-    color: var(--yb-color-white) !important;
+    color: red !important;
+    background: none;
     transition: 0.3s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+      font-size: 32px;
+    }
     &:hover{
-      background-color: rgb(225, 23, 23) !important;
+      color: rgb(225, 23, 23) !important;
     }
   }
 }
@@ -177,7 +185,7 @@
   }
   .MGnav .O-A-alignCenter{
     gap: 8px !important;
-    p{
+    div{
       font-size: 12px;
     }
     .O-A-logout{
@@ -243,11 +251,19 @@
     transition: 1s all;
   }
   .O-A-boxLogOut{
-    padding-top: 8px;
+    padding-top: 14px;
     flex-direction: column;
     align-items: center;
+    div{
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--yb-color-primary);
+    }
   }
   .O-A-menuLogOut{
     color: red;
+    svg{
+      font-size: 24px;
+    }
   }
 }

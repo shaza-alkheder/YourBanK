@@ -4,6 +4,7 @@ import './Nav.css'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useState } from "react"
 import { FaUser } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
 
 
 function Nav({logo}) {
@@ -42,15 +43,16 @@ function Nav({logo}) {
           </div>
       
           <div  className = "MGnavbar-buttons O-A-alignCenter">
-            <p><FaUser /> {localStorage.getItem("userLoginNow")}</p>
+            <div><FaUser /> {localStorage.getItem("userLoginNow")}</div>
             <Button
               className="MGlogin-btn O-A-logout"
-              content = "LogOut" 
+              content = {<MdLogout />}
               onClick={()=>{SetuserFound("false")
                 localStorage.setItem("userFound" , "false")
                 localStorage.setItem("userLoginNow" , "")
               }}
             />
+            
         </div>
       </>
       ):
@@ -99,17 +101,18 @@ function Nav({logo}) {
             onClick={()=>navigate("/login")}/>
           </div>
           <div className = "MGmobile-buttons O-A-boxLogOut">
-          <p><FaUser /> {localStorage.getItem("userLoginNow")}</p>
+            <div><FaUser /> {localStorage.getItem("userLoginNow")}</div>
 
-          <Button
-            className="MGlogin-mobile O-A-menuLogOut"
-            content = "LogOut" 
-            onClick={()=>{SetuserFound("false")
-              localStorage.setItem("userFound" , "false")
-              localStorage.setItem("userLoginNow" , "")
-            }}
-          />
-        </div>
+            <Button
+              className="MGlogin-mobile O-A-menuLogOut"
+              content = {<MdLogout />}
+              onClick={()=>{SetuserFound("false")
+                localStorage.setItem("userFound" , "false")
+                localStorage.setItem("userLoginNow" , "")
+              }}
+            />
+            
+          </div>
         </>
       ):
       <div className = "MGmobile-buttons">
