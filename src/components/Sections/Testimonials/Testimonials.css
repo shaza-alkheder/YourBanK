@@ -98,6 +98,9 @@
             justify-content: start;
             overflow: hidden;
             gap: clamp(40px, 2.77vw, 50px);
+            animation: cardAppear 0.8s ease-in-out forwards;
+            opacity: 1;
+            transform: translateY(0);
 
             .DS_titleWrapper {
                 display: flex;
@@ -196,6 +199,17 @@
     cursor: not-allowed;
     pointer-events: none;
     }
+
+    @keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 @media screen and (max-width: 1440px){
     .DS_Testimonials {    
         .DS_testimonialsSlider {

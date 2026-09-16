@@ -106,6 +106,7 @@ useEffect(() => {
             <div className="DS_slider">
                 <div 
                     ref={sliderRef}
+                    key={activeTab}
                     className="DS_testimonialsSlider"
                     style={{ 
                         overflowX: 'auto', 
