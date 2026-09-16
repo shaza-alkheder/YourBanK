@@ -9,6 +9,7 @@ function Hero({ iconHero }) {
   const description =
     "At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.";
   const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
   useEffect(() => {
     let index = 0;
     const typingInterval = setInterval(() => {
@@ -16,6 +17,7 @@ function Hero({ iconHero }) {
       index++;
       if (index === description.length) {
         clearInterval(typingInterval);
+         setIsTyping(false);
       }
     }, 25);
     return () => clearInterval(typingInterval);
@@ -40,13 +42,11 @@ function Hero({ iconHero }) {
               className: "DS_ColorLimeGreen",
             },
           ]}
-          //     description="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and
-          // businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our
-          // customers' needs."
+         
           description={
             <>
-              
-              {displayedText} <span className="typing-cursor">|</span>
+              {displayedText}
+               {isTyping && <span className="typing-cursor">|</span>}
             </>
           }
         />

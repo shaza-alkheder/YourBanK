@@ -9,9 +9,7 @@ const Benefits = () => {
     const benefitsStored = localStorage.getItem("benefitsContent");
     return benefitsStored ? JSON.parse(benefitsStored) : BenefitsCardData;
   });
-  // useEffect(() => {
-  //   localStorage.setItem("benefitsContent", JSON.stringify(benefitsContent));
-  // }, [benefitsContent]);
+ 
 
      useEffect(() => {
     const storageChange = (event) => {
