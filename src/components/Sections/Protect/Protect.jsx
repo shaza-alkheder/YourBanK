@@ -12,9 +12,7 @@ const Protect = () => {
       ? JSON.parse(securitContentStored)
       : SecurityCardData;
   });
-  // useEffect(() => {
-  //   localStorage.setItem("securityContent", JSON.stringify(securityContent));
-  // }, [securityContent]);
+ 
 
   useEffect(() => {
     const storageChange = (event) => {

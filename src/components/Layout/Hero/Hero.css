@@ -3,7 +3,7 @@
   margin-bottom: 120px;
   display: flex;
   justify-content: space-around;
-  /* overflow: hidden; */
+ 
 }
 
 .MGhero-left {
@@ -454,10 +454,8 @@
           }
         }
         .S-K-Exchange {
-          /* */
-
+         
           gap: 19.97px;
-
           .S-K-ExchangeContainer {
             gap: 19.97px;
 
@@ -710,7 +708,7 @@
           }
         }
         .S-K-Exchange {
-          /* */
+         
           gap: clamp(12px, 1.5vw, 14.87px);
 
           .S-K-ExchangeContainer {

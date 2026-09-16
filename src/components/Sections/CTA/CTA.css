@@ -6,7 +6,7 @@
   gap: 150px;
   position: relative;
   background:
-    /* linear-gradient(0deg, #1c1c1c, #1c1c1c), */
+ 
     linear-gradient(267.5deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
     url("/assets/img/HomePage/bg-cat.webp");
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -31,11 +31,11 @@
   .S-K-contentCTA {
     display: flex;
     flex-direction: column;
-    /* max-width: 874px; */
+    
     width: 100%;
     gap: 14px;
     justify-content: space-between;
-    /* align-items: center; */
+   
     h2 {
       font-weight: 400;
       line-height: 150%;

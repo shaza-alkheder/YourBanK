@@ -49,8 +49,7 @@
     &.S-K-FaqCard-collapsed {
       border: none !important;
 
-      /* .S-K-cardFaqStyle:nth-child(3),
-      .S-K-cardFaqStyle:nth-child(4) { */
+      
       > :nth-child(3) .S-K-cardFaqStyle,
       > :nth-child(4) .S-K-cardFaqStyle {
         position: relative;
@@ -149,8 +148,7 @@
         width: 100%;
         gap: 24px;
         border-radius: 10px;
-        /* border-width: 1px; */
-        /* padding: 40px; */
+      
         .S-K-headerCardFAQ {
           padding-bottom: 24px;
           .S-K-titleCardFAQ {
@@ -198,7 +196,7 @@
         }
       }
       &.S-K-FaqCard-collapsed {
-        /* .S-K-cardFaqStyle:nth-child(3) { */
+       
         > :nth-child(3) .S-K-cardFaqStyle {
           opacity: 1;
           filter: none;
@@ -211,7 +209,7 @@
             border-bottom-color: var(--yb-color-dark-3);
           }
         }
-        /* .S-K-cardFaqStyle:nth-child(4) { */
+      
         > :nth-child(4) .S-K-cardFaqStyle {
           display: block;
 
